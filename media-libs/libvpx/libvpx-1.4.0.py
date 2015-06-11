@@ -12,7 +12,7 @@ runtime @ sys-libs/glibc
 build @ dev-lang/yasm
 """
 
-srcdir = name+"-v"+version
+srcdir = name+"-"+version
 
 def configure():
     raw_configure("--prefix=/usr \
