@@ -1,0 +1,11 @@
+--- exrenvmap/blurImage.cpp
++++ exrenvmap/blurImage.cpp
+@@ -39,6 +39,8 @@
+ //
+ //-----------------------------------------------------------------------------
+ 
++#include <string.h>
++
+ #include <blurImage.h>
+ 
+ #include <resizeImage.h>
