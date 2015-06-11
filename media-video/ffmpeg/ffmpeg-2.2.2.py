@@ -9,25 +9,20 @@ options @ lame rtmp vdpau vorbis xvid x264 vpx theora amr schroedinger jpeg2k cp
 
 depends = """
 build @ dev-lang/yasm media-libs/libtheora
+	media-video/rtmpdump dev-util/pkg-config media-libs/libdc1394 sys-libs/libraw1394 
+	media-sound/lame media-libs/libvorbis media-libs/xvidcore media-libs/x264 
+	media-libs/libvpx media-libs/libtheora media-libs/opencore-amr media-libs/schroedinger 
+dev-util/pkg-config media-libs/openjpeg x11-libs/libX11 x11-libs/libXext x11-libs/libvdpau
 runtime @ x11-libs/libXfixes media-libs/alsa-lib app-arch/bzip2
         sys-libs/zlib
         media-libs/SDL_image media-libs/SDL net-libs/gnutls x11-libs/libva x11-libs/libvdpau media-libs/openjpeg
 """
 
 opt_runtime = """
-rtmp @ media-video/rtmpdump dev-util/pkg-config
-ieee1394 @ media-libs/libdc1394 sys-libs/libraw1394
-lame @ media-sound/lame
-vorbis @ media-libs/libvorbis
-xvid @ media-libs/xvidcore
-x264 @ media-libs/x264
-vpx @ media-libs/libvpx
-theora @ media-libs/libtheora
-amr @ media-libs/opencore-amr
-schroedinger @ media-libs/schroedinger dev-util/pkg-config
-jpeg2k @ media-libs/openjpeg
-X @ x11-libs/libX11 x11-libs/libXext
-vdpau @ x11-libs/libvdpau
+media-video/rtmpdump dev-util/pkg-config media-libs/libdc1394 sys-libs/libraw1394 
+media-sound/lame media-libs/libvorbis media-libs/xvidcore media-libs/x264 
+media-libs/libvpx media-libs/libtheora media-libs/opencore-amr media-libs/schroedinger 
+dev-util/pkg-config media-libs/openjpeg x11-libs/libX11 x11-libs/libXext x11-libs/libvdpau
 """
 
 export("PATH", "%s:/usr/bin/core_perl" % get_env('PATH'))
