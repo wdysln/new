@@ -8,6 +8,7 @@ options @ lame rtmp vdpau vorbis xvid x264 vpx theora amr schroedinger jpeg2k cp
 """
 
 depends = """
+build @ dev-lang/yasm
 runtime @ x11-libs/libXfixes media-libs/alsa-lib app-arch/bzip2
         sys-libs/zlib
         media-libs/SDL_image media-libs/SDL net-libs/gnutls x11-libs/libva x11-libs/libvdpau media-libs/openjpeg
