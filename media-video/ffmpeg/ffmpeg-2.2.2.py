@@ -18,13 +18,6 @@ runtime @ x11-libs/libXfixes media-libs/alsa-lib app-arch/bzip2
         media-libs/SDL_image media-libs/SDL net-libs/gnutls x11-libs/libva x11-libs/libvdpau media-libs/openjpeg
 """
 
-opt_runtime = """
-media-video/rtmpdump dev-util/pkg-config media-libs/libdc1394 sys-libs/libraw1394 
-media-sound/lame media-libs/libvorbis media-libs/xvidcore media-libs/x264 
-media-libs/libvpx media-libs/libtheora media-libs/opencore-amr media-libs/schroedinger 
-dev-util/pkg-config media-libs/openjpeg x11-libs/libX11 x11-libs/libXext x11-libs/libvdpau
-"""
-
 export("PATH", "%s:/usr/bin/core_perl" % get_env('PATH'))
 
 def configure():
