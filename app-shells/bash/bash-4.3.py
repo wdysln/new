@@ -13,10 +13,10 @@ build @ sys-libs/readline
 """
 
 def prepare():
-    for i in xrange(1, 34):
+    for i in xrange(1, 39):
         fetch("http://ftp.gnu.org/gnu/bash/bash-4.3-patches/bash43-%03d" % i, location=build_dir)
 
-    for f in xrange(1, 34):
+    for f in xrange(1, 39):
         patch("bash43-%03d" % f, location=build_dir)
 
 def configure():
@@ -46,9 +46,9 @@ def install():
 
     makedirs("/etc/skel")
     insexe(joinpath(filesdir, "bashrc"), "/etc/bashrc")
-    insfile(joinpath(filesdir, "dot-bashrc"), "/etc/skel/.bashrc")
-    insfile(joinpath(filesdir, "dot-bash_profile"), "/etc/skel/.bash_profile")
-    insfile(joinpath(filesdir, "dot-bash_logout"), "/etc/skel/.bash_logout")
+   # insfile(joinpath(filesdir, "dot-bashrc"), "/etc/skel/.bashrc")
+    #insfile(joinpath(filesdir, "dot-bash_profile"), "/etc/skel/.bash_profile")
+    #insfile(joinpath(filesdir, "dot-bash_logout"), "/etc/skel/.bash_logout")
     insexe(joinpath(filesdir, "dircolors"), "/etc/dircolors")
 
     insdoc("README", "NEWS", "AUTHORS", "CHANGES", "COMPAT", "Y2K", "doc/FAQ", "doc/INTRO")
