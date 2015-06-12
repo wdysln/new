@@ -2,7 +2,7 @@ metadata = """
 summary @ A collection of documentation utilities for the Gnome project
 homepage @ http://live.gnome.org/GnomeDocUtils
 license @ GPL2 LGPL2.1
-src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/0.20/$fullname.tar.bz2
+src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/0.20/$fullname.tar.xz
 arch @ ~x86_64
 """
 
