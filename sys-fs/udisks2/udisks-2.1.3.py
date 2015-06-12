@@ -10,7 +10,7 @@ slot @ 2
 depends = """
 runtime  @ sys-apps/systemd sys-apps/sg3_utils sys-libs/glib dev-libs/dbus-glib
            sys-auth/polkit sys-block/parted dev-libs/libatasmart sys-process/lsof
-           sys-block/eject sys-fs/ntfs_3g
+           sys-fs/ntfs_3g
 build @ dev-util/intltool
 """
 
