@@ -8,7 +8,7 @@ options @ soprano
 """
 
 depends = """
-runtime @ app-misc/strigi kde-base/attica x11-misc/libxss app-arch/xz dev-libs/openssl 
+runtime @ app-misc/strigi kde-base/attica x11-misc/libxss app-arch/xz dev-libs/openssl sys-fs/udisks:2
 	app-crypt/qca dev-libs/libdbusmenu-qt sys-auth/polkit-qt dev-libs/grantlee 
 	x11-misc/shared-mime-info app-text/enchant media-libs/giflib media-libs/jasper media-libs/openexr 
 	media-libs/ilmbase x11-misc/xdg-utils media-libs/phonon x11-themes/hicolor-icon-theme sys-power/upower 
@@ -35,6 +35,7 @@ def configure():
             "-DWITH_Soprano=OFF",
             "-DKDE4_BUILD_TESTS=OFF",
             "-DCMAKE_SKIP_RPATH=ON",
+	     "-DWITH_SOLID_UDISKS2=ON",
             "-DWITH_FAM=OFF",
             "-DWITH_HUpnp=OFF",
             "-DDOCBOOKXSL_DIR=/usr/share/xml/docbook/docbook-xsl-1.76.1", sourcedir=build_dir)
