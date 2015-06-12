@@ -2,7 +2,7 @@ metadata = """
 summary @ PDF rendering library based on xpdf 3.0 code base
 homepage @ http://poppler.freedesktop.org/
 license @ GPL
-src_url @ http://poppler.freedesktop.org/$name-$version.tar.gz
+src_url @ http://poppler.freedesktop.org/$name-$version.tar.xz
 arch @ ~x86_64
 options @ cairo introspection curl jpeg lcms png cjk
 """
