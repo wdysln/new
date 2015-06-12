@@ -8,7 +8,7 @@ options @ policykit debug
 """
 
 depends = """
-runtime @ xfce-base/xfce4-panel sys-power/upower sys-fs/udisks
+runtime @ xfce-base/xfce4-panel sys-power/upower sys-fs/udisks:2
           x11-themes/hicolor-icon-theme gnome-base/librsvg x11-libs/libnotify
 """
 
