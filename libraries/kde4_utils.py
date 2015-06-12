@@ -45,9 +45,9 @@ def kde4_utils_prepare():
 
 def kde4_utils_configure():
     cd("build")
-    cmake_conf("-DAutomoc4_DIR=/usr/lib/automoc4    
-		-DCMAKE_SKIP_RPATH=ON \
-                -Wno-dev",sourcedir=build_dir+"/%s" % subdir)
+    cmake_conf("-DAutomoc4_DIR=/usr/lib/automoc4",   
+		"-DCMAKE_SKIP_RPATH=ON",
+                "-Wno-dev",sourcedir=build_dir+"/%s" % subdir)
 
 def kde4_utils_build():
     cd("build")
