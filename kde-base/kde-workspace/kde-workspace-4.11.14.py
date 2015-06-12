@@ -12,7 +12,7 @@ options @ xinerama qalculate semantic
 depends = """
 build @ dev-util/cmake dev-util/automoc4 x11-libs/libX11 x11-libs/libXext dev-libs/qjson dev-libs/libical 
 dev-libs/cyrus-sasl net-dns/openldap x11-libs/libXklavier x11-libs/libXrender x11-libs/libXtst kde-base/kactivities
-runtime @ x11-proto/kbproto x11-proto/renderproto x11-misc/xcb-util-renderutil 
+runtime @ x11-proto/kbproto x11-proto/renderproto x11-misc/xcb-util-renderutil kde-base/kdepim-runtime
 media-libs/libraw media-libs/qimageblitz media-libs/mesa media-libs/glu kde-base/kdepimlibs
 """
 

@@ -18,6 +18,9 @@ def configure():
     cmake_conf(
     "-DCMAKE_BUILD_TYPE=Release",
     "-DCMAKE_SKIP_RPATH=ON",
+    "-DKDE4_BUILD_TESTS=OFF",
+    "-DBUILD_nepomuk=OFF",
+    "-Wno-dev",
     "-DAutomoc4_DIR=/usr/lib/automoc4",
     "-DCMAKE_INSTALL_PREFIX=/usr", sourcedir=build_dir)
     
