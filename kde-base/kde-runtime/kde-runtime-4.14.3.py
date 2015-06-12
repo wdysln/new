@@ -23,6 +23,10 @@ def configure():
     cmake_conf(
     "-DCMAKE_BUILD_TYPE=Release",
     "-DCMAKE_SKIP_RPATH=ON",
+    "-DWITH_QNtrack=OFF",
+    "-DKDE4_ENABLE_FPIE=ON",
+    "-DWITH_NepomukCore=OFF",
+    "-DKDERUNTIME_BUILD_NEPOMUK=OFF",
     "-DAutomoc4_DIR=/usr/lib/automoc4",
     "-DCMAKE_INSTALL_PREFIX=/usr", sourcedir=build_dir)
 
