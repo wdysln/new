@@ -29,8 +29,15 @@ def configure():
     cmake_conf(
     cmake_config_with("qalculate"),
     "-DCMAKE_SKIP_RPATH=ON",
-	"-DAutomoc4_DIR=/usr/lib/automoc4",
+    "-DAutomoc4_DIR=/usr/lib/automoc4",
     "-DWITH_NepomukCore=OFF",
+    "-DKDE4_COMMON_PAM_SERVICE=kde4",
+    "-DKDE4_ENABLE_FPIE=ON",
+    "-DDBUS_SYSTEM_SERVICES_INSTALL_DIR=/usr/share/dbus-1/system-services",
+    "-DWITH_Googlegadgets=OFF",
+    "-DWITH_Xmms=OFF",
+    "-DWITH_Soprano=OFF",
+    "-DKDE4_KCHECKPASS_PAM_SERVICE=kde4",
     "-DWITH_NetworkManager=OFF", sourcedir=build_dir)
 
 def build():
