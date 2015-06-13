@@ -2,7 +2,7 @@ metadata = """
 summary @ Automatic moc for Qt4
 homepage @ http://www.kde.org/
 license @ custom
-src_url @ ftp://ftp.kde.org/pub/kde/stable/$name/$version/$fullname.tar.bz2
+src_url @ http://download.kde.org/stable/$name/$version/$fullname.tar.bz2
 arch @ ~x86_64
 """
 
