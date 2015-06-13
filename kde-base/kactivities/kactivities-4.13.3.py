@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-build @ dev-util/cmake dev-util/automoc4 >=kde-base/kde-runtime-4.14.3 >=kde-base/kdelibs-4.14.3 >=kde-base/kde-workspace-4.11.4
+build @ dev-util/cmake dev-util/automoc4 >=kde-base/kdelibs-4.14.3 
 
 """
 
