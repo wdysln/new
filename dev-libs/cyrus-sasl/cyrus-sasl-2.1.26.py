@@ -7,13 +7,14 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ sys-libs/db sys-libs/pam
+runtime @ sys-libs/db sys-libs/pam sys-devel/automake
 """
 
 def prepare():
     patch(level=1)
 
 def configure():
+    autoreconf("-fi")
     conf("--prefix=/usr        \
          --sysconfdir=/etc    \
          --enable-auth-sasldb \
