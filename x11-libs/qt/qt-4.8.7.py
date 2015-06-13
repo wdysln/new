@@ -9,7 +9,7 @@ arch @ ~x86_64
 depends = """
 runtime @ sys-libs/glibc media-libs/tiff media-libs/libpng media-libs/libmng dev-db/sqlite app-misc/ca-certificates sys-libs/glib sys-apps/dbus
 	media-libs/fontconfig media-libs/mesa x11-libs/libSM x11-libs/libXrandr x11-libs/libXv x11-libs/libXi media-libs/alsa-lib
-	dev-db/unixODBC x11-libs/gtk+:2 media-plugins/gst-plugins-base:0 media-libs/gstreamer:0
+	dev-db/unixODBC x11-libs/gtk+:2 media-plugins/gst-plugins-base:0 media-libs/gstreamer:0 dev-util/cmake
 """
 
 srcdir = "qt-everywhere-opensource-src-"+version
