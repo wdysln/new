@@ -10,7 +10,7 @@ options @ a52 aac alsa altivec avcodec avformat cddb dc1394 dvd dvdnav flac font
 depends = """
 build @ app-arch/xz sys-libs/zlib dev-util/pkg-config sys-apps/dbus >=media-libs/a52dec-0.7.4 >=media-libs/faad2-2.6.1 >=media-libs/alsa-lib-1.0.23 >=media-libs/libmpeg2-0.3.2 media-libs/libtheora
 runtime @ sys-libs/zlib dev-util/pkg-config sys-apps/dbus >=media-libs/a52dec-0.7.4 >=media-libs/faad2-2.6.1 >=media-libs/alsa-lib-1.0.23 >=media-libs/libmpeg2-0.3.2 media-libs/libtheora
-common @ <=dev-lang/lua-5.2.3
+common @ <=dev-lang/lua-5.2.3 media-libs/libmad
 """
 
 
