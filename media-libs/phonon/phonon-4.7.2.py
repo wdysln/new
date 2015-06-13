@@ -2,7 +2,7 @@ metadata = """
 summary @ The multimedia framework for KDE4
 homepage @ http://phonon.kde.org/
 license @ LGPL
-src_url @ https://pkgs.fedoraproject.org/repo/pkgs/phonon/phonon-4.7.2.tar.xz/a8b722a11a301fc2cda7ff8228209531/phonon-4.7.2.tar.xz
+src_url @ http://download.kde.org/stable/$name/$version/$fullname.tar.xz
 arch @ ~x86_64
 options @ mplayer vlc
 """
