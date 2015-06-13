@@ -8,6 +8,7 @@ options @ nls xmp zlib
 """
 
 depends = """
+build @ dev-util/cmake
 runtime @ sys-devel/gcc sys-devel/gettext sys-libs/zlib
 """
 
