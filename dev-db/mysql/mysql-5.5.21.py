@@ -2,8 +2,8 @@ metadata = """
 summary @ A fast SQL database server
 homepage @ https://www.mysql.com/products/community/
 license @ GPL-2
-src_url @ http://ftp.gwdg.de/pub/misc/mysql/Downloads/MySQL-5.5/$fullname.tar.gz
-arch @ ~x86
+src_url @ https://downloads.mariadb.com/archives/mysql-5.5/mysql-5.5.21.tar.gz
+arch @ ~x86_64
 """
 
 depends = """
@@ -57,7 +57,6 @@ def install():
     cd("build")
     raw_install("DESTDIR=%s" % install_dir)
     # What the fuck is that?
-    rmdir("/usr/mysql_test")
     insfile("%s/my.cnf" % filesdir, "/etc/my.cnf")
     insexe("%s/mysqld" % filesdir, "/etc/rc.d/mysqld")
     makedirs("/var/lib/mysql")

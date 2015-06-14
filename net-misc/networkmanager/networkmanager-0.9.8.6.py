@@ -31,6 +31,7 @@ def configure():
     --with-iptables=/usr/sbin/iptables \
     --disable-static \
     --disable-ppp \
+    --with-resolvconf=/etc/resolv.default.conf \
     --enable-more-warnings=no \
     --disable-wimax \
     --enable-doc")

@@ -14,7 +14,7 @@ build @ dev-util/cmake dev-libs/boost dev-util/automoc4
 get("main/fdo_mime")
 
 def prepare():
-	patch("kde412.patch", level=1)
+	patch("fix-link.patch", level=1)
 
 def configure():
 	pass
