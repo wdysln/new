@@ -8,38 +8,22 @@ arch @ ~x86_64
 
 standard_procedure = False
 
-ZoneDir = "/usr/share/zoneinfo"
-TargetDir = "%s/%s" % (install_dir , ZoneDir)
-
-RightDir = "%s/right" % TargetDir
-PosixDir = "%s/posix" % TargetDir
-
 
 Components = ["etcetera", "southamerica", "northamerica", "europe", "africa", "antarctica", \
               "asia", "australasia", "backward", "pacificnew", "solar87", "solar88", "solar89", \
               "systemv" ]
 
-ExtraDist = ["zone.tab", "iso3166.tab"]
-
-def build():
-    copy("%s/yearistype.sh" % filesdir, "yearistype.sh")
-    makedirs("ZoneDir")
-    makedirs("RightDir")
-    makedirs("PosixDir")
+#ExtraDist = ["zone.tab", "iso3166.tab"]
+   
 
 
 def install():
-    for extra in ExtraDist:
-       insinto(ZoneDir, extra)
-
-    for tz in Components:
-        cmd = "zic -L /dev/null -d %s -y \"%s/yearistype.sh\" %s" % (TargetDir, get.workDIR(), tz)
-        system (cmd)
-        part2 = "zic -L /dev/null -d %s -y \"%s/yearistype.sh\" %s" % (PosixDir, get.workDIR(), tz)
-        system (part2)
-        part3 = "zic -L leapseconds -d %s -y \"%s/yearistype.sh\" %s" % (RightDir, get.workDIR(), tz)
-        system (part3)
-
-     system("zic -d %s -p Europe/Istanbul" % TargetDir)
+    copy("%s/yearistype.sh" % filesdir, "yearistype.sh")
+    system("zic -y ./yearistype -d %s/usr/share/zoneinfo %s" % (install_dir ,Components))
+    system("zic -y ./yearistype -d %s/usr/share/zoneinfo/posix %s"  % (install_dir ,Components))
+    system("zic -y ./yearistype -d %s/usr/share/zoneinfo/right -L leapseconds %s" % (install_dir ,Components))
+    system("zic -y ./yearistype -d %s/usr/share/zoneinfo/right -L leapseconds %s" % (install_dir ,Components))
+    
+    system("zic -y ./yearistype -d %s/usr/share/zoneinfo -p America/New_York" % install_dir)
     
     
