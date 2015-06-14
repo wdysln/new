@@ -2,7 +2,7 @@ metadata = """
 summary @ A movie player for linux
 homepage @ http://www.mplayerhq.hu/ 
 license @ GPL 
-src_url @ http://anduin.linuxfromscratch.org/sources/other/mplayer-2014-12-19.tar.xz
+src_url @ http://anduin.linuxfromscratch.org/sources/other/mplayer-2015-02-20.tar.xz
 http://ffmpeg.org/releases/ffmpeg-2.5.tar.gz
 arch @ ~x86_64
 options @ bidi amr a52 theora cdparanoia dts encode lame x264 xvid faad mad schroedinger vpx mng X vdpau sdl vorbis
