@@ -25,8 +25,8 @@ def install():
     notify("Installing modules...")
     make("INSTALL_MOD_PATH=%s/ DEPMOD=/bin/true modules_install mod-fw=" % install_dir)
     
-    notify("Installing Libc headers...")
-    make("INSTALL_HDR_PATH=%s/usr headers_install" % install_dir)
+  #  notify("Installing Libc headers...")
+   # make("INSTALL_HDR_PATH=%s/usr headers_install" % install_dir)
     
     notify("installing kernel as /boot/%s" % version)
     insfile("arch/x86/boot/bzImage", "/boot/kernel-%s" % version)
