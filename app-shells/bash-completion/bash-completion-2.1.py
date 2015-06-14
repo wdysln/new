@@ -17,8 +17,9 @@ def build():
 def install():
     raw_install("DESTDIR=%s" % install_dir)
 
-    blacklist = ["cal", "chsh", "dmesg", "eject", "hd", "hexdump", "hwclock", "ionice", "look", "ncal", "nmcli", "newgrp", "makepkg", "renice", "rtcwake", "su"]
-    for comp in blacklist:
-       system("rm -rf usr/share/bash-completion/completions/%s" % comp)    
+
+    for i in  ["cal", "chsh", "dmesg", "eject", "hd", "hexdump", "hwclock", "ionice", "look", "ncal", "nmcli", "newgrp", "makepkg", "renice", "rtcwake", "su"]:
+        rmfile("usr/share/bash-completion/completions/%s" % i)
+
        
        
