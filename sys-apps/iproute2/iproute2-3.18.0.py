@@ -10,7 +10,7 @@ options @ berkdb
 #TODO: add atm option
 
 depends = """
-runtime @ sys-libs/glibc sys-devel/bison sys-devel/flex >=sys-kernel/linux-2.6.27
+runtime @ sys-libs/glibc sys-devel/bison sys-devel/flex >=sys-kernel/linux-api-headers-2.6.27
 """
 
 opt_runtime = """

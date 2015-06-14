@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-build @ sys-kernel/linux
+build @ sys-kernel/linux-api-headers
         sys-libs/timezone-data
 """
 
