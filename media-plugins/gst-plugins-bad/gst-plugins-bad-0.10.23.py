@@ -19,6 +19,10 @@ def prepare():
     system("./autogen.sh")
 """
 def configure():
+    sed("-e '/Some compatibility/ s:*/::' \
+    -e '/const char/ i*/'            \
+    -i  ext/vp8/gstvp8utils.h")
+    
     conf('--disable-examples',
          '--disable-debug',
          '--with-package-name="GStreamer Bad Plugins (Hadron GNU/Linux)"',
