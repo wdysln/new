@@ -13,11 +13,10 @@ common @ media-libs/gstreamer:0 media-plugins/gst-plugins-base:0 sys-libs/glib
 opt_build = """
 orc @ dev-lang/orc
 """
-"""
+
 def prepare():
-    export("NOCONFIGURE", "1")
-    system("./autogen.sh")
-"""
+    patch(level = 1)
+
 def configure():
     conf("--disable-static \
 --disable-valgrind \
