@@ -9,20 +9,25 @@ arch @ ~x86_64
 standard_procedure = False
 
 
-Components = ["etcetera", "southamerica", "northamerica", "europe", "africa", "antarctica", \
-              "asia", "australasia", "backward", "pacificnew", "solar87", "solar88", "solar89", \
+timezones = ["etcetera", "southamerica", "northamerica", "europe", "africa", "antarctica", \
+              "asia", "australasia", "factory", "backward", "pacificnew", \
               "systemv" ]
 
-#ExtraDist = ["zone.tab", "iso3166.tab"]
-   
-
-
 def install():
-    copy("%s/yearistype.sh" % filesdir, " yearistype.sh")
-    system("zic -y ./yearistype.sh -d %s/usr/share/zoneinfo %s" % (install_dir ,Components))
-    system("zic -y ./yearistype.sh -d %s/usr/share/zoneinfo/posix %s"  % (install_dir ,Components))
-    system("zic -y ./yearistype.sh -d %s/usr/share/zoneinfo/right -L leapseconds %s" % (install_dir ,Components))
+    makedirs("/usr/share/zoneinfo/right")
+    makedirs("/usr/share/zoneinfo/posix")
+    cd("..")
     
-    system("zic -y ./yearistype -d %s/usr/share/zoneinfo -p America/New_York" % install_dir)
-    
-    
+    for tz in timezones:
+        cmd = "zic -L /dev/null -d %s/usr/share/zoneinfo -y ./yearistype.sh %s" %(install_dir, tz)
+        system(cmd)
+        part2 = "zic -L /dev/null -d %s/usr/share/zoneinfo/posix -y ./yearistype.sh %s" %(install_dir, tz)
+        system(part2)
+        part3 = "zic -L leapseconds -d %s/usr/share/zoneinfo/right -y ./yearistype.sh %s"%(install_dir, tz)
+        system(part3)
+
+        # Default DST # ln -sf /usr/share/zoneinfo/Asia/Calcutta localtime
+        system ("zic -d %s/usr/share/zoneinfo -p America/New_York" % install_dir)
+        
+        insfile("zone.tab", "/usr/share/zoneinfo/zone.tab")
+        insfile("iso3166.tab", "/usr/share/zoneinfo/iso3166.tab")

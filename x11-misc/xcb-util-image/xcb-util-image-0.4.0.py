@@ -8,7 +8,7 @@ arch @ ~x86_64
 
 depends = """
 runtime @ sys-libs/glibc x11-libs/libxcb
-build @ dev-util/gperf
+build @ dev-util/gperf x11-misc/xcb-util
 """
 def build():
     make("check")
