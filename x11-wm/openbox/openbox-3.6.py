@@ -2,7 +2,7 @@ metadata = """
 summary @ A window manager for the X11 windowing system
 homepage @ http://openbox.org/
 license @ GPL
-src_url @ http://openbox.org/dist/openbox/openbox-3.6.tar.gz
+src_url @ http://openbox.org/dist/openbox/$fullname.tar.gz
 arch @ ~x86_64
 options @ startup-notification nls static-libs session
 """
@@ -17,10 +17,10 @@ opt_runtime = """
 startup-notification @ x11-libs/startup-notification
 nls @ sys-devel/gettext
 """
-"""
+
 def prepare():
     patch(level=1) 
-"""
+
 def configure():
     conf("--with-x",
             config_enable("startup-notification"),
