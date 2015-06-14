@@ -3,7 +3,7 @@ summary @ A movie player for linux
 homepage @ http://www.mplayerhq.hu/ 
 license @ GPL 
 src_url @ ftp://ftp.mplayerhq.hu/MPlayer/releases/mplayer-checkout-snapshot.tar.bz2
-http://ffmpeg.org/releases/ffmpeg-2.2.4.tar.gz
+http://ffmpeg.org/releases/ffmpeg-2.5.tar.gz
 arch @ ~x86_64
 options @ bidi amr a52 theora cdparanoia dts encode lame x264 xvid faad mad schroedinger vpx mng X vdpau sdl vorbis
 """
