@@ -17,10 +17,10 @@ opt_runtime = """
 startup-notification @ x11-libs/startup-notification
 nls @ sys-devel/gettext
 """
-
+"""
 def prepare():
     patch(level=1) 
-
+"""
 def configure():
     conf("--with-x",
             config_enable("startup-notification"),
