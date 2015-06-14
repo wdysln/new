@@ -20,7 +20,7 @@ srcdir = "mplayer-checkout-2015-05-07"
 #srcdir = "mplayer-checkout-%s" % now.strftime("%Y-%m-%d")
 
 def prepare():
-    copytree("../ffmpeg-2.2.4", "ffmpeg")
+    copytree("../ffmpeg-2.5", "ffmpeg")
     
 def configure():
 	raw_configure(
