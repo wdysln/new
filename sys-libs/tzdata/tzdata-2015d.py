@@ -9,7 +9,7 @@ arch @ ~x86_64
 standard_procedure = False
 
 ZoneDir = "/usr/share/zoneinfo"
-TargetDir = "%s/%s" % (install_dir, ZoneDir)
+TargetDir = "%s/%s" % (install_dir , ZoneDir)
 
 RightDir = "%s/right" % TargetDir
 PosixDir = "%s/posix" % TargetDir
@@ -40,6 +40,6 @@ def install():
         part3 = "zic -L leapseconds -d %s -y \"%s/yearistype.sh\" %s" % (RightDir, get.workDIR(), tz)
         system (part3)
 
-    system ("zic -d %s -p Europe/Istanbul" % TargetDir)
+     system("zic -d %s -p Europe/Istanbul" % TargetDir)
     
     
