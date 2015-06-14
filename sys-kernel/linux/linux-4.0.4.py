@@ -7,7 +7,9 @@ arch @ ~x86_64
 options @ sources headers
 """
 
-
+depends = """
+build @ sys-devel/bc app-arch/cpio app-text/docbook-xsl-stylesheets app-text/xmlto sys-kernel/dracut
+"""
 
 standard_procedure = False
 
@@ -23,7 +25,7 @@ def build():
 
 def install():
     notify("Installing modules...")
-    make("INSTALL_MOD_PATH=%s/ DEPMOD=/bin/true modules_install mod-fw=" % install_dir)
+    make("INSTALL_MOD_PATH=%s modules_install" % install_dir)
     
   #  notify("Installing Libc headers...")
    # make("INSTALL_HDR_PATH=%s/usr headers_install" % install_dir)
@@ -86,3 +88,6 @@ def install():
     makesym("/%s" % headersDirectoryName, "/lib/modules/%s/build" % version)
     makesym("build", "/lib/modules/%s/source" % version)
 
+def post_install():
+    system("/sbin/depmod %s" % version)
+    system("dracut -N -f --kver %s" % version)
