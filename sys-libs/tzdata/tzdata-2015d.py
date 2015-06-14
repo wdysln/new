@@ -18,11 +18,10 @@ Components = ["etcetera", "southamerica", "northamerica", "europe", "africa", "a
 
 
 def install():
-    copy("%s/yearistype.sh" % filesdir, "yearistype.sh")
-    system("zic -y ./yearistype -d %s/usr/share/zoneinfo %s" % (install_dir ,Components))
-    system("zic -y ./yearistype -d %s/usr/share/zoneinfo/posix %s"  % (install_dir ,Components))
-    system("zic -y ./yearistype -d %s/usr/share/zoneinfo/right -L leapseconds %s" % (install_dir ,Components))
-    system("zic -y ./yearistype -d %s/usr/share/zoneinfo/right -L leapseconds %s" % (install_dir ,Components))
+    copy("%s/yearistype.sh" % filesdir, " yearistype.sh")
+    system("zic -y ./yearistype.sh -d %s/usr/share/zoneinfo %s" % (install_dir ,Components))
+    system("zic -y ./yearistype.sh -d %s/usr/share/zoneinfo/posix %s"  % (install_dir ,Components))
+    system("zic -y ./yearistype.sh -d %s/usr/share/zoneinfo/right -L leapseconds %s" % (install_dir ,Components))
     
     system("zic -y ./yearistype -d %s/usr/share/zoneinfo -p America/New_York" % install_dir)
     
