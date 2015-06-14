@@ -7,9 +7,6 @@ arch @ ~x86_64
 options @ sources headers
 """
 
-depends = """
-build @ sys-devel/bc app-arch/cpio app-text/docbook-xsl-stylesheets app-text/xmlto
-"""
 
 
 standard_procedure = False
@@ -63,7 +60,6 @@ def install():
 
     system(find_cmd)
 
-
     # Install remaining headers
     system("cp -a %s %s" % (" ".join(pruned), destination))
 
@@ -77,14 +73,15 @@ def install():
     system("rm -rf %s/lib/modules/%s/source" % (install_dir ,version))
     system("rm -rf %s/lib/modules/%s/build" % (install_dir ,version))
     
+  #      shelltools.system("(find arch -name include -type d -print | \
+   #                     xargs -n1 -i: find : -type f) | \
+    #                    cpio -pd --preserve-modification-time %s" % destination)
+
     
-
-    # Finally copy the include directories found in arch/
- #   system("'(find arch -name include -type d -print | \
-  #                      xargs -n1 -i: find : -type f)' | \
-   #                     cpio -pd --preserve-modification-time %s" % destination)
-  
-
+    cd("arch")
+    
+    system("find  -name include -type d -print  | xargs -n1 -i: find : -type f | cpio -pd --preserve-modification-time %s/arch" % destination)
+    
     # Settle the correct build symlink to this headers
     makesym("/%s" % headersDirectoryName, "/lib/modules/%s/build" % version)
     makesym("build", "/lib/modules/%s/source" % version)

@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-build @ sys-kernel/linux-api-headers
+build @ sys-kernel/linux
         sys-libs/timezone-data
 """
 defaultflags = "-O3 -g -fasynchronous-unwind-tables -mtune=generic -march=x86_64"

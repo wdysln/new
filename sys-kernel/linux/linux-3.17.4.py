@@ -10,7 +10,7 @@ options @ sources headers
 standard_procedure = False
 
 opt_runtime = """
-headers @ >=sys-kernel/linux-api-headers-3.17.2
+headers @ >=sys-kernel/linux-3.17.2
 """
 
 def configure():
