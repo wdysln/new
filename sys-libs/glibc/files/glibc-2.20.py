@@ -8,7 +8,7 @@ arch @ ~x86_64
 
 depends = """
 build @ sys-kernel/linux-api-headers
-        sys-libs/timezone-data
+        sys-libs/tzdata
 """
 defaultflags = "-O3 -g -fasynchronous-unwind-tables -mtune=generic -march=x86_64"
 
