@@ -13,10 +13,11 @@ common @ media-libs/gstreamer:0 media-plugins/gst-plugins-base:0 sys-libs/glib
 opt_build = """
 orc @ dev-lang/orc
 """
+"""
 def prepare():
     export("NOCONFIGURE", "1")
     system("./autogen.sh")
-
+"""
 def configure():
     conf('--disable-examples',
          '--disable-debug',
