@@ -10,7 +10,6 @@ depends = """
 build @ media-plugins/gst-plugins-bad:0 media-plugins/gst-plugins-base:0 media-plugins/gst-plugins-good:0 media-plugins/gst-plugins-bad:0
         media-plugins/gst-plugins-ugly:0 media-libs/gstreamer:0 media-sound/lame x11-libs/qt x11-libs/libnotify media-libs/taglib
 """
-srcdir ="tmp/sayonara-player-r57"
 
 get("main/cmake_utils")
 
