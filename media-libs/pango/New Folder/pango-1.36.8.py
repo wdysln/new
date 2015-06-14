@@ -14,7 +14,7 @@ build @ dev-util/pkg-config media-libs/libpng dev-libs/gobject-introspection x11
 
 
 def configure():
-    autoreconf("-fiv")
+    autoreconf("-fi")
     myopts = ""
     if opt("X"):
         myopts += "  --x-includes=/usr/include --x-libraries=/usr/lib "
