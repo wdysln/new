@@ -2,7 +2,7 @@ metadata = """
 summary @ XML to PO and back again
 homepage @ http://itstool.org/
 license @ GPL3
-src_url @ http://files.itstool.org/$name/$fullname/tar.bz2
+src_url @ http://files.itstool.org/$name/$fullname.tar.bz2
 arch @ ~x86_64
 """
 
