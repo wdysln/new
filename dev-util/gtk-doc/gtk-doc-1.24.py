@@ -9,7 +9,7 @@ arch @ ~x86_64
 depends = """
 common @ app-text/docbook-xsl-stylesheets
 runtime @ dev-lang/perl
-build @ dev-util/pkg-config app-text/docbook-xml-dtd
+build @ dev-util/pkg-config app-text/docbook-xml-dtd dev-util/itstool
 """
 
 def configure():
