@@ -1,8 +1,8 @@
 metadata = """
-summary @ Audio player for GNU/Linux systems with X11
-homepage @ http://deadbeef.sourceforge.net
-license @ GPL2
-src_url @ https://github.com/Alexey-Yakovenko/deadbeef/archive/0.6.2.tar.gz
+summary @ Linux music player written in C++. It supports all common audio files (like mp3, wav, flac, ogg...). The main focus is on managing your music library.
+homepage @ http://sayonara-player.com
+license @ GPL3
+src_url @ ftp://sayonara-player.com/sayonara/sayonara-player-r57.tar.gz
 arch @ ~x86_64
 """
 
