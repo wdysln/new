@@ -10,8 +10,3 @@ depends = """
 build @ dev-libs/libxml2
 """
 
-def configure():
-    autoreconf("-fi")
-
-def install():
-    raw_install("DESTDIR=%s" % install_dir)
