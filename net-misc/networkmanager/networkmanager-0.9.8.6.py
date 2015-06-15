@@ -13,6 +13,7 @@ common @ >=sys-apps/dbus-1.2 dev-libs/dbus-glib net-wireless/wireless_tools sys-
     >=sys-libs/glib-2.30
 
 build @ dev-util/pkg-config dev-util/intltool sys-devel/gettext dev-libs/libgcrypt net-libs/gnutls dev-libs/nss
+        net-misc/networkmanager
 """
 
 
@@ -29,13 +30,22 @@ def configure():
     --localstatedir=/var \
     --with-crypto=nss \
     --with-iptables=/usr/sbin/iptables \
+    --with-dnsmasq=/usr/bin/dnsmasq \
+    --with-systemdsystemunitdir=/usr/lib/systemd/system \
     --disable-static \
     --disable-ppp \
-    --with-resolvconf=/etc/resolv.default.conf \
     --enable-more-warnings=no \
     --disable-wimax \
+    --with-udev-dir=/usr/lib/udev \
+    --with-session-tracking=systemd \
+    --enable-modify-system \
     --enable-doc")
-
+    
+    
+def build():
+    make("check")
+    
+    
 def install():
     installd()
     insfile("%s/NetworkManager.conf" % filesdir, "/etc/NetworkManager/")
