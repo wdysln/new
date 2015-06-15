@@ -33,6 +33,7 @@ def configure():
                          --enable-modify-system \
                          --enable-concheck \
                          --without-netconfig \
+                         --disable-ppp \
                          --with-libsoup=yes \
                          --with-session-tracking=consolekit \
                          --with-suspend-resume=upower \
