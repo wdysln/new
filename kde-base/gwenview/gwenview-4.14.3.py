@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ kde-base/kdebase-libs kde-base/libkipi
+runtime @ kde-base/kdelibs kde-base/libkipi
 build @ dev-util/cmake dev-util/automoc4
 """
 
