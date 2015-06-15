@@ -2,7 +2,7 @@ metadata = """
 summary @ An interface to use kipi-plugins from a KDE application
 homepage @ http://kde.org/
 license @ GPL LGPL FDL 
-src_url @ http://download.kde.org/stable/$version/src/$fullname.tar.bz2
+src_url @ http://download.kde.org/stable/$version/src/$fullname.tar.xz
 arch @ ~x86_64
 """
 
