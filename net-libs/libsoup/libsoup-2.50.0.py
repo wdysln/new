@@ -2,7 +2,7 @@ metadata = """
 summary @ An HTTP library implementation in C
 homepage @ http://live.gnome.org/LibSoup
 license @ LGPL-2
-src_url @ ftp://ftp.gnome.org/pub/gnome/sources/libsoup/2.40/$fullname.tar.xz
+src_url @ ftp://ftp.gnome.org/pub/gnome/sources/libsoup/2.50/$fullname.tar.xz
 arch @ ~x86_64
 options @ introspection ssl
 """

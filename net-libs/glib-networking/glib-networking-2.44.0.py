@@ -2,7 +2,7 @@ metadata = """
 summary @ Network-related giomodules for glib
 homepage @ http://www.gtk.org/
 license @ GPL-2
-src_url @ ftp://ftp.gnome.org/pub/gnome/sources/$name/2.34/$fullname.tar.xz
+src_url @ ftp://ftp.gnome.org/pub/gnome/sources/$name/2.44/$fullname.tar.xz
 arch @ ~x86_64
 options @ ssl gnome
 """
