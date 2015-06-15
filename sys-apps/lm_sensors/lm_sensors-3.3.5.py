@@ -9,12 +9,9 @@ arch @ ~x86_64
 
 depends = """
 common @ dev-lang/perl
-build @ sys-apps/sed sys-devel/bison sys-devel/flex
+build @ sys-apps/sed sys-devel/bison sys-devel/flex net-analyzer/rrdtool
 """
 
-opt_common = """
-sensord @ net-analyzer/rrdtool
-"""
 
 def prepare():
     notify("%s requires CONFIG_HWMON to be enabled for use." % name)
