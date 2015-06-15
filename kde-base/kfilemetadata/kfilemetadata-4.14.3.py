@@ -8,7 +8,7 @@ arch @ ~x86_64
 
 depends = """
 runtime @ kde-base/kde-workspace kde-base/kdelibs
-build @ dev-util/cmake media-libs/taglib media-gfx/exiv2
+build @ dev-util/cmake media-libs/taglib media-gfx/exiv2 media-video/ffmpeg
 """
 
 get("main/kde4_utils")
