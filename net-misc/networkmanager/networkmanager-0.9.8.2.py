@@ -28,12 +28,10 @@ def configure():
     --with-crypto=nss \
     --with-iptables=/usr/sbin/iptables \
     --with-dnsmasq=/usr/bin/dnsmasq \
-    --with-systemdsystemunitdir=/usr/lib/systemd/system \
     --disable-static \
     --disable-ppp \
     --enable-more-warnings=no \
     --disable-wimax \
-    --with-udev-dir=/usr/lib/udev \
     --enable-modify-system \
     --enable-doc")
     
