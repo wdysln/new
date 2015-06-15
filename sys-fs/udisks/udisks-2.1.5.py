@@ -2,7 +2,7 @@ metadata = """
 summary @ Disk Management Service
 homepage @ http://www.freedesktop.org/wiki/Software/udisks
 license @ GPL
-src_url @ http://udisks.freedesktop.org/releases/udisks-2.1.3.tar.bz2
+src_url @ http://udisks.freedesktop.org/releases/udisks-2.1.5.tar.bz2
 arch @ ~x86_64
 slot @ 2
 """
