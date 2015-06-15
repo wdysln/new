@@ -11,4 +11,4 @@ common @ >=kde-base/kdelibs-4.14.3
 build @ dev-util/cmake dev-util/automoc4
 """
 
-get("main/cmake_utils")
+get("main/kde4_utils")
