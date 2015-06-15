@@ -8,7 +8,7 @@ arch @ ~x86_64
 
 depends = """
 runtime @ kde-base/kdelibs >=kde-base/kdepimlibs-4.14.3 >=kde-base/kdepim-runtime-4.14.3
-build @ dev-util/cmake dev-util/automoc4 kde-base/kfilemetadata kde-base/libkdcraw
+build @ dev-util/cmake dev-util/automoc4 kde-base/kfilemetadata kde-base/libkdcraw dev-libs/Xapian
 """
 
 get("main/kde4_utils", "main/fdo_mime", "main/extract_utils")
