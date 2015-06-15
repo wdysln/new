@@ -2,7 +2,7 @@ metadata ="""
 summary @ ENCA detects the character coding of a file and converts it if desired
 homepage @ http://gitorious.org/enca
 license @ GPL-2
-src_url @ http://dl.cihar.com/$name/$name-$version.tar.bz2
+src_url @ http://dl.cihar.com/$name/$name-$version.tar.xz
 options @ doc recode
 arch @ ~x86_64
 """
