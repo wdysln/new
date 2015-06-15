@@ -34,7 +34,6 @@ def configure():
     --enable-more-warnings=no \
     --disable-wimax \
     --with-udev-dir=/usr/lib/udev \
-    --with-session-tracking=systemd \
     --enable-modify-system \
     --enable-doc")
     
