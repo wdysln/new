@@ -1,8 +1,8 @@
 metadata = """
 summary @ Userspace driver for NTFS read/write support
 homepage @ http://www.tuxera.com/community/ntfs-3g-download
-license @ GPL2 + LGPL2
-src_url @ http://tuxera.com/opensource/$name_ntfsprogs-$version.tgz
+license @ GPL2 
+src_url @ http://tuxera.com/opensource/ntfs-3g_ntfsprogs-2015.3.14.tgz
 arch @ ~x86_64
 """
 
