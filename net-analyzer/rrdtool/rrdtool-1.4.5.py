@@ -17,7 +17,7 @@ lua @ dev-lang/lua
 perl @ dev-lang/perl
 ruby @ dev-lang/ruby
 tcl @ dev-lang/tcl
-python @ dev-lang/python
+python @ dev-lang/python:2.7
 """
 
 def prepare():
