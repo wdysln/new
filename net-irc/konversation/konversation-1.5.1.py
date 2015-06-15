@@ -2,7 +2,7 @@ metadata = """
 summary @ Archiving tool
 homepage @ http://kde.org/
 license @ GPL LGPL FDL 
-src_url @ http://download.kde.org/stable/$version/src/$fullname.tar.xz
+src_url @ http://download.kde.org/stable/$name/$version/src/$fullname.tar.xz
 arch @ ~x86_64
 """
 
