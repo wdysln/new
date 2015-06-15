@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ >=kde-base/kde-workspace-4.14.3
+runtime @ >=kde-base/kde-workspace-4.11.14
 build @ dev-util/cmake
 """
 
