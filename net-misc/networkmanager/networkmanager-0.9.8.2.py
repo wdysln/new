@@ -20,6 +20,7 @@ def prepare():
     patch(level=1)
 
 def configure():
+    export("HOME", build_dir)
     autoreconf("-fi")
     system("intltoolize --force --copy --automake")
     raw_configure("--prefix=/usr \
@@ -38,6 +39,7 @@ def configure():
     
     
 def install():
+    export("HOME", build_dir)
     installd()
     insfile("%s/NetworkManager.conf" % filesdir, "/etc/NetworkManager/")
     insfile("%s/NetworkManager.confd" % filesdir, "/etc/conf.d/NetworkManager/")
