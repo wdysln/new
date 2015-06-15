@@ -12,7 +12,7 @@ common @ sys-devel/flex
 """
 
 opt_runtime = """
-libnl @ dev-libs/libnl:1.1
+libnl @ dev-libs/libnl:3.0
 """
 def configure():
     conf(
