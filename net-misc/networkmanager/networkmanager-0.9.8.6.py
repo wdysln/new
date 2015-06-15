@@ -38,9 +38,6 @@ def configure():
     --enable-doc")
     
     
-def build():
-    make("check")
-    
     
 def install():
     installd()
