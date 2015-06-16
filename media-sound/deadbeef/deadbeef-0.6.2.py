@@ -13,7 +13,7 @@ runtime @ x11-libs/gtk+:2 dev-util/desktop-file-utils
         media-plugins/gst-plugins-base:0 media-plugins/gst-plugins-good:0 media-plugins/gst-plugins-bad:0
         media-plugins/gst-plugins-ugly:0 media-libs/gstreamer:0 media-sound/lame x11-libs/libnotify media-libs/taglib        
 """
-srcdir ="deadbeef-master"
+srcdir = "deadbeef-master"
 def configure():
     system("./autogen.sh")
     conf("--prefix=/usr --enable-gtk3=no --enable-staticlink=no")
