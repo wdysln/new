@@ -2,7 +2,7 @@ metadata = """
 summary @ A collection of tools to configure IEEE 802.11 wireless LAN cards
 homepage @ http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html
 license @ GPL
-src_url @ http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/$name.$version.tar.gz
+src_url @ http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/wireless_tools.30.pre9.tar.gz
 arch @ ~x86_64
 """
 
