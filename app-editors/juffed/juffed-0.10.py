@@ -9,5 +9,5 @@ arch @ ~x86_64
 depends = """
 runtime @ x11-libs/qt x11-libs/QScintilla
 """
-
+srcdir ="juffed-master"
 get("main/cmake_utils")
