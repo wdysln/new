@@ -12,7 +12,9 @@ common @ >=sys-libs/glib-2.26 >=dev-libs/dbus-glib-0.88 >=gnome-base/libgnome-ke
 app-i18n/iso-codes >=net-misc/networkmanager-0.9.6
 """
 
-
-
-
-
+def build():
+    export("HOME", build_dir)
+    
+def install():
+    export("HOME", build_dir)
+    raw_install("INSTALL_ROOT=%s" % install_dir)
