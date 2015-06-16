@@ -12,6 +12,8 @@ runtime @ x11-libs/qt media-libs/phonon media-libs/gstreamer:0 media-plugins/gst
 build @ dev-util/cmake dev-util/automoc4
 """
 
-get("main/kde4_utils")
+get("main/cmake_utils")
+
+
 
 
