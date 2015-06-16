@@ -9,7 +9,7 @@ arch @ ~x86_64
 depends = """
 runtime @ x11-libs/qt
 """
-srcdir ="QScintilla-gpl-%s" % $version
+srcdir ="QScintilla-gpl-%s" % version
 standard_procedure = False
 
 
