@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ x11-libs/qt
+runtime @ x11-libs/qt app-admin/chrpath
 """
 srcdir ="QScintilla-gpl-%s" % version
 standard_procedure = False
