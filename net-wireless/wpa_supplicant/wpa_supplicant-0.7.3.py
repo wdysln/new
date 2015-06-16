@@ -8,7 +8,7 @@ options @ dbus debug eap-sim readline gnutls
 """
 
 depends = """
-runtime @ dev-libs/openssl sys-apps/dbus sys-libs/readline dev-libs/libnl:3.0
+runtime @ dev-libs/openssl sys-apps/dbus sys-libs/readline dev-libs/libnl:1.1
 """
 
 opt_runtime = """
