@@ -22,6 +22,6 @@ def build():
 def install():
     export("HOME", build_dir)
     cd("Qt4Qt5")
-    raw_install("DESTDIR=%s" % install_dir)
+    raw_install("INSTALL_ROOT=%s" % install_dir)
 
    
