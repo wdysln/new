@@ -10,7 +10,6 @@ depends = """
 runtime @ >=sys-libs/glibc
 """
 
-
 def configure():
     conf("--disable-gcov", config_enable("introspection"))
 
