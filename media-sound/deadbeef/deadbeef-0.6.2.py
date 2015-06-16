@@ -9,7 +9,7 @@ arch @ ~x86_64
 depends = """
 runtime @ x11-libs/gtk+:2 dev-util/desktop-file-utils
         x11-themes/hicolor-icon-theme media-libs/pango x11-libs/cairo x11-libs/gdk-pixbuf media-libs/alsa-lib
-        media-libs/imlib2 media-libs/libvorbis media-libs/libogg media-video/ffmpeg dev-libs/jannson
+        media-libs/imlib2 media-libs/libvorbis media-libs/libogg media-video/ffmpeg dev-libs/jansson
         media-plugins/gst-plugins-base:0 media-plugins/gst-plugins-good:0 media-plugins/gst-plugins-bad:0
         media-plugins/gst-plugins-ugly:0 media-libs/gstreamer:0 media-sound/lame x11-libs/libnotify media-libs/taglib        
 """
