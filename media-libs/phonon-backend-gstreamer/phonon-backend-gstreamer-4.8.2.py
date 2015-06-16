@@ -8,7 +8,7 @@ options @ mplayer vlc
 """
 
 depends = """
-runtime @ x11-libs/qt media-libs/phonon media-libs/gstreamer:0 media-plugins/gst-plugins-base:0
+runtime @ x11-libs/qt media-libs/phonon media-libs/gstreamer:1 media-plugins/gst-plugins-base:1
 build @ dev-util/cmake dev-util/automoc4
 """
 
