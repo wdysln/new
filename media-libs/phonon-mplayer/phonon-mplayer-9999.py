@@ -7,7 +7,7 @@ arch @ ~x86_64
 
 depends = """
 common @ media-libs/phonon media-video/mplayer
-build @ dev-lang/python dev-vcs/git
+build @ dev-lang/python:2.7 dev-vcs/git
 """
 
 standard_procedure = False
