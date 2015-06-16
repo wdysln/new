@@ -11,4 +11,14 @@ runtime @ sys-libs/glibc dev-libs/openssl
           sys-fs/sysfsutils
 """
 
+def configure():
+    export("HOME", build_dir)
+    conf("--disable-static")
+    
+def build():
+    export("HOME", build_dir)
+    make()
 
+def install():
+    export("HOME", build_dir)
+    raw_install("DESTDIR=%s" % install_dir)

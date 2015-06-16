@@ -10,7 +10,7 @@ options @ gnutls dhcpcd introspection
 depends = """
 common @ >=sys-apps/dbus-1.2 dev-libs/dbus-glib net-wireless/wireless_tools sys-apps/systemd
     sys-auth/polkit dev-libs/libnl:3.0 net-wireless/wpa_supplicant[dbus] net-libs/libsoup
-    >=sys-libs/glib-2.30 dev-libs/nss
+    >=sys-libs/glib-2.30 dev-libs/nss net-misc/iptables net-misc/libndp
 """
 
 
