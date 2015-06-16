@@ -21,7 +21,7 @@ opt_common = """
 introspection @ dev-libs/gobject-introspection
 """
 def prepare():
-    patch(level=1)
+   # patch(level=1)
     export("AUTOPOINT", "true")
     autoreconf("-vfi")
     
