@@ -6,13 +6,7 @@ src_url @ http://www.digip.org/$name/releases/$fullname.tar.bz2
 arch @ ~x86_64
 """
 
-depends = """
-runtime @ >=sys-libs/glibc
-"""
 
 def configure():
     conf("--disable-gcov", config_enable("introspection"))
 
-def build():
-    export("HOME", build_dir)
-    make()
