@@ -2,7 +2,7 @@ metadata = """
 summary @ Gstreamer libav Plugin
 homepage @ http://gstreamer.freedesktop.org/
 license @ LGPL
-src_url @ http://gstreamer.freedesktop.org/src/$name/$fullname.bzip2
+src_url @ http://gstreamer.freedesktop.org/src/$name/$fullname.tar.xz
 arch @ ~x86_64
 """
 
