@@ -2,7 +2,7 @@ metadata = """
 summary @ GStreamer phonon backend
 homepage @ http://phonon.kde.org/
 license @ LGPL
-src_url @ http://download.kde.org/stable/phonon/$name/$version/src/$fullname.tar.xz    
+src_url @ http://download.kde.org/stable/phonon/phonon-backend-gstreamer/4.8.0/phonon-backend-gstreamer-4.8.0.tar.xz
 arch @ ~x86_64
 options @ mplayer vlc
 """
