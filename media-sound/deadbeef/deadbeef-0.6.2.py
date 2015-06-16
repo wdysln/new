@@ -18,7 +18,7 @@ srcdir = "deadbeef-master"
 def configure():
     system("/bin/chmod u+x autogen.sh")
     system("./autogen.sh")
-    conf("--prefix=/usr --enable-gtk3=no --enable-staticlink=no --without-jansson")
+    conf("--prefix=/usr --enable-gtk3=no --enable-staticlink=no --without-jansson --enable-jansson=no")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
