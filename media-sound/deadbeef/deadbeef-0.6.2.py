@@ -2,7 +2,7 @@ metadata = """
 summary @ Audio player for GNU/Linux systems with X11
 homepage @ http://deadbeef.sourceforge.net
 license @ GPL2
-src_url @ https://github.com/Alexey-Yakovenko/deadbeef/archive/0.6.2.tar.gz
+src_url @ https://github.com/Alexey-Yakovenko/deadbeef/archive/master.zip
 arch @ ~x86_64
 """
 
