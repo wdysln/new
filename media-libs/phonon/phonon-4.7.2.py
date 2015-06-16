@@ -23,8 +23,6 @@ get("main/cmake_utils")
 def configure():
     cmake_conf("-DCMAKE_BUILD_TYPE=Release \
                           -DCMAKE_INSTALL_PREFIX=/usr \
-                          -DPHONON_INSTALL_QT_EXTENSIONS_INTO_SYSTEM_QT=ON \
-                          -DQT_QMAKE_EXECUTABLE=/usr/bin/qmake \
                           -DCMAKE_INSTALL_LIBDIR=lib \
                           -DCMAKE_SKIP_RPATH:BOOL=YES")
 
