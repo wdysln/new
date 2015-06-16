@@ -8,7 +8,7 @@ arch @ ~x86_64
 
 depends = """
 common @ >=sys-libs/glib-2.26 >=dev-libs/dbus-glib-0.88 >=gnome-base/libgnome-keyring-2.20 
->=sys-apps/dbus-1.4.1 >=sys-auth/polkit-0.96-r1 >=x11-libs/gtk+-3:3 >=x11-libs/libnotify-0.7.0 
+>=sys-apps/dbus-1.4.1 >=sys-auth/polkit-0.96-r1 >=x11-libs/gtk+-2.24:2 >=x11-libs/libnotify-0.7.0 
 app-i18n/iso-codes >=net-misc/networkmanager-0.9.6 gnome-extra/libsecret
 """
 
