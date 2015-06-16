@@ -2,14 +2,14 @@ metadata = """
 summary @ Qt4 port of Scintilla
 homepage @ http://www.riverbankcomputing.co.uk/qscintilla
 license @ GPL2 + GPL3
-src_url @ http://downloads.sourceforge.net/project/pyqt/QScintilla2/QScintilla-2.8.4/QScintilla-gpl-2.8.4.tar.gz
+src_url @ http://downloads.sourceforge.net/pyqt/$name-gpl-$version.tar.gz
 arch @ ~x86_64
 """
 
 depends = """
 runtime @ x11-libs/qt
 """
-srcdir ="QScintilla-gpl-2.8.4"
+srcdir ="QScintilla-gpl-%s" % $version
 standard_procedure = False
 
 
