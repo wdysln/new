@@ -15,6 +15,7 @@ runtime @ x11-libs/gtk+:2 dev-util/desktop-file-utils
 """
 srcdir = "deadbeef-master"
 def configure():
+    system("/bin/chmod u+x autogen.sh")
     system("./autogen.sh")
     conf("--prefix=/usr --enable-gtk3=no --enable-staticlink=no")
 
