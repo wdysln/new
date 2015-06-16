@@ -2,7 +2,7 @@ metadata = """
 summary @ Linux music player written in C++. It supports all common audio files (like mp3, wav, flac, ogg...). The main focus is on managing your music library.
 homepage @ http://sayonara-player.com
 license @ GPL3
-src_url @ https://github.com/clementine-player/Clementine/archive/1.2.3.tar.gz
+src_url @ https://github.com/clementine-player/Clementine/archive/master.zip
 arch @ ~x86_64
 """
 
@@ -16,4 +16,13 @@ get("main/cmake_utils")
 def prepare():
     patch(level=1)
 
+def configure():
+    cmake_conf(" -DBUILD_WERROR=OFF \
+                 -DBUNDLE_PROJECTM_PRESETS=OFF \
+                  -DUSE_BUILTIN_TAGLIB=OFF \
+                  -DENABLE_BREAKPAD=OFF \
+                  -DENABLE_GIO=ON \
+                   -DUSE_SYSTEM_QXT=ON \
+                   -DUSE_SYSTEM_GMOCK=ON")
 
+                         
