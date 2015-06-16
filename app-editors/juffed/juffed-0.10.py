@@ -10,4 +10,4 @@ depends = """
 runtime @ x11-libs/qt x11-libs/QScintilla
 """
 
-get("main/kde4_utils")
+get("main/cmake_utils")
