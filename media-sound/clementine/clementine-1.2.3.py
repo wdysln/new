@@ -13,6 +13,7 @@ build @ media-plugins/gst-plugins-bad:0 media-plugins/gst-plugins-base:0 media-p
 
 get("main/cmake_utils")
 
+srcdir = "Clementine-master"
 
 def configure():
     cmake_conf(" -DBUILD_WERROR=OFF \
