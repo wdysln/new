@@ -2,7 +2,7 @@ metadata = """
 summary @ The libsecret package contains a GObject based library for accessing the Secret Service API. 
 homepage @ https://wiki.gnome.org/Projects/Libsecret
 license @ LGPL
-src_url @ http://ftp.gnome.org/pub/gnome/sources/libsecret/0.18/libsecret-0.18.2.tar.xz
+src_url @ http://ftp.gnome.org/pub/gnome/sources/libsecret/0.18/libsecret-0.18.tar.xz
 arch @ ~x86_64
 """
 
