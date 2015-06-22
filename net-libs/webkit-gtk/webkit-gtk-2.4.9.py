@@ -16,7 +16,7 @@ spell @ >=app-text/enchant-0.22
 webgl @ media-libs/mesa
 """
 
-srcdir = "webkitgtk-2.4.9" % version
+srcdir = "webkitgtk-%" % version
 
 def prepare():
     sed(""" -i 's/-O2//g' configure.ac""")
