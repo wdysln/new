@@ -1,7 +1,7 @@
 metadata = """
 summary @ An object oriented language for quick and easy programming
 homepage @ http://www.ruby-lang.org/en
-src_url @ ftp://ftp.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0.tar.gz
+src_url @ ftp://ftp.ruby-lang.org/pub/ruby/2.1/ruby-2.1.5.tar.gz
 license @ GPL-2
 options @ berkdb gdbm ssl ncurses readline doc yaml
 arch @ ~x86_64
