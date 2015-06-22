@@ -13,7 +13,7 @@ opt_runtime = """
 gstreamer @ media-libs/gstreamer >=media-libs/gst-plugins-base-0.10.30
 introspection @  >=dev-libs/gobject-introspection-0.9.5 >=x11-libs/gtk+-3.0[introspection] >=net-libs/libsoup-2.33.6[introspection] || >=x11-libs/gtk+-3.0 >=net-libs/libsoup-2.33.6
 spell @ >=app-text/enchant-0.22
-webgl @ media-libs/mesa
+webgl @ media-libs/mesa media-libs/libwebp
 """
 
 srcdir = "webkitgtk-%s" % version
@@ -33,6 +33,8 @@ def configure():
     config_enable("gstreamer", "video"),
     config_enable("jit"),
     config_enable("webgl"),
+    config_enable("egl"),
+    config_enable("geoloc", "geolocation"),
     "--with-font-backend=freetype",
     "--enable-web-sockets",
     "--with-gtk=2.0",
