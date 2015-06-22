@@ -9,7 +9,7 @@ slot @ 2
 """
 
 depends = """
-common @ sys-libs/zlib dev-libs/libffi
+common @ sys-libs/zlib dev-libs/libffi dev-libs/libyaml
 """
 
 opt_common = """
