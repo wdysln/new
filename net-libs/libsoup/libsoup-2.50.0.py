@@ -8,13 +8,10 @@ options @ introspection ssl
 """
 
 depends = """
-common @ dev-libs/libxml2 sys-libs/glib
-build @ dev-util/gtk-doc dev-util/intltool
+common @ dev-libs/libxml2 sys-libs/glib 
+build @ dev-util/gtk-doc dev-util/intltool net-libs/glib-networking
 """
 
-opt_common = """
-introspection @ net-libs/glib-networking
-"""
 
 def configure():
     conf("--disable-static")
