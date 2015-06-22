@@ -11,8 +11,6 @@ runtime @ sys-libs/glibc sys-libs/zlib dev-lang/perl
 build @ app-text/hunspell sys-apps/gawk
 """
 
-def prepare():
-    patch(level=1)
 
 def configure():
     conf("--enable-linginfo", 
