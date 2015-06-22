@@ -34,8 +34,9 @@ def configure():
     config_enable("jit"),
     config_enable("webgl"),
     config_enable("egl"),
-    config_enable("geoloc", "geolocation"),
     "--with-font-backend=freetype",
+    "--disable-geoloc",
+    "--disable-geolocation",
     "--enable-web-sockets",
     "--with-gtk=2.0",
     "--disable-webkit3")
