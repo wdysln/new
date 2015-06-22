@@ -1,9 +1,3 @@
-blame = """
-alias @ purak
-packager @ Burak Sezer <purak{et}hadronproject.org>
-bugs_to @ toolchain{et}hadronproject.org
-"""
-
 metadata = """
 summary @ Hardware (PCI, USB, OUI, IAB) IDs databases
 homepage @ https://github.com/gentoo/hwids
