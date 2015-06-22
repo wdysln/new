@@ -2,7 +2,7 @@ metadata = """
 summary @ Lightweight, GTK2-based advanced audio player focused on audio quality
 homepage @ http://audacious-media-player.org/
 license @ GPL3
-src_url @ http://pkgs.fedoraproject.org/repo/pkgs/audacious/audacious-3.2.4.tar.bz2/7d1cabdaf5188abb4deddf628535a955/audacious-3.2.4.tar.bz2
+src_url @ http://distfiles.audacious-media-player.org/audacious-3.6.2.tar.bz2
 arch @ ~x86_64
 options @ altivec chardet nls session sse2
 """
