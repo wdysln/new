@@ -7,13 +7,6 @@ arch @ ~x86_64
 options @ introspection debug gstreamer jit spell webgl coverage
 """
 
-depends = """
-runtime @ dev-libs/libxml2 dev-libs/libxslt media-libs/jpeg >=media-libs/libpng-1.4 
->=x11-libs/cairo-1.10 >=sys-libs/glib-2.27.90 >=dev-libs/icu-3.8.1-r1 
-dev-db/sqlite >=media-libs/pango-1.12 x11-libs/libXrender
-build @ >=sys-devel/flex-2.5.33 sys-devel/gettext  dev-util/gperf
-dev-util/pkg-config
-"""
 #build @  dev-util/gtk-doc-am
 
 opt_runtime = """
