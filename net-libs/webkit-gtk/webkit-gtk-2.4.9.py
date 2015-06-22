@@ -2,7 +2,7 @@ metadata = """
 summary @ Open source web browser engine
 homepage @ http://www.webkitgtk.org/
 license @ LGPL-2 LGPL-2.1 BSD
-src_url @ http://www.webkitgtk.org/webkit-$version.tar.gz
+src_url @ http://webkitgtk.org/releases/webkit-$version.tar.xz
 arch @ ~x86_64
 options @ introspection debug gstreamer jit spell webgl coverage
 """
