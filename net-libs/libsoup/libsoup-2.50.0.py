@@ -17,12 +17,8 @@ introspection @ net-libs/glib-networking
 """
 
 def configure():
-    conf("--disable-static",
-            "--disable-tls-check",
-            "--without-gnome",
-            "--without-apache-httpd",
-            config_enable("introspection"))
-
+    conf("--disable-static")
+    
 def build():
     export("HOME", build_dir)
     make()
