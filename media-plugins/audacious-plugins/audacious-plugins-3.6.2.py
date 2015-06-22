@@ -44,7 +44,7 @@ def configure():
             config_enable("cdda", "cdaudio"),
             config_enable("cue"),
             config_with("ffmpeg", "ffaudio"),
-            config_with("flac", "flacng"),
+            config_enable("flac", "flacng"),
             config_enable("flac", "filewriter_flac"),
             config_enable("ipv6"),
             config_enable("gnome", "gnomeshortcuts"),
