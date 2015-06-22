@@ -39,7 +39,7 @@ def configure():
     "--disable-geolocation",
     "--enable-web-sockets",
     "--with-gtk=2.0",
-    "--disable-webkit3")
+    "--disable-webkit2")
 
 def build():
     export("HOME", build_dir)
