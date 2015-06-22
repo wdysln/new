@@ -8,14 +8,20 @@ options @ introspection ssl
 """
 
 depends = """
-common @ dev-libs/libxml2 sys-libs/glib 
-build @ dev-util/gtk-doc dev-util/intltool net-libs/glib-networking
+common @ dev-libs/libxml2 sys-libs/glib
+build @ dev-util/gtk-doc dev-util/intltool
 """
 
+opt_common = """
+introspection @ net-libs/glib-networking
+"""
 
 def configure():
-    conf("--disable-static")
-    
+    conf("--disable-static",
+            "--disable-tls-check",
+            "--without-apache-httpd")
+
+
 def build():
     export("HOME", build_dir)
     make()
