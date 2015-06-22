@@ -1,7 +1,7 @@
 metadata = """
 summary @ An object oriented language for quick and easy programming
 homepage @ http://www.ruby-lang.org/en
-src_url @ ftp://ftp.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0.tar.gz
+src_url @ ftp://ftp.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.xz
 license @ GPL-2
 options @ berkdb gdbm ssl ncurses readline doc yaml
 arch @ ~x86_64
@@ -9,7 +9,7 @@ slot @ 2
 """
 
 depends = """
-common @ sys-libs/zlib dev-libs/libffi
+common @ sys-libs/zlib dev-libs/libffi dev-libs/libyaml
 """
 
 opt_common = """
@@ -21,7 +21,7 @@ readline @ sys-libs/readline
 yaml @ dev-libs/libyaml
 """
 
-srcdir = "ruby-2.0.0-p0"
+#srcdir = "ruby-2.0.0-p0"
 
 # TODO: We need a mechanism for handling different ruby versions. 
 # Like 1.9, 1.8 and 2.0. So these versions of ruby can co-exist in Hadron
