@@ -18,8 +18,8 @@ def configure():
           -DUSE_APIDOCS=ON \
           -DUSE_GRANITE=ON \
           -DUSE_ZEITGEIST=ON \
-         -DCMAKE_SKIP_RPATH=ON \    
-         -DCMAKE_SKIP_INSTALL_RPATH=ON")
+          -DCMAKE_SKIP_RPATH=ON \    
+          -DCMAKE_SKIP_INSTALL_RPATH=ON")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
