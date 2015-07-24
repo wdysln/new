@@ -2,7 +2,7 @@ metadata = """
 summary @ The CUPS Printing System
 homepage @ http://www.cups.org/
 license @ GPL
-src_url @ ftp://ftp.easysw.com/pub/cups/$version/$fullname-source.tar.bz2
+src_url @ http://www.cups.org/software/2.0.3/cups-2.0.3-source.tar.bz2
 arch @ ~x86_64
 options @ ssl gnutls dbus jpeg pam perl png acl tiff usb X threads debug static-libs
 """
