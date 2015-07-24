@@ -7,17 +7,19 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ app-arch/bzip2 sys-libs/zlib dev-libs/openssl sys-libs/gpm
+runtime @ app-arch/bzip2 sys-libs/zlib dev-libs/openssl 
 build @ gnome-base/librsvg net-libs/libsoup
 """
 
-srcdir = "links-2.3pre2"
+get("main/cmake_utils")
 
 def configure():
-    conf("--enable-javascript",
-            "--disable-graphics",
-            "--without-x",
-            "--without-fb")
+    conf("-DUSE_GTK3=OFF \
+          -DUSE_APIDOCS=ON \
+          -DUSE_GRANITE=ON \
+          -DUSE_ZEITGEIST=ON \
+         -DCMAKE_SKIP_RPATH=ON \    
+         -DCMAKE_SKIP_INSTALL_RPATH=ON")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
