@@ -13,6 +13,7 @@ build @ gnome-base/librsvg net-libs/libsoup
 
 get("main/cmake_utils")
 
+"""
 def configure():
     conf("-DUSE_GTK3=OFF \
           -DUSE_APIDOCS=ON \
@@ -23,3 +24,4 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
+"""
