@@ -8,7 +8,7 @@ arch @ ~x86_64
 
 standard_procedure = False
 
-#srcdir = "zip30"
+srcdir = "unrar"
 
 def build():
     make()
