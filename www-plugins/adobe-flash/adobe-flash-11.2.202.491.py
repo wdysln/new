@@ -2,7 +2,7 @@ metadata = """
 summary @ Adobe Flash Player
 homepage @ http://get.adobe.com/flashplayer
 license @ AdobeFlash-10.3 
-src_url @ http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.460/install_flash_player_11_linux.x86_64.tar.gz
+src_url @ http://fpdownload.macromedia.com/get/flashplayer/pdc/$version/install_flash_player_11_linux.x86_64.tar.gz
 http://www.adobe.com/products/eulas/pdfs/PlatformClients_PC_WWEULA_Combined_20100108_1657.pdf
 arch @ ~x86_64
 """
