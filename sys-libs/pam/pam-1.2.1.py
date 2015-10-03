@@ -18,7 +18,7 @@ berkdb @ sys-libs/db
 
 def configure():
     cd("../Linux-PAM-%s" % raw_version)
-    patch(level=1)
+   # patch(level=1)
     conf("--enable-dependency-tracking",
             "--enable-shared",
             config_enable("nls"),
