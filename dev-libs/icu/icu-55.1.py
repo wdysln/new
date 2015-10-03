@@ -13,8 +13,6 @@ depends = """
 runtime @ sys-devel/gcc
 """
 
-def prepare():
-    patch("icu.8198.revert.icu5431.patch", level=1)
     
 def configure():
     cd("source")
