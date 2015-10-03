@@ -10,8 +10,6 @@ depends = """
 common @ sys-apps/texinfo
 """
 
-def configure():
-    conf("--without-x")
 
 def install():
     makedirs("/usr")
