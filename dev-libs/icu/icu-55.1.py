@@ -2,7 +2,7 @@ metadata = """
 summary @ International Components for Unicode library
 homepage @ http://www.icu-project.org
 license @ icu
-src_url @ http://download.icu-project.org/files/icu4c/54.1/icu4c-54_1-src.tgz
+src_url @ http://download.icu-project.org/files/icu4c/55.1/icu4c-55_1-src.tgz
 arch @ ~x86_64
 options @ debug examples static-libs
 """
@@ -13,6 +13,9 @@ depends = """
 runtime @ sys-devel/gcc
 """
 
+def prepare():
+    patch("icu.8198.revert.icu5431.patch", level=1)
+    
 def configure():
     cd("source")
     conf(
