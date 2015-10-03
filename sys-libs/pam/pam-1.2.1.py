@@ -2,7 +2,7 @@ metadata = """
 summary @ Pluggable Authentication Modules
 homepage @ http://www.kernel.org/pub/linux/libs/pam/
 license @ GPL-2
-src_url @ https://fedorahosted.org/releases/l/i/linux-pam/Linux-PAM-$version.tar.bz2
+src_url @ http://linux-pam.org/library/Linux-PAM-$version.tar.bz2
 arch @ ~x86_64
 options @ berkdb cracklib debug nls nis
 """
