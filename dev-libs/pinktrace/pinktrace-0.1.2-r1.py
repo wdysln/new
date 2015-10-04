@@ -20,6 +20,7 @@ build @ dev-util/check
 # * python-doc, ruby-doc, doxygen, haskell options are going to added
 
 def configure():
+   #sed("""-i -e "s/CFLAGS = -std=c99 -pedantic -Wall -Os/CFLAGS += -std=c99 -pedantic -Wall -g/")
     conf("--enable-easy",
             #config_enable("python"),
             #config_enable("python-doc"),

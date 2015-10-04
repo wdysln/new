@@ -2,7 +2,7 @@ metadata = """
 summary @ Access control list utilities, libraries and headers
 homepage @ http://savannah.nongnu.org/projects/acl
 license @ LGPL-2
-src_url @ http://mirrors.zerg.biz/nongnu/$name/$fullname.src.tar.gz
+src_url @ http://download.savannah.gnu.org/releases/$name/$fullname.src.tar.gz
 arch @ ~x86_64
 """
 
