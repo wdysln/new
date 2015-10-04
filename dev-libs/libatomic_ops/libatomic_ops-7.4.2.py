@@ -8,4 +8,14 @@ arch @ ~x86_64
 
 srcdir = "%s-libatomic_ops-7_4_2" % name
 
-install = lambda: installd()
+def configure():
+    system("./autogen.sh")
+    system("./configure --prefix=/usr --disable-static --enable-shared")
+
+def build():
+    make()
+    make("check")
+
+def install():
+    raw_install("DESTDIR=%s" % install_dir)
+    insdoc("AUTHORS", "NEWS", "README")
