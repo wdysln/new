@@ -18,6 +18,7 @@ def configure():
     "--with-zlib",
     "--disable-static",
     "--disable-guile",
+    "--without-p11-kit",
     "--disable-valgrind-tests")
 
 def install():
