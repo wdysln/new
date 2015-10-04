@@ -17,15 +17,10 @@ get("gnome2_utils")
 
 
 def configure():
-    libtoolize("-f")
-    autoreconf()
     conf(
-    "--disable-dependency-tracking",
-    "--enable-default-binary",
-    "--with-x",
-    "--with-xmc",
-    "--without-xvfb-run")
-
+    "--disable-dependency-tracking")
+    
+    
 
 def build():
     export("PYTHONDONTWRITEBYTECODE", "1")
@@ -33,9 +28,7 @@ def build():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    sed("-i 's|#!/usr/bin/env python|#!/usr/bin/env python2|' %s/usr/lib/gimp/2.0/plug-ins/*.py" % install_dir)
-    insdoc("AUTHORS", "ChangeLog*", "HACKING", "NEWS", "README*")
-    system("ln -s gimptool-2.0 %s/usr/bin/gimptool" % install_dir)
+
 
 def post_install():
     desktop_database_update()
