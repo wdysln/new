@@ -2,7 +2,7 @@ metadata = """
 summary @ A Free Implementation of the Unicode Bidirectional Algorithm
 homepage @ http://fribidi.org/
 license @ LGPL
-src_url @ http://fribidi.org/download/$fullname.tar.gz
+src_url @ http://fribidi.org/download/$fullname.tar.bz2
 arch @ ~x86_64
 """
 
