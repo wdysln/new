@@ -6,6 +6,6 @@ src_url @ https://github.com/ivmai/$name/archive/$name-7_4_2.tar.gz
 arch @ ~x86_64
 """
 
-srcdir = "gc-7.2"
+srcdir = "%s-libatomic_ops-7_4_2" % name
 
 install = lambda: installd()
