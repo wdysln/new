@@ -2,7 +2,7 @@ metadata = """
 summary @ Introspection system for GObject-based libraries
 homepage @ http://live.gnome.org/GObjectInstrospection
 license @ LGPL + GPL
-src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/1.42/$fullname.tar.xz
+src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/1.44/$fullname.tar.xz
 arch @ ~x86_64
 """
 
