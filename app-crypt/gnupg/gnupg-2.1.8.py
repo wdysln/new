@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ app-crypt/libassuan dev-libs/libksba dev-libs/pth
+runtime @ app-crypt/libassuan dev-libs/libksba dev-libs/pth dev-libs/libksba dev-libs/npth
 """
 def configure():
    # autoreconf("-vfi")
