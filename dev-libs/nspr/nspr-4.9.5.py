@@ -2,7 +2,7 @@ metadata = """
 summary @ Netscape Portable Runtime
 homepage @ http://www.mozilla.org/projects/nspr/
 license @ MPL + GPL
-src_url @ ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v$version/src/$fullname.tar.gz
+src_url @ http://ftp.osuosl.org/pub/blfs/conglomeration/nspr/nspr-4.9.5.tar.gz  
 arch @ ~x86_64
 """
 
