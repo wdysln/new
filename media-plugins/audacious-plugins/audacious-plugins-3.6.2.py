@@ -9,7 +9,7 @@ options @ aac alsa aqua cdda cue ffmpeg flac gnome ipv6 lame libnotify libsample
 
 depends = """
 runtime @ app-arch/unzip dev-libs/dbus-glib dev-libs/libxml2 media-sound/audacious net-libs/neon x11-libs/gtk+:2 media-sound/mpg123
-build @ dev-util/pkg-config
+build @ dev-util/pkg-config media-video/ffmpeg media-libs/faad2
 """
 
 opt_runtime = """

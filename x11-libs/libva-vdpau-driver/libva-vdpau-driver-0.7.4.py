@@ -16,8 +16,8 @@ opengl @ media-libs/mesa >=x11-libs/libva-1.1.0[opengl]
 """
 
 def prepare():
-    patch()
-    autoreconf()
+    patch(level=1)
+  #  autoreconf()
 
 def configure():
     conf(

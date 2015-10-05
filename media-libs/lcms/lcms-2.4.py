@@ -2,7 +2,7 @@ metadata = """
 summary @ Lightweight color management development library/engine
 homepage @ http://www.littlecms.com/
 license @ custom
-src_url @ http://garr.dl.sourceforge.net/project/lcms/lcms/2.4/lcms2-$version.tar.gz
+src_url @ http://downloads.sourceforge.net/project/lcms/lcms/2.4/lcms2-$version.tar.gz
 arch @ ~x86_64
 options @ jpeg tiff zlib static-libs
 """

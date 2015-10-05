@@ -2,7 +2,7 @@ metadata = """
 summary @ Mozilla Network Security Services
 homepage @ http://www.mozilla.org/projects/security/pki/nss/
 license @ MPL GPL
-src_url @ ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_14_3_RTM/src/nss-3.14.3.tar.gz
+src_url @ http://ftp.mozilla.org/pub/security/nss/releases/NSS_3_14_3_RTM/src/nss-3.14.3.tar.gz
 arch @ ~x86_64
 """
 

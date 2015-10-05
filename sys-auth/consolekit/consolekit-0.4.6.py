@@ -2,7 +2,7 @@ metadata = """
 summary @ Framework for defining and tracking users, login sessions and seats.
 homepage @ http://www.freedesktop.org/wiki/Software/ConsoleKit
 license @ GPL
-src_url @ http://anduin.linuxfromscratch.org/sources/BLFS/svn/c/ConsoleKit-$version.tar.xz
+src_url @ http://www.freedesktop.org/software/ConsoleKit/dist/ConsoleKit-$version.tar.xz
 options @ pam
 arch @ ~x86_64
 """
