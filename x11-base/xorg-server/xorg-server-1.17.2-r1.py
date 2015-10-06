@@ -24,7 +24,7 @@ build @ sys-devel/flex >=x11-proto/bigreqsproto-1.1.0 >=x11-proto/compositeproto
 >=x11-proto/renderproto-0.11 >=x11-proto/resourceproto-1.0.2 >=x11-proto/scrnsaverproto-1.1
 x11-proto/trapproto >=x11-proto/videoproto-2.2.2 >=x11-proto/xcmiscproto-1.2.0
 >=x11-proto/xextproto-7.1.99 >=x11-proto/xf86dgaproto-2.0.99.1
-x11-proto/xf86rushproto >=x11-proto/xf86vidmodeproto-2.2.99.1
+x11-proto/xf86rushproto >=x11-proto/xf86vidmodeproto-2.2.99.1 media-libs/libepoxy
 >=x11-proto/xineramaproto-1.1.3 >=x11-proto/xproto-7.0.22 >=media-fonts/font-util-1.1
 >=x11-proto/dmxproto-2.2.99.1 >=x11-misc/util-macros-1.14 x11-misc/xcb-util-image x11-misc/xcb-util-keysyms 
 x11-misc/xcb-util-wm x11-libs/libxcb
@@ -46,10 +46,9 @@ nv @ x11-drivers/xf86-video-nv
 nouveau @ x11-drivers/xf86-video-nouveau
 vesa @ x11-drivers/xf86-video-vesa
 """
-"""
+
 def prepare():
     patch(level=1)
-"""
 
 def configure():
     export("HOME", build_dir)
@@ -75,6 +74,7 @@ def configure():
             --disable-static \
             --sysconfdir=/etc/X11 \
             --localstatedir=/var \
+            --enable-glamor \
             --with-xkb-path=/usr/share/X11/xkb \
             --with-xkb-output=/var/lib/xkb \
             --with-fontrootdir=/usr/share/fonts \
