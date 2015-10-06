@@ -17,7 +17,7 @@ x11-libs/libvdpau media-libs/libtheora media-libs/libvorbis media-libs/openjpeg 
 
 import datetime
 now = datetime.datetime.now()
-srcdir = "mplayer-2015-02-20"
+srcdir = "mplayer-SVN-r37520"
 #srcdir = "mplayer-checkout-%s" % now.strftime("%Y-%m-%d")
 
 def prepare():
