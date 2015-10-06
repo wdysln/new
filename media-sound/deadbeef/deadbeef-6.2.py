@@ -13,12 +13,24 @@ runtime @ x11-libs/gtk+:2 dev-util/desktop-file-utils
         media-plugins/gst-plugins-base:0 media-plugins/gst-plugins-good:0 media-plugins/gst-plugins-bad:0
         media-plugins/gst-plugins-ugly:0 media-libs/gstreamer:0 media-sound/lame x11-libs/libnotify media-libs/taglib        
 """
-srcdir = "deadbeef-master"
+#srcdir = "deadbeef-master"
 
+get("git_utils")
+
+standard_procedure = False
+
+reserve_files = ["/etc/lpms/build.conf", "/etc/lpms/repo.conf"]
+
+def prepare():
+    git_clone("git@github.com:Alexey-Yakovenko/deadbeef.git", subdir=name)
+    
 def configure():
     system("/bin/chmod u+x *.sh")
     system("./autogen.sh")
     conf("--prefix=/usr --enable-gtk3=no --enable-staticlink=no --without-jansson --enable-jansson=no")
 
+def build():
+    make()
+    
 def install():
     raw_install("DESTDIR=%s" % install_dir)
