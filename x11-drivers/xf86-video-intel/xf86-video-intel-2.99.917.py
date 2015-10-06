@@ -18,7 +18,7 @@ build @ >=x11-proto/dri2proto-2.6 >=x11-base/xorg-server-1.6
 """
 
 def configure():
-    conf()
+    conf("--enable-kms-only --enable-uxa")
 
 def build():
     make()
