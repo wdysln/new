@@ -46,10 +46,10 @@ nv @ x11-drivers/xf86-video-nv
 nouveau @ x11-drivers/xf86-video-nouveau
 vesa @ x11-drivers/xf86-video-vesa
 """
-"""
+
 def prepare():
     patch(level=1)
-"""
+
 
 def configure():
     export("HOME", build_dir)
