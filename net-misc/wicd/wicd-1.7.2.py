@@ -8,7 +8,7 @@ options @ gtk X libnotify ncurses nls pm-utils
 """
 
 depends = """
-runtime @ dev-python/dbus-python:2 net-misc/dhcpcd net-wireless/wpa_supplicant net-wireless/wireless_tools sys-apps/ethtool
+runtime @ dev-python/dbus-python:2.7 net-misc/dhcpcd net-wireless/wpa_supplicant net-wireless/wireless_tools sys-apps/ethtool
 build @ dev-python/Babel
 """
 
