@@ -2,8 +2,8 @@ metadata = """
 summary @ A movie player for linux
 homepage @ http://www.mplayerhq.hu/ 
 license @ GPL 
-src_url @ http://anduin.linuxfromscratch.org/sources/other/mplayer-SVN-r37520.tar.xz
-http://ffmpeg.org/releases/ffmpeg-2.8.tar.bz2
+src_url @ http://anduin.linuxfromscratch.org/sources/other/mplayer-2015-02-20.tar.xz
+http://ftp.osuosl.org/pub/blfs/conglomeration/ffmpeg/ffmpeg-2.5.1.tar.bz2
 arch @ ~x86_64
 options @ bidi amr a52 theora cdparanoia dts encode lame x264 xvid faad mad schroedinger vpx mng X vdpau sdl vorbis
 """
@@ -21,7 +21,7 @@ srcdir = "mplayer-SVN-r37520"
 #srcdir = "mplayer-checkout-%s" % now.strftime("%Y-%m-%d")
 
 def prepare():
-    copytree("../ffmpeg-2.8", "ffmpeg")
+    copytree("../ffmpeg-2.5.1", "ffmpeg")
     
 def configure():
 	raw_configure(
