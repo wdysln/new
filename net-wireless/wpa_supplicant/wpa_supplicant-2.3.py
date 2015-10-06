@@ -18,11 +18,7 @@ gnutls @ net-libs/gnutls
 
 def prepare():
     cd(name)
-    patch(level=1)
     copy("%s/config" % filesdir, "./.config")
-
-
-
 
 def build():
     cd(name)
@@ -31,3 +27,12 @@ def build():
 def install():
     cd(name)
     raw_install("LIBDIR=/usr/lib BINDIR=/usr/bin DESTDIR=%s" % install_dir)
+    
+    insfile("wpa_supplicant.conf", "/etc/wpa_supplicant/wpa_supplicant.conf")
+    
+    
+    insfile("dbus/*.service", "/usr/share/dbus-1/system-services/")	
+    insfile("dbus/dbus-wpa_supplicant.conf", "/etc/dbus-1/system.d/wpa_supplicant.conf")
+
+    insfile("systemd/*.service", "/usr/lib/systemd/system/")
+
