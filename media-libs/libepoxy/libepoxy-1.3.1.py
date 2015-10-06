@@ -11,4 +11,6 @@ runtime @ sys-libs/glibc media-libs/mesa
 build @ media-libs/mesa x11-misc/util-macros
 """
 
-
+def configure():
+    system("./autogen.sh --prefix=/usr")
+    
