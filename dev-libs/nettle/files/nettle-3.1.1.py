@@ -10,11 +10,11 @@ options @ gmp static-libs
 opt_build = """
 gmp @ dev-libs/gmp
 """
-
+"""
 def prepare():
     patch(level=1)
     autoreconf()
-
+"""
 def configure():
     conf("--disable-openssl",
         config_enable("gmp", "public-key"),
