@@ -18,14 +18,13 @@ startup-notification @ x11-libs/startup-notification
 nls @ sys-devel/gettext
 """
 
-def prepare():
-    patch(level=1) 
 
 def configure():
     conf("--with-x",
-            "--enable-startup-notification",
-            config_enable("nls"),
-            config_enable("static-libs", "static"),
+         config_enable("nls"),
+         config_enable("static-libs", "static"),
+	  "--enable-startup-notification")
+
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
