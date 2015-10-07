@@ -2,7 +2,7 @@ metadata = """
 summary @ Caches to speed up freedesktop.org's application menus use.
 homepage @ http://lxde.org/
 license @ GPL-2
-src_url @ http://downloads.sourceforge.net/lxde/$fullname.tar.xz
+src_url @ http://downloads.sourceforge.net/lxde/$fullname.tar.gz
 arch @ ~x86_64
 """
 
