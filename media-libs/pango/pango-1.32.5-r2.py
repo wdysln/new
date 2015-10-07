@@ -28,8 +28,7 @@ def configure():
 
     conf(
             config_enable("introspection"),
-            config_with("X", "xft"),
-            "--with-included-modules=basic-fc", myopts
+             "--with-included-modules=basic-fc", myopts
     )
 
 def install():
