@@ -11,10 +11,6 @@ common @ dev-libs/dbus-glib x11-libs/gtk+:2 sys-libs/glib
 runtime @ x11-misc/shared-mime-info sys-fs/udisks
 """
 
-def prepare():
-    system("sed -i '/docs/d' configure.ac")
-    autoreconf()
-    system("sed -i 's/GTK_DOC_CHECK(1.14,--flavour no-tmpl)/#GTK_DOC_CHECK(1.14,--flavour no-tmpl)/' configure")
 
 def configure():
 	conf("--prefix=/usr --sysconfdir=/etc --enable-udisks --with-gnu-ld",
