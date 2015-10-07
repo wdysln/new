@@ -2,7 +2,7 @@ metadata = """
 summary @ GTK+ theme switcher of the LXDE Desktop (manages icons and fonts)
 homepage @ http://lxde.org/
 license @ GPL-2
-src_url @ http://downloads.sourceforge.net/sourceforge/lxde/$fullname.tar.gz
+src_url @ http://downloads.sourceforge.net/sourceforge/lxde/$fullname.tar.xz
 arch @ ~x86_64
 """
 
