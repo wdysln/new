@@ -2,7 +2,7 @@ metadata = """
 summary @ LXDE default icon theme based on nuoveXT2
 homepage @ http://lxde.org
 license @ GPL
-src_url @ http://downloads.sourceforge.net/lxde/$fullname.tar.bz2
+src_url @ http://downloads.sourceforge.net/lxde/$fullname.tar.xz
 arch @ ~x86_64
 """
 
