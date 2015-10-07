@@ -2,7 +2,7 @@ metadata = """
 summary @ freedesktop.org desktop menus for LXDE
 homepage @ http://lxde.org/
 license @ GPL-2
-src_url @ http://downloads.sourceforge.net/sourceforge/lxde/$fullname.tar.xz
+src_url @ http://downloads.sourceforge.net/sourceforge/lxde/$fullname.tar.gz
 arch @ ~x86_64
 """
 
