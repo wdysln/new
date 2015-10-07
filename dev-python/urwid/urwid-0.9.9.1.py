@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ dev-lang/python
+runtime @ dev-lang/python:2.7
 """
 
 srcdir = fullname+"/src/urwid-%s" % version

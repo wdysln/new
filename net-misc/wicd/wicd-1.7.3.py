@@ -22,7 +22,9 @@ ncurses @ dev-python/urwid dev-python/pygobject
 pm-utils @ sys-power/pm-utils
 libnotify @ dev-python/notify-python
 """
-
+def prepare():
+    patch(level=1)
+    
 def configure():
     rmfile("po/ast.po")
     myconf = ""
@@ -33,8 +35,7 @@ def configure():
         myconf += " --no-install-ncurses "
     if not opt("pm-utils"):
         myconf += " --no-install-pmutils "
-    if not opt("gtk"):
-        myconf += " --no-install-gtk "
+
 
     system("find . -type f -exec sed -i 's@#!/usr.*python@#!/usr/bin/python2@' {} \;")
     
@@ -45,6 +46,8 @@ def configure():
             --resume=/usr/share/wicd/scripts/ \
             --suspend=/usr/share/wicd/scripts/ \
             --python=/usr/bin/python2 \
+            --no-install-gnome-shell-extensions \
+	    --systemd=/usr/lib/systemd/system \
             --verbose %s" % myconf)
     pass
 
