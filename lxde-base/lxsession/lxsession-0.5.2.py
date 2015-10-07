@@ -2,7 +2,7 @@ metadata = """
 summary @ Session manager of the LXDE Desktop (light version)
 homepage @ http://lxde.org/
 license @ GPL-2
-src_url @ http://downloads.sourceforge.net/sourceforge/lxde/$fullname.tar.gz
+src_url @ http://downloads.sourceforge.net/sourceforge/lxde/$fullname.tar.xz
 arch @ ~x86_64
 """
 
