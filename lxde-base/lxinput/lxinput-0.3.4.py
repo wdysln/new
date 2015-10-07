@@ -2,7 +2,7 @@ metadata = """
 summary @ LXDE keyboard and mouse configuration tool
 homepage @ http://lxde.sourceforge.net/
 license @ GPL-2
-src_url @ http://downloads.sourceforge.net/lxde/$fullname.tar.gz
+src_url @ http://downloads.sourceforge.net/lxde/$fullname.tar.xz
 arch @ ~x86_64
 """
 
