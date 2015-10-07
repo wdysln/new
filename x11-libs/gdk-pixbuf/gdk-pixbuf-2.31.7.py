@@ -31,8 +31,7 @@ def configure():
     "--with-libpng",
     config_enable("introspection"),
     config_with("jpeg", "libjpeg"),
-    config_with("tiff", "libtiff"),
-    config_with("X", "x11"), myconf)
+    config_with("tiff", "libtiff"),myconf)
 
 
 def build():
