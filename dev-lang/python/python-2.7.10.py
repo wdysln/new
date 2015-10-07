@@ -2,7 +2,7 @@ metadata = """
 summary @ A high-level scripting language
 homepage @ http://www.python.org
 license @ GPL-2
-src_url @ http://www.python.org/ftp/python/$version/Python-$version.tar.bz2
+src_url @ http://www.python.org/ftp/python/$version/Python-$version.tar.xz
 options @ gdbm berkdb ncurses readline ssl xml ipv6 threads wide-unicode examples
 arch @ ~x86_64
 slot @ 2.7
@@ -28,7 +28,7 @@ xml @ dev-libs/expat
 
 def prepare():
     sed('-i "/progname =/s/python/python2.7/" Python/pythonrun.c')
-    patch(location="%s/2.7.3" % filesdir)
+   # patch(location="%s/2.7.3" % filesdir)
     for i in ('expat', 'zlib', '_ctypes/darwin'): #'_ctypes/libffi'):
         rmdir('Modules/%s' % i)
     copytree("Lib/plat-linux2", "%s/Lib/plat-linux3" % build_dir)
