@@ -21,5 +21,5 @@ def build():
 def install():
     export("HOME", build_dir)
     raw_install("DESTDIR=%s" % install_dir)
-
+    insfile("%s/20-glamor.conf" % filesdir, "/etc/X11/xorg.conf.d/20-glamor.conf")
 

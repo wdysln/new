@@ -26,6 +26,8 @@ def build():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-
+    insfile("%s/20-intel.conf" % filesdir, "/etc/X11/xorg.conf.d/20-intel.conf")
+    
+    
 def post_install():
     notify("Warning: This driver requires KMS support in your kernel.")
