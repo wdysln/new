@@ -21,6 +21,7 @@ def configure():
          --enable-afc \
          --enable-archive \
          --enable-bash-completion \
+         --disable-gphoto2 \
          --enable-bluray \
          --enable-gphoto2 \
          --enable-keyring \
