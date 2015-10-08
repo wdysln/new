@@ -23,7 +23,6 @@ def configure():
          --enable-bash-completion \
          --disable-gphoto2 \
          --enable-bluray \
-         --enable-gphoto2 \
          --enable-keyring \
          --enable-udev \
          --enable-udisks2")
