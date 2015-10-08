@@ -8,22 +8,16 @@ options @ debug introspection X jpeg tiff
 """
 
 depends = """
-runtime @ sys-libs/glib media-libs/libpng
+runtime @ sys-libs/glib media-libs/libpng x11-libs/libX11 media-libs/tiff media-libs/jpeg
 build @ dev-util/pkg-config sys-devel/gettext
 """
 
-opt_common = """
-jpeg @ media-libs/jpeg
-X @ x11-libs/libX11
-tiff @ media-libs/tiff
-introspection @ dev-libs/gobject-introspection
-"""
 
 def configure():
     export("HOME", build_dir)
     conf("--disable-static \
          --disable-silent-rules \
-         --with-libjasper
+         --with-libjasper \
 	 --with-x11 \
          --with-included-loaders=png")
 
