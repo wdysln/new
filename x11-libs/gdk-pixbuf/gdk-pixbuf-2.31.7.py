@@ -21,22 +21,15 @@ introspection @ dev-libs/gobject-introspection
 
 def configure():
     export("HOME", build_dir)
-    myconf = ""
-    if opt("debug"):
-        myconf += " --enable-debug=yes "
-
-    conf(
-    "--without-libjasper",
-    "--with-included-loaders=png",
-    "--with-libpng",
-    config_enable("introspection"),
-    config_with("jpeg", "libjpeg"),
-    config_with("tiff", "libtiff"),myconf)
+    conf("--disable-static \
+         --disable-silent-rules \
+         --with-libjasper
+	 --with-x11 \
+         --with-included-loaders=png")
 
 
 def build():
     export("HOME", build_dir)
-    if opt("introspection"): unset_env_variables()
     make()
 
 def install():
