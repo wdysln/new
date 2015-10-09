@@ -17,7 +17,7 @@ def prepare():
     sed("-i 's|/usr/local/sbin|/usr/bin|' instfiles/xrdp.sh")
     sed("-i 's|/usr/sbin|/usr/bin|' instfiles/xrdp.service")
     sed("-i 's|/usr/sbin|/usr/bin|' instfiles/xrdp-sesman.service")
-    system("patch -p2 -b -z .orig %s/fixups.patch" %filesdir)
+   # system("patch -p2 -b -z .orig %s/fixups.patch" %filesdir)
     system("./bootstrap")
      
 def configure():
