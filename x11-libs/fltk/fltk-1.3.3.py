@@ -13,7 +13,9 @@ build @ dev-util/pkg-config
 
 
 def configure():
-    conf("--enable-shared") 
+    conf("--enable-shared \
+               --enable-gl \
+               --enable-threads") 
             
 
 def build():
