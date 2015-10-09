@@ -26,6 +26,8 @@ def configure():
          --enable-keyring \
          --enable-udev \
          --enable-udisks2")
+def build():
+    make()
     
     
 
