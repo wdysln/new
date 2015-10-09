@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ sys-apps/acl
+commons @ sys-fs/fuse media-libs/libjpeg-turbo x11-libs/libXrandr x11-misc/tigervnc
 """
 def prepare():
     patch(level=1) 
