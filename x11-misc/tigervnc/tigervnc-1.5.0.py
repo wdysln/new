@@ -38,7 +38,7 @@ def prepare():
   
   
 def build():
-    system("cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/usr")
+    system("cmake -G 'Unix Makefiles' -DCMAKE_INSTALL_PREFIX=/usr")
     make()
     cd("unix/xserver")
     autoreconf("-fiv")
