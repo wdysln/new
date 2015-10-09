@@ -10,7 +10,8 @@ depends = """
 runtime @ dev-libs/expat
 build @ dev-util/pkg-config
 """
-
+def prepare():
+    patch(level=1)
 
 def configure():
     conf("--enable-shared \
