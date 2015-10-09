@@ -32,5 +32,10 @@ def build():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
+    
+def post_install():
+    system("xrdp-keygen xrdp /etc/xrdp/rsakeys.ini")
 
+def post_remove():
+    post_install("rm /etc/xrdp/rsakeys.ini")
  
