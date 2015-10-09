@@ -13,16 +13,19 @@ def prepare():
     patch(level=1) 
     sed("-i 's|/etc/sysconfig/xrdp|/etc/xrdp/xrdp.ini|' instfiles/xrdp.service")
     sed("-i 's|/etc/sysconfig/xrdp|/etc/xrdp/xrdp.ini|' instfiles/xrdp-sesman.service")
-
+    
+    sed("-i 's|/usr/local/sbin|/usr/bin|' instfiles/xrdp.sh")
+    sed("-i 's|/usr/sbin|/usr/bin|' instfiles/xrdp.service")
+    sed("-i 's|/usr/sbin|/usr/bin|' instfiles/xrdp-sesman.service")
+    system("patch -p2 -b -z .orig %s/fixups.patch" %filesdir)
     system("./bootstrap")
      
 def configure():
     conf("--prefix=/usr \
-              --with-systemdsystemunitdir=/usr/lib/systemd/system \
-              --enable-jpeg \
-              --enable-simplesound \
-              --enable-fuse \
-              --enable-loadpulsemodules")
+         --with-systemdsystemunitdir=/usr/lib/systemd/system \
+         --enable-jpeg \
+         --enable-fuse")
+
     
 def build():
     make("V=0")
