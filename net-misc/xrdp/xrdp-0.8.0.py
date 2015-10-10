@@ -1,6 +1,6 @@
 metadata = """
-summary @ File transfer program to keep remote files into sync
-homepage @ http://rsync.samba.org/
+summary @ An open source remote desktop protocol (RDP) server
+homepage @ http://xrdp.sourceforge.net/
 license @ Apache
 src_url @ https://github.com/neutrinolabs/xrdp/archive/v0.8.0.tar.gz
 arch @ ~x86_64
