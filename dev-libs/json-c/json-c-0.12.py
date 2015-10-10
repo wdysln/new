@@ -9,7 +9,9 @@ arch @ ~x86_64
 depends = """
 runtime @ sys-libs/glibc
 """
-
+def prepare():
+    sed("-i s/-Werror// Makefile.in")  
+    
 def configure():
     conf("--disable-static")
 
