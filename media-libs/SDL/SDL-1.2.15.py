@@ -22,7 +22,10 @@ opt_build = """
 nas @ x11-proto/xextproto x11-proto/xproto
 X @ x11-proto/xextproto x11-proto/xproto
 """
-
+def prepare():
+    sed("-e '/_XData32/s:register long:register _Xconst long:' \
+    -i src/video/x11/SDL_x11sym.h")
+    
 def configure():
 
     myconf = ""
