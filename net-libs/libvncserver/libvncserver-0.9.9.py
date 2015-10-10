@@ -11,7 +11,7 @@ runtime @ net-libs/gnutls dev-libs/libgcrypt dev-libs/openssl media-libs/SDL
           media-libs/libjpeg-turbo media-libs/libpng
 build @ dev-util/cmake dev-libs/boost dev-util/automoc4
 """
-srcdir = "%s-LibVNCServer-%s" % (name, version)
+srcdir = "LibVNCServer-%s" % version
 
 
 def configure():
