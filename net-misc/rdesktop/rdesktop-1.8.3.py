@@ -7,11 +7,9 @@ arch @ ~x86_64
 """
 
 depends = """
-commons @ sys-fs/fuse media-libs/libjpeg-turbo x11-libs/libXrandr media-libs/libsamplerate
-          media-libs/libao
+build @ sys-fs/fuse media-libs/libjpeg-turbo x11-libs/libXrandr media-libs/libsamplerate
+          media-libs/libao net-libs/libgssglue
 """
-def prepare():
-    patch("rdesktop-send_physical_buttons.diff") 
     
 def configure():
     conf("--disable-smartcard \
