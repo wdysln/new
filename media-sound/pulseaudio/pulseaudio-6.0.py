@@ -2,7 +2,7 @@ metadata = """
 summary @ A featureful, general-purpose sound server
 homepage @ http://pulseaudio.org/
 license @ GPL + LGPL
-src_url @ http://0pointer.de/lennart/projects/$name/$fullname.tar.gz
+src_url @ http://freedesktop.org/software/$name/releases/$fullname.tar.xz
 arch @ ~x86_64
 """
 
