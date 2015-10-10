@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ sys-libs/glibc  sys-libs/libcap sys-apps/attr media-libs/alsa-lib
+runtime @ sys-libs/glibc sys-libs/libcap sys-apps/attr media-libs/alsa-lib
 	  x11-libs/libSM media-libs/libsndfile sys-devel/libtool media-libs/libsamplerate
 	  sys-apps/dbus x11-misc/xcb-util dev-util/intltool dev-libs/openssl dev-libs/json-c 
 """
