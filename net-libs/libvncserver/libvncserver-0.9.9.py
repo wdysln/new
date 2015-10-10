@@ -16,11 +16,8 @@ srcdir = "LibVNCServer-%s" % version
 
 def configure():
     conf("--disable-static \
-          --with-backchannel \
-          --disable-dependency-tracking \
-          --with-24bpp \
-          --with-zlib \
-          --with-jpeg")
+          --disable-dependency-tracking")
+
 
 def build():
     make()
