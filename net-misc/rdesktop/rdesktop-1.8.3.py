@@ -11,7 +11,7 @@ commons @ sys-fs/fuse media-libs/libjpeg-turbo x11-libs/libXrandr media-libs/lib
           media-libs/libao
 """
 def prepare():
-    patch(level=1) 
+    patch("rdesktop-send_physical_buttons.diff") 
     
 def configure():
     conf("--disable-smartcard \
