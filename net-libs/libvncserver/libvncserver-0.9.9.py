@@ -2,7 +2,7 @@ metadata = """
 summary @ A cross-platform C libraries that allow you to easily implement VNC server 
 homepage @ https://libvnc.github.io
 license @ GPL
-src_url @ https://github.com/LibVNC/$name/archive/LibVNCServer-$version.tar.gz
+src_url @ http://downloads.sourceforge.net/project/$name/$version/LibVNCServer-$version.tar.gz
 arch @ ~x86_64
 """
 
