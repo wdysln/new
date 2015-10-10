@@ -10,10 +10,10 @@ arch @ ~x86_64
 
 depends = """
 runtime @ sys-libs/zlib media-libs/freetype x11-libs/libSM 
-          x11-base/xorg-server x11-proto/bigreqsproto x11-proto/compositeproto
-          media-libs/mesa x11-proto/renderproto x11-libs/libpciaccess x11-libs/xtrans
+          x11-base/xorg-server x11-proto/bigreqsproto
+          media-libs/mesa
           
-build @ dev-lang/yasm x11-proto/inputproto x11-proto/xextproto x11-proto/xproto x11-libs/fltk
+build @ dev-lang/yasm x11-proto/xproto x11-libs/fltk
 """
 
 
