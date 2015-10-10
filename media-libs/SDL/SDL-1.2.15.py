@@ -27,40 +27,7 @@ def prepare():
     -i src/video/x11/SDL_x11sym.h")
     
 def configure():
-
-    myconf = ""
-    if not opt("alsa-shared"):
-        myconf += " --disable-alsa-shared "
-
-    if not opt("pulseaudio-shared"):
-        myconf += " --disable-pulseaudio-shared "
-
-        conf(
-        "--disable-rpath",
-        "--disable-arts",
-        "--disable-esd",
-        "--enable-events",
-        "--enable-cdrom",
-        "--enable-threads",
-        "--enable-timers",
-        "--enable-file",
-        "--enable-cpuinfo",
-        "--disable-esd-shared",
-        "--disable-arts-shared",
-        "--disable-nas-shared",
-        "--disable-osmesa-shared",
-        "--disable-video-x11-xme",
-        config_enable("alsa"),
-        config_enable("X", "video-x11"),
-    config_enable("nas"),
-    config_enable("pulseaudio"),
-    config_enable("dga"),
-    config_enable("dga", "video-dga"),
-    config_enable("xv", "video-x11-xv"),
-    config_enable("xinerama", "video-x11-xinerama"),
-    config_enable("X", "video-x11-xrandr"),
-    config_with("X", "x"),
-    config_enable("static-libs", "static"), myconf)
+    conf("--disable-static")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
