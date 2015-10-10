@@ -15,7 +15,12 @@ srcdir = "LibVNCServer-%s" % version
 
 
 def configure():
-    system("./autogen.sh --prefix=/usr")
+    conf("--disable-static \
+          --with-backchannel \
+          --disable-dependency-tracking \
+          --with-24bpp \
+          --with-zlib \
+          --with-jpeg")
 
 def build():
     make()
