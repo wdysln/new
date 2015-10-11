@@ -11,13 +11,7 @@ depends = """
 common @ sys-libs/ncurses
 build @ sys-libs/readline
 """
-cfgsettings = """-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\' \
-                 -DSTANDARD_UTILS_PATH=\'\"/bin:/usr/bin:/sbin:/usr/sbin\"\' \
-                 -DSYS_BASHRC=\'\"/etc/bash/bashrc\"\' \
-                 -DNON_INTERACTIVE_LOGIN_SHELLS \
-                 -DSSH_SOURCE_BASHRC"""
-                 
-                 
+
 def prepare():
     for i in xrange(1, 39):
         fetch("http://ftp.gnu.org/gnu/bash/bash-4.3-patches/bash43-%03d" % i, location=build_dir)
@@ -26,8 +20,6 @@ def prepare():
         patch("bash43-%03d" % f, location=build_dir)
 
 def configure():
-    export("CFLAGS", "-D_GNU_SOURCE -DRECYCLES_PIDS %s" % cfgsettings
-    autoconf()
     myconf = ""
     if not opt("nls"):
         myconf += " --disable-nls"
@@ -42,7 +34,6 @@ def configure():
         "--with-installed-readline",
         myconf)
 
-
 def install():
     if opt("plugins"):
         make("-C examples/loadables all others")
@@ -54,10 +45,10 @@ def install():
     makesym("/bin/bash", "/bin/sh")
 
     makedirs("/etc/skel")
-    insexe(joinpath(filesdir, "bashrc"), "/etc/bash/bashrc")
-   # insfile(joinpath(filesdir, "dot-bashrc"), "/etc/skel/.bashrc")
-   # insfile(joinpath(filesdir, "dot-bash_profile"), "/etc/skel/.bash_profile")
-    #insfile(joinpath(filesdir, "dot-bash_logout"), "/etc/skel/.bash_logout")
-    insexe(joinpath(filesdir, "dircolors"), "/etc/DIR_COLORS")
+    insexe(joinpath(filesdir, "bashrc"), "/etc/bashrc")
+    insfile(joinpath(filesdir, "dot-bashrc"), "/etc/skel/.bashrc")
+    insfile(joinpath(filesdir, "dot-bash_profile"), "/etc/skel/.bash_profile")
+    insfile(joinpath(filesdir, "dot-bash_logout"), "/etc/skel/.bash_logout")
+    insexe(joinpath(filesdir, "dircolors"), "/etc/dircolors")
 
     insdoc("README", "NEWS", "AUTHORS", "CHANGES", "COMPAT", "Y2K", "doc/FAQ", "doc/INTRO")
