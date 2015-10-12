@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ sys-fs/e2fsprogs sys-fs/lvm
+runtime @ sys-block/parted dev-cpp/gtkmm
 """
 def prepare ():
     sed("-i '\@sigc++/class_slot@d' include/WinGParted.h")
