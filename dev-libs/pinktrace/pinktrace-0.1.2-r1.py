@@ -21,6 +21,8 @@ build @ dev-util/check
 
 def configure():
    #sed("""-i -e "s/CFLAGS = -std=c99 -pedantic -Wall -Os/CFLAGS += -std=c99 -pedantic -Wall -g/")
+   sed("-i 's|3.*|4.*|' configure.ac")
+   
     conf("--enable-easy",
             #config_enable("python"),
             #config_enable("python-doc"),
