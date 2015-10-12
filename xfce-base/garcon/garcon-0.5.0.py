@@ -8,6 +8,7 @@ options @ debug
 """
 
 depends = """
+build @ xfce-base/libxfce4ui xfce-base/libxfce4util
 runtime @ sys-libs/glib
 """
 
