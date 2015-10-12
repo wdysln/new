@@ -8,8 +8,8 @@ options @ libnotify debug
 """
 
 depends = """
-runtime @ >=xfce-base/libxfce4ui x11-themes/hicolor-icon-theme x11-libs/libwnck x11-libs/libX11
-build @ >=xfce-base/xfce4-panel dev-util/intltool
+runtime @ xfce-base/libxfce4ui x11-themes/hicolor-icon-theme x11-libs/libwnck x11-libs/libX11
+build @ xfce-base/xfce4-panel dev-util/intltool
 """
 
 opt_runtime = """
