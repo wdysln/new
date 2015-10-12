@@ -10,7 +10,6 @@ depends = """
 runtime @ sys-block/parted dev-cpp/gtkmm
 """
 def prepare ():
-    sed("-i '\@sigc++/class_slot@d' include/WinGParted.h")
     export("CXXFLAGS", "-g -O2 -std=c++11")
     
 def configure():
