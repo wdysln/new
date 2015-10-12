@@ -8,7 +8,7 @@ options @ debug
 """
 
 depends = """
-runtime @ >=xfce-base/exo >=xfce-base/garcon >=xfce-base/libxfce4ui x11-libs/libSM x11-libs/libwnck
+runtime @ xfce-base/exo xfce-base/garcon xfce-base/libxfce4ui x11-libs/libSM x11-libs/libwnck
           x11-themes/hicolor-icon-theme
 build @ dev-util/intltool dev-lang/perl sys-devel/gettext dev-util/pkg-config
 """
