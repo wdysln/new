@@ -13,7 +13,7 @@ runtime @ sys-libs/glib
 """
 
 def configure():
-    conf("--disable-static",
+    conf("--disable-static --disable-gtk3",
     config_enable("debug"))
 
 def install():

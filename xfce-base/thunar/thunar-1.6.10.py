@@ -25,7 +25,6 @@ srcdir = "Thunar-%s" % version
 
 get("gnome2_utils", "fdo_mime")
 def prepare():
-    patch("tr.patch",level=0)
     patch("f4-open-panel.patch",level=1)
 
 def configure():
