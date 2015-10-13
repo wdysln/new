@@ -2,7 +2,7 @@ metadata = """
 summary @ a simple client-server configuration storage and query system
 homepage @ http://www.xfce.org/
 license @ GPL2
-src_url @ http://archive.xfce.org/src/xfce/$name/4.12/$fullname.tar.bz2
+src_url @ http://archive.xfce.org/src/xfce/$name/4.10/$fullname.tar.bz2
 arch @ ~x86_64
 options @ debug
 """

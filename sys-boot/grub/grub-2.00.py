@@ -2,7 +2,7 @@ metadata = """
 summary @ A GNU multiboot boot loader
 homepage @ http://www.gnu.org/software/grub/
 license @ GPL
-src_url @ http://alpha.gnu.org/gnu/grub/grub-2.02~beta2.tar.xz
+src_url @ http://ftp.gnu.org/gnu/grub/grub-$version.tar.xz
 arch @ ~x86_64
 slot @ 2
 """
@@ -12,13 +12,16 @@ slot @ 2
 # * perhaps, efi support?
 
 depends = """
-runtime @ sys-libs/ncurses sys-apps/sed sys-apps/diffutils app-arch/xz sys-libs/ncurses
-build @ dev-lang/python:2.7 sys-devel/flex sys-devel/bison sys-apps/texinfo
+runtime @ sys-libs/ncurses sys-apps/sed sys-apps/diffutils app-arch/xz >=sys-libs/ncurses-5.2-r5
+build @ >=dev-lang/python-2.5.2 sys-devel/flex sys-devel/bison sys-apps/texinfo
 """
 
-srcdir = "grub-2.02~beta2"
+def prepare():
+    sed("-i -e '/gets is a/d' grub-core/gnulib/stdio.in.h")
+
 def configure():
     conf("--program-prefix=",
+            "--program-transform-name='s,grub,grub2,'",
             "--with-grubdir=grub2",
             "--disable-grub-emu-usb",
             "--disable-efiemu",

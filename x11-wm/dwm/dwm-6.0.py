@@ -27,6 +27,16 @@ def prepare():
 
 
 
+
+
+
+
+
+
+
+
+
+
     """sed("-i 's/CPPFLAGS =/CPPFLAGS +=/g' config.mk")
     sed("-i 's/^CFLAGS = -g/#CFLAGS += -g/g' config.mk")
     sed("-i 's/^#CFLAGS = -std/CFLAGS += -std/g' config.mk")

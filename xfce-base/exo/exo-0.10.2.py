@@ -8,7 +8,7 @@ options @ debug python
 """
 
 depends = """
-runtime @ xfce-base/libxfce4util x11-libs/gtk+:2 x11-themes/hicolor-icon-theme
+runtime @ >=xfce-base/libxfce4util-4.10.0 x11-libs/gtk+:2 x11-themes/hicolor-icon-theme
 build @ dev-util/intltool x11-apps/iceauth dev-perl/URI
 """
 
@@ -17,13 +17,12 @@ python @ dev-python/pygtk
 """
 
 def configure():
-    conf("--disable-static \
-          --enable-gio-unix \
-           --libexecdir=/usr/lib/xfce4 \
-          --disable-gtk-doc",
-          config_enable("debug"),
-          config_enable("python"))
-
+    conf("--libexecdir=/usr/lib/xfce4 \
+            --disable-static \
+            --enable-gio-unix \
+            --disable-gtk-doc",
+            config_enable("debug"),
+            config_enable("python"))
 
 def build():
     export("PYTHONDONTWRITEBYTECODE", "1")
