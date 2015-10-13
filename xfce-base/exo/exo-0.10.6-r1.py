@@ -19,6 +19,7 @@ python @ dev-python/pygtk
 def configure():
     conf("--disable-static \
           --enable-gio-unix \
+           --libexecdir=/usr/lib/xfce4 \
           --disable-gtk-doc",
           config_enable("debug"),
           config_enable("python"))

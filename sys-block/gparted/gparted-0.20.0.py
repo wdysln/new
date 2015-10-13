@@ -13,7 +13,7 @@ def prepare ():
     export("CXXFLAGS", "-g -O2 -std=c++11")
     
 def configure():
-    conf("--disable-static")
+    conf("--disable-static --disable-doc")
 
 
 def install():

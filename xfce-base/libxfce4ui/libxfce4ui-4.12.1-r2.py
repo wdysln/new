@@ -13,6 +13,7 @@ runtime @ xfce-base/libxfce4util x11-libs/gtk+:2 xfce-base/xfconf x11-libs/start
 def configure():
     conf("--disable-static",
             "--disable-gtk-doc",
+            "--libexecdir=/usr/lib/xfce4",
             "--disable-debug",
             '--with-vendor-info="Hadron Linux"')
 
