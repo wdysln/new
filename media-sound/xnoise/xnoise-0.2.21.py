@@ -9,7 +9,7 @@ arch @ ~x86_64
 depends = """
 build @ x11-libs/gtk+:3 dev-util/desktop-file-utils
         media-plugins/gst-plugins-base:1 media-plugins/gst-plugins-good:1 media-plugins/gst-plugins-bad:1
-        media-plugins/gst-plugins-ugly:1 media-libs/taglib        
+        media-plugins/gst-plugins-ugly:1 media-libs/taglib media-plugins/gst-libav media-libs/libtaginfo      
 """
 #media-libs/imlib2 media-libs/libvorbis media-libs/libogg media-video/ffmpeg dev-libs/jansson
 
