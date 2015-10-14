@@ -9,7 +9,7 @@ options @ debug introspection X jpeg tiff
 
 depends = """
 runtime @ sys-libs/glib media-libs/libpng x11-libs/libX11 media-libs/tiff media-libs/jpeg
-build @ dev-util/pkg-config sys-devel/gettext
+build @ dev-util/pkg-config sys-devel/gettext media-libs/jasper
 """
 
 

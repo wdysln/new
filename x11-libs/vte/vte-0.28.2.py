@@ -8,7 +8,7 @@ options @ debug introspection
 """
 
 depends = """
-build @ dev-util/intltool dev-util/pkg-config sys-devel/gettext
+build @ dev-util/intltool dev-util/pkg-config sys-devel/gettext main/x11-libs/gtk+:2
 runtime @ x11-libs/libXft x11-libs/libX11 sys-libs/ncurses media-libs/pango sys-libs/glib
 """
 
