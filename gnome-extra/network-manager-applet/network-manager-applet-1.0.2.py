@@ -16,7 +16,7 @@ def configure():
     raw_configure("--prefix=/usr",
             "--sysconfdir=/etc",
             "--libexecdir=/usr/lib/NetworkManager"
-            "--with-gtkver=2",
+            "--with-gtkver=3",
             "--disable-migration",
             "--disable-static")
 
