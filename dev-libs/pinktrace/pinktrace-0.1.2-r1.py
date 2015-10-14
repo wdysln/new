@@ -18,7 +18,9 @@ build @ dev-util/check
 
 # TODO:
 # * python-doc, ruby-doc, doxygen, haskell options are going to added
-
+def prepare():
+    patch(level=1)
+    
 def configure():
    #sed("""-i -e "s/CFLAGS = -std=c99 -pedantic -Wall -Os/CFLAGS += -std=c99 -pedantic -Wall -g/")
     conf("--enable-easy",
