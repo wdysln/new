@@ -13,7 +13,7 @@ common @ x11-libs/libXrender x11-libs/libX11 x11-libs/libXi x11-libs/libXt x11-l
 >=x11-libs/libXrandr-1.3 x11-libs/libXcursor x11-libs/libXfixes x11-libs/libXcomposite
 x11-libs/libXdamage >=x11-libs/cairo-1.10.0 >=x11-libs/gdk-pixbuf-2.26.0[X]
 >=sys-libs/glib-2.29.14 >=media-libs/pango-1.36.7 >=dev-libs/atk-2.1.5 x11-libs/gtk+:2
-media-libs/fontconfig x11-misc/shared-mime-info
+>=media-libs/fontconfig-2.11.1 x11-misc/shared-mime-info
 build @ dev-util/pkg-config app-accessibility/at-spi2-core app-accessibility/at-spi2-atk
 """
 #TODO: [introspection?] support
