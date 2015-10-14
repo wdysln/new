@@ -23,5 +23,5 @@ def install():
 
 def post_install():
     notify("building fonts.cache")
-    if not system("/usr/bin/fc-cache -r"):
+    if not system("/usr/bin/fc-cache -f"):
         raise BuildError
