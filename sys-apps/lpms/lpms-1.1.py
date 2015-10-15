@@ -1,7 +1,7 @@
 metadata = """
 summary @ Package building and distribution system for Hadron GNU/Linux
 homepage @ http://hadronproject.org
-src_url @ https://github.com/wdysln/new/raw/master/sys-apps/lpms/lpms-1.0.tar.gz
+src_url @ https://github.com/wdysln/new/raw/85b3c438a852d5eca682be1db7666a274ecb2881/sys-apps/lpms/lpms-1.0.tar.xz
 license @ GPL-3
 arch @ ~x86_64
 """
