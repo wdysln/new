@@ -8,8 +8,9 @@ options @
 """
 
 depends = """
-runtime @ >=sys-libs/glib-2.18.1 dev-libs/libxml2 dev-libs/libxslt 
-build @ >=dev-util/intltool-0.40 >=dev-util/pkg-config-0.12.0 dev-libs/boost
+runtime @ sys-libs/glib dev-libs/libxml2 dev-libs/libxslt 
+build @ dev-util/intltool dev-util/pkg-config dev-libs/boost dev-libs/popt dev-cpp/gtkmm
+        dev-libs/libxslt dev-libs/libatomic_ops
 """
 
 get("fdo_mime")
