@@ -32,6 +32,7 @@ def install():
     makedirs("/etc/lpms")
     insinto("%s/data/*" % build_dir, "/etc/lpms")
     insfile("%s/revdep-rebuild" % filesdir, "/usr/bin/revdep-rebuild")
+    system("/bin/chmod u+x /usr/bin/revdep-rebuild")
     
     for directories in ('/var/db/lpms', '/var/cache/lpms/sources',
             '/var/tmp/lpms', '/var/lib/lpms', '/var/tmp/merge-conf',
@@ -53,3 +54,4 @@ def install():
 
 
     insdoc("COPYING", "AUTHORS", "README", "TODO", "VERSION") 
+    
