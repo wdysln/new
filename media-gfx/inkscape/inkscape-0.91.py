@@ -10,7 +10,7 @@ options @
 depends = """
 runtime @ sys-libs/glib dev-libs/libxml2 dev-libs/libxslt 
 build @ dev-util/intltool dev-util/pkg-config dev-libs/boost dev-libs/popt dev-cpp/gtkmm
-        dev-libs/libxslt dev-libs/libatomic_ops
+        dev-libs/libxslt dev-libs/libatomic_ops sci-libs/gsl
 """
 
 get("fdo_mime")
