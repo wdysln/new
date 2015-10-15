@@ -2,7 +2,7 @@ metadata = """
 summary @ C++ interface for glib2
 homepage @ http://www.gtkmm.org
 license @ LGPL-2.1 GPL-2
-src_url @ http://ftp.gnome.org/pub/GNOME/sources/$name/2.42/$fullname.tar.bz2
+src_url @ http://ftp.gnome.org/pub/GNOME/sources/$name/2.42/$fullname.tar.xz
 arch @ ~x86_64
 """
 
