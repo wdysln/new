@@ -20,7 +20,6 @@ def configure():
 
 def build():
     make()
-    make("check")
     
 def install():
     raw_install("DESTDIR=%s" % install_dir)
