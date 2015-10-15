@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-build @ dev-libs/glibc app-shell/bash     
+build @ sys-libs/glibc app-shells/bash    
 """
 
 """
