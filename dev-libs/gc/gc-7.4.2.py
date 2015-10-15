@@ -11,7 +11,7 @@ build @ dev-libs/libatomic_ops
 #srcdir = "%s-libatomic_ops-7_4_2" % name
 
 def configure():
-    autoconf("-fi")
+    autoreconf("-fi")
     conf("--enable-cplusplus --disable-static")
 
 def build():
