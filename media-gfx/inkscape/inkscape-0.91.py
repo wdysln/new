@@ -32,8 +32,8 @@ def install():
 
 
 def post_install():
-    desktop_database_update()
-    gnome2_icon_cache_update()
+    system("update-desktop-database -q")
+    system("gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor")
 
 def post_remove():
     post_install()
