@@ -12,7 +12,7 @@ conflict @ dev-python/distribute
 """
 
 get("python_utils")
-srcdir = name + "-0.6c11"
+#srcdir = name + "-0.6c11"
 standard_procedure = False
 
 def install():
