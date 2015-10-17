@@ -19,12 +19,12 @@ standard_procedure = False
 
 def prepare():
     export("AUTO_GOPATH", "1")
-    export("DOCKER_GITCOMMIT", "786b29d") 
+    export("DOCKER_GITCOMMIT", "0baf609") 
     export("GOPATH", "%s/" % build_dir)
     export("CGO_CFLAGS", "-I/usr/include")
     export("CGO_LDFLAGS", "-L/usr/lib")
     export("DOCKER_BUILDTAGS","exclude_graphdriver_aufs")
-    export("DOCKER_INITPATH", "/usr/lib/docker/dockerinit")
+    export("DOCKER_INITPATH", "/usr/libexec/docker/dockerinit")
 
 def build():
     system("./hack/make.sh dynbinary")
@@ -33,9 +33,9 @@ def build():
 def install():  
     
     insexe("bundles/1.7.0/dynbinary/docker","/usr/bin/")
-    insexe("bundles/1.7.0/dynbinary/docker-1.7.1","/usr/bin/")
+    insexe("bundles/1.7.0/dynbinary/docker-1.7.0","/usr/bin/")
     insexe("bundles/1.7.0/dynbinary/dockerinit", "/usr/libexec/dockerinit")
-    insexe("bundles/1.7.0/dynbinary/dockerinit-1.7.1", "/usr/libexec/dockerinit-1.7.0")
+    insexe("bundles/1.7.0/dynbinary/dockerinit-1.7.0", "/usr/libexec/dockerinit-1.7.0")
 
     insinto("contrib/init/systemd/docker.service", "/usr/lib/systemd/system")
     insinto("contrib/init/systemd/docker.socket", "/usr/lib/systemd/system")
