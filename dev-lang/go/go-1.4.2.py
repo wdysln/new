@@ -4,16 +4,17 @@ homepage @ http://golang.org/
 license @ BSD
 src_url @ https://github.com/golang/$name/archive/go$version.tar.gz
 arch @ ~x86_64
-options @ debug threads
 """
 
-#srcdir = "tcl8.5.9"
-
+srcdir = "%s-%s%s" (name,name,version)
+depends = """
+build @ sys-apps/inetutils dev-vcs/mercurial dev-vcs/git
+"""
 
 def prepare():
-    export("GOROOT", "%s/go-go1.4.2" % build_dir)
+    export("GOROOT", "%s" % srcdir)
     export("GOBIN", "$GOROOT/bin")
-    export("GOPATH", "%s" % build_dir)
+    export("GOPATH", "%s" % srcdir )
     export("GOROOT_FINAL", "/usr/lib/go")
 
     export("GOOS","linux")
@@ -24,8 +25,8 @@ def build():
     cd("src")
     system("bash make.bash")
 
-    cd("go-go1.4.2")
-
+    cd("..")
+    prepare()
     system("$GOROOT/bin/go get -d golang.org/x/tools/cmd/godoc")
     system("$GOROOT/bin/go build -o $GOPATH/godoc golang.org/x/tools/cmd/godoc")
 
