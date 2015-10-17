@@ -10,7 +10,7 @@ depends = """
 common @ sys-apps/util-linux app-shells/bash
 """
 
-srcdir = "%s" name
+srcdir = "%s" % name
 
 def configure():
     system("./autogen.sh")
