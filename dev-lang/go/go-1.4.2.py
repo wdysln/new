@@ -36,10 +36,6 @@ def build():
 
 
 def install():  
-    cd("go-go1.4.2")
-    
-    #dobin("bin/*")
-    
     insexe("bin/*", "/usr/bin/")
     makedirs("/usr/lib/go")
     
