@@ -6,7 +6,7 @@ src_url @ https://github.com/golang/$name/archive/go$version.tar.gz
 arch @ ~x86_64
 """
 
-srcdir = "%s-%s%s" (name,name,version)
+srcdir = "%s-%s%s" % (name,name,version)
 depends = """
 build @ sys-apps/inetutils dev-vcs/mercurial dev-vcs/git
 """
