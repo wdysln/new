@@ -10,14 +10,15 @@ options @ debug threads
 
 #srcdir = "tcl8.5.9"
 
-export("GOROOT", "%s/go-go1.4.2" % build_dir)
-export("GOBIN", "$GOROOT/bin")
-export("GOPATH", "%s" % build_dir)
-export("GOROOT_FINAL", "/usr/lib/go")
 
-export("GOOS","linux")
-export("GOARCH","amd64")
+def prepare():
+    export("GOROOT", "%s/go-go1.4.2" % build_dir)
+    export("GOBIN", "$GOROOT/bin")
+    export("GOPATH", "%s" % build_dir)
+    export("GOROOT_FINAL", "/usr/lib/go")
 
+    export("GOOS","linux")
+    export("GOARCH","amd64")
 
 def build():
   
