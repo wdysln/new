@@ -10,8 +10,6 @@ depends = """
 common @ sys-apps/util-linux app-shells/bash
 """
 
-def prepare():
-    sed("-i '/init\.d/s|^|#|' misc/Makefile.in")
 
 def configure():
     system("./autogen.sh")
