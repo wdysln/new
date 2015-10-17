@@ -20,10 +20,10 @@ standard_procedure = False
 def prepare():
     export("AUTO_GOPATH", "1")
     export("DOCKER_GITCOMMIT", "0baf609") 
-   # export("GOPATH", "%s/" % build_dir)
-    #export("CGO_CFLAGS", "-I/usr/include")
-    #export("CGO_LDFLAGS", "-L/usr/lib")
-    #export("DOCKER_BUILDTAGS","exclude_graphdriver_aufs")
+    export("GOPATH", "%s/" % build_dir)
+    export("CGO_CFLAGS", "-I/usr/include")
+    export("CGO_LDFLAGS", "-L/usr/lib")
+    export("DOCKER_BUILDTAGS","exclude_graphdriver_aufs")
     export("DOCKER_INITPATH", "/usr/libexec/docker/dockerinit")
 
 def build():
