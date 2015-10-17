@@ -9,7 +9,9 @@ arch @ ~x86_64
 depends = """
 runtime @ sys-libs/glibc dev-libs/openssl
 """
-
+def prepare():
+    patch(level=1)
+    
 def configure():
     autoconf()
     conf("--prefix=/usr \
