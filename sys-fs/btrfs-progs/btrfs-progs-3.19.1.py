@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-common @ sys-apps/util-linux app-shells/bash
+build @ sys-apps/util-linux app-shells/bash app-arch/lzo dev-vcs/git sys-libs/zlib
 """
 
 srcdir = "%s" % name

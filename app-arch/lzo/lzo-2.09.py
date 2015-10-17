@@ -5,6 +5,9 @@ license @ GPL
 src_url @ http://www.oberhumer.com/opensource/lzo/download/lzo-2.09.tar.gz
 arch @ ~x86_64
 """
+depends = """
+build @ sys-apps/util-linux app-shells/bash app-text/xmlto
+"""
 
 def configure():
     conf("--enable-shared")
