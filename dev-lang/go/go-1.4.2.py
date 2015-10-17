@@ -2,8 +2,7 @@ metadata = """
 summary @  Compiler and tools for the Go programming language from Google
 homepage @ http://golang.org/
 license @ BSD
-src_url @ http://downloads.sourceforge.net/sourceforge/$name/$name$version-src.tar.gz
-	https://github.com/golang/$name/archive/go$version.tar.gz
+src_url @ https://github.com/golang/$name/archive/go$version.tar.gz
 arch @ ~x86_64
 options @ debug threads
 """
