@@ -12,9 +12,9 @@ build @ sys-apps/inetutils dev-vcs/mercurial dev-vcs/git
 """
 
 def prepare():
-    export("GOROOT", "%s" % srcdir)
+    export("GOROOT", "%s" % build_dir)
     export("GOBIN", "$GOROOT/bin")
-    export("GOPATH", "%s" % srcdir )
+    export("GOPATH", "%s/" % build_dir )
     export("GOROOT_FINAL", "/usr/lib/go")
 
     export("GOOS","linux")
@@ -27,6 +27,13 @@ def build():
 
     cd("..")
     prepare()
+    export("GOROOT", "%s" % build_dir )
+    export("GOBIN", "$GOROOT/bin")
+    export("GOPATH", "%s/" % build_dir )
+    export("GOROOT_FINAL", "/usr/lib/go")
+
+    export("GOOS","linux")
+    export("GOARCH","amd64")
     system("$GOROOT/bin/go get -d golang.org/x/tools/cmd/godoc")
     system("$GOROOT/bin/go build -o $GOPATH/godoc golang.org/x/tools/cmd/godoc")
 
