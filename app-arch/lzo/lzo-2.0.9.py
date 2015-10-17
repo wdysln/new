@@ -2,7 +2,7 @@ metadata = """
 summary @ Portable lossless data compression library
 homepage @ http://www.oberhumer.com/opensource/lzo
 license @ GPL 
-src_url @ http://www.oberhumer.com/opensource/lzo/download/$fullname.tar.gz
+src_url @ http://www.oberhumer.com/opensource/lzo/download/lzo-2.09.tar.gz
 arch @ ~x86_64
 """
 
