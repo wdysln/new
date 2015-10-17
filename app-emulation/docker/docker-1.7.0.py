@@ -24,9 +24,10 @@ def prepare():
     #export("CGO_CFLAGS", "-I/usr/include")
     #export("CGO_LDFLAGS", "-L/usr/lib")
     #export("DOCKER_BUILDTAGS","exclude_graphdriver_aufs")
-    #export("DOCKER_INITPATH", "/usr/libexec/docker/dockerinit")
+    export("DOCKER_INITPATH", "/usr/libexec/docker/dockerinit")
 
 def build():
+    system("export DOCKER_INITPATH=/usr/libexec/docker/dockerinit")
     system("./hack/make.sh dynbinary")
 
 
