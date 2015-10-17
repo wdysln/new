@@ -34,8 +34,8 @@ def install():
     
     insexe("bundles/1.7.0/dynbinary/docker","/usr/bin/")
     insexe("bundles/1.7.0/dynbinary/docker-1.7.0","/usr/bin/")
-    insexe("bundles/1.7.0/dynbinary/dockerinit", "/usr/libexec/dockerinit")
-    insexe("bundles/1.7.0/dynbinary/dockerinit-1.7.0", "/usr/libexec/dockerinit-1.7.0")
+    insexe("bundles/1.7.0/dynbinary/dockerinit", "/usr/libexec/docker/dockerinit")
+    insexe("bundles/1.7.0/dynbinary/dockerinit-1.7.0", "/usr/libexec/docker/dockerinit-1.7.0")
 
     insinto("contrib/init/systemd/docker.service", "/usr/lib/systemd/system")
     insinto("contrib/init/systemd/docker.socket", "/usr/lib/systemd/system")
