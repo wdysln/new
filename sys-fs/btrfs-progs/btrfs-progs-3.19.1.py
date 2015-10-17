@@ -19,7 +19,5 @@ def configure():
 def install():
     installd()
 
-    insexe("bcp", "btrfs-bcp","/usr/bin")
-    insexe("show-blocks", "btrfs-show-blocks","/usr/bin")
 
 
