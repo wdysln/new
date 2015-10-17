@@ -70,7 +70,7 @@ def configure():
     config_enable("smp", "mp"),
     config_enable("sse"),
     config_with("svg", "librsvg"),
-    config_with("tiff", "libtiff"),
+    config_with("tiff", "libtiff"))
 
 def build():
     export("PYTHONDONTWRITEBYTECODE", "1")
