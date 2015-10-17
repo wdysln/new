@@ -28,8 +28,8 @@ def install():
     
     insexe("bundles/1.7.1/dynbinary/docker","/usr/bin/")
     insexe("bundles/1.7.1/dynbinary/docker-1.7.1","/usr/bin/")
-    insexe("bundles/1.7.1/dynbinary/dockerinit", "/usr/lib/dockerinit")
-    insexe("bundles/1.7.1/dynbinary/dockerinit-1.7.1", "/usr/lib/dockerinit-1.7.1")
+    insexe("bundles/1.7.1/dynbinary/dockerinit", "/usr/libexec/dockerinit")
+    insexe("bundles/1.7.1/dynbinary/dockerinit-1.7.1", "/usr/libexec/dockerinit-1.7.1")
 
     insinto("contrib/init/systemd/docker.service", "/usr/lib/systemd/system")
     insinto("contrib/init/systemd/docker.socket", "/usr/lib/systemd/system")
