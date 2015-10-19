@@ -6,7 +6,7 @@ arch @ ~x86_64
 """
 
 depends = """
-common @ dev-lang/python:2.7
+common @ dev-lang/python:2.7 dev-python/setuptools
 """
 
 standard_procedure = False
