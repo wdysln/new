@@ -13,6 +13,7 @@ common @ sys-libs/glibc
 def prepare():
     patch(level=1)
     system("sed -i '/gets is a security hole/d' gnu/stdio.in.h")
+    
 def configure():
     conf("--enable-nls \
           --bindir=/bin \

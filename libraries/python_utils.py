@@ -61,7 +61,5 @@ def python_utils_install(*params, **kwargs):
             'README*', 'PKG-INFO')
 
     for doc_file in doc_files:
-        for doc in glob.glob(doc_file):
-            if not isempty(doc):
-                insdoc(doc)
+        insdoc(doc_files)
     # END
