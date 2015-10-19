@@ -61,5 +61,5 @@ def python_utils_install(*params, **kwargs):
             'README*', 'PKG-INFO')
 
     for doc_file in doc_files:
-        insdoc(doc_files)
+        insdoc(doc_file)
     # END
