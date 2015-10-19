@@ -22,3 +22,6 @@ def configure():
          --enable-udisks2")
 def build():
     make()
+    
+def install():
+    installd()

@@ -18,4 +18,5 @@ gtk3 @ x11-libs/gtk+:3
 """
 
 
-
+def install():
+    installd()
