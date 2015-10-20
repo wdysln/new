@@ -26,6 +26,7 @@ png @ media-libs/libpng
 opt_runtime = """
 cjk @ app-text/poppler-data
 """
+get("main/cmake_utils")
 
 def configure():
     pass
@@ -55,5 +56,7 @@ def build():
     system("cmake ../ \
             -DCMAKE_INSTALL_PREFIX=/usr %s" % cmakeopts)
 
-
+def install():
+    raw_install("DESTDIR=%s" % install_dir)
+    
     # What the fuck !?! Gentoo uses cmake, arch uses standard configure. FUCK PDF!
