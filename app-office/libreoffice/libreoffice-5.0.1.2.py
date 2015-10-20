@@ -68,7 +68,7 @@ def configure():
              --with-system-openssl       \
              --with-system-poppler       \
              --with-system-zlib          \
-             --with-parallelism=%s' % (get_env("JOBS").replace("-j","")))
+             --with-parallelism=%s' % (get_env("JOBS").replace("-j",""))
 
     system("./autogen.sh %s" % options)
     
