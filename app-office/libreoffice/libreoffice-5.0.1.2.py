@@ -35,36 +35,40 @@ def configure():
         
     append_cxxflags("-I%s/include" % build_dir)
 
-    options =         '--prefix=/usr                   \
-                        --sysconfdir=/etc               \
-                        --with-vendor=PisiLinux         \
-                        --with-lang="tr"               \
-                        --with-help                     \
-                        --with-myspell-dicts            \
-                        --with-alloc=system             \
-                        --without-java                  \
-                        --without-system-dicts          \
-                        --disable-gconf                 \
-                        --disable-postgresql-sdbc       \
-                        --enable-release-build=yes      \
-                        --enable-python=system          \
-                        --with-system-boost             \
-                        --with-system-curl              \
-                        --with-system-cairo             \
-                        --with-system-expat             \
-                        --with-system-harfbuzz          \
-                        --with-system-icu               \
-                        --with-system-jpeg              \
-                        --with-system-lcms2             \
-                        --with-system-libpng            \
-                        --with-system-libxml            \
-                        --with-system-mesa-headers      \
-                        --with-system-nss               \
-                        --with-system-openssl           \
-                        --with-system-poppler           \
-                        --with-system-zlib              \
-                        --disable-odk
-                        --with-parallelism=%s' % (get_env("JOBS").replace("-j","")))
+    options ='--prefix=/usr        \
+             --sysconfdir=/etc           \
+             --with-vendor="Hadron Gnu/Linux" \
+             --with-lang="tr"      \
+             --with-help                 \
+             --with-myspell-dicts        \
+             --with-alloc=system         \
+             --without-java              \
+             --without-system-dicts      \
+             --disable-gconf             \
+             --disable-odk               \
+             --disable-postgresql-sdbc   \
+             --enable-release-build=yes  \
+             --enable-python=system      \
+             --with-system-boost         \
+             --with-system-clucene       \
+             --with-system-cairo         \
+             --with-system-curl          \
+             --with-system-expat         \
+             --with-system-graphite      \
+             --with-system-harfbuzz      \
+             --with-system-icu           \
+             --with-system-jpeg          \
+             --with-system-lcms2         \
+             --with-system-libpng        \
+             --with-system-libxml        \
+             --with-system-mesa-headers  \
+             --with-system-nss           \
+             --with-system-odbc          \
+             --with-system-openldap      \
+             --with-system-openssl       \
+             --with-system-poppler       \
+             --with-system-zlib          \
+             --with-parallelism=%s' % (get_env("JOBS").replace("-j","")))
 
     system("./autogen.sh %s" % options)
     
