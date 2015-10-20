@@ -32,7 +32,8 @@ def configure():
     for f in [ "dictionaries", "help", "translations"]:
         name = "libreoffice-%s-%s.tar.xz" % (f, version)
         makesym("%s/%s" % (src_cache,name), "%s/external/tarballs/%s" % (build_dir, name))
-    
+        
+    append_cxxflags("-I%s/include" % build_dir)
 
     options =         "--prefix=/usr                   \
                         --sysconfdir=/etc               \
