@@ -35,10 +35,10 @@ def configure():
         
     append_cxxflags("-I%s/include" % build_dir)
 
-    options =         "--prefix=/usr                   \
+    options =         '--prefix=/usr                   \
                         --sysconfdir=/etc               \
                         --with-vendor=PisiLinux         \
-                        --with-lang='tr'               \
+                        --with-lang="tr"               \
                         --with-help                     \
                         --with-myspell-dicts            \
                         --with-alloc=system             \
@@ -63,8 +63,8 @@ def configure():
                         --with-system-openssl           \
                         --with-system-poppler           \
                         --with-system-zlib              \
-                        --disable-odk"
-  
+                        --disable-odk
+                        --with-parallelism=%s' % (get_env("JOBS").replace("-j","")))
 
     system("./autogen.sh %s" % options)
     
