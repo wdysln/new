@@ -16,7 +16,6 @@ runtime @ sys-libs/glibc media-libs/tiff media-libs/libpng media-libs/libmng dev
 srcdir = "qt-everywhere-opensource-src-"+version
 
 def configure():
-    patch(level=1)
     system("unset QMAKESPEC")
     export("QT5DIR", build_dir)
     export("PATH", "%s/bin:%s" % (build_dir, get_env("PATH")))
