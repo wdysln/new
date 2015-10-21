@@ -8,10 +8,11 @@ slot @ 5
 """
 
 depends = """
-build @ media-libs/libwebp dev-lang/ruby[yaml]
+build @ media-libs/libwebp dev-lang/ruby[yaml] media-libs/jasper media-plugins/gst-plugins-base:1 dev-libs/icu net-print/cups
 runtime @ sys-libs/glibc media-libs/tiff media-libs/libpng media-libs/libmng dev-db/sqlite app-misc/ca-certificates sys-libs/glib sys-apps/dbus
 	media-libs/fontconfig media-libs/mesa x11-libs/libSM x11-libs/libXrandr x11-libs/libXv x11-libs/libXi media-libs/alsa-lib
 	dev-db/unixODBC x11-libs/gtk+:2 media-plugins/gst-plugins-base:0 media-libs/gstreamer:0 dev-util/cmake media-libs/libwebp
+	
 """
 
 srcdir = "qt-everywhere-opensource-src-"+version
@@ -21,10 +22,6 @@ def configure():
     export("QT5DIR", build_dir)
     export("PATH", "%s/bin:%s" % (build_dir, get_env("PATH")))
     export("LD_LIBRARY_PATH", "%s/%s" % (build_dir, "lib"))
-    
-    print system('sed -i "s|-O2|$CXXFLAGS|" mkspecs/common/g++.conf')
-    print system('sed -i "/^QMAKE_RPATH/s| -Wl,-rpath,||g" mkspecs/common/g++.conf')
-    print system('sed -i "/^QMAKE_LFLAGS\s/s|+=|+= $LDFLAGS|g" mkspecs/common/g++.conf')
     
     raw_configure("-confirm-license -opensource \
             -prefix /usr \
