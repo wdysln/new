@@ -21,13 +21,6 @@ readline @ sys-libs/readline
 yaml @ dev-libs/libyaml
 """
 
-srcdir = "ruby-2.0.0-p0"
-
-# TODO: We need a mechanism for handling different ruby versions. 
-# Like 1.9, 1.8 and 2.0. So these versions of ruby can co-exist in Hadron
-# Main problem is in our case, slotting mechanism cannot deal with differend ruby versions
-# Because of that situation, I remove old 1.9.x packages from main repository for now.
-
 def configure():
     conf("--enable-shared",
         "--enable-pthread",
