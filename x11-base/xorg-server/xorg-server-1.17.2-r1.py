@@ -26,9 +26,9 @@ x11-proto/trapproto >=x11-proto/videoproto-2.2.2 >=x11-proto/xcmiscproto-1.2.0
 >=x11-proto/xextproto-7.1.99 >=x11-proto/xf86dgaproto-2.0.99.1
 x11-proto/xf86rushproto >=x11-proto/xf86vidmodeproto-2.2.99.1 media-libs/libepoxy
 >=x11-proto/xineramaproto-1.1.3 >=x11-proto/xproto-7.0.22 >=media-fonts/font-util-1.1
->=x11-proto/dmxproto-2.2.99.1 >=x11-misc/util-macros-1.14 x11-misc/xcb-util-image x11-misc/xcb-util-keysyms 
-x11-misc/xcb-util-wm x11-libs/libxcb x11-misc/xcb-util-renderutil
->=x11-proto/xf86driproto-2.1.0 >=x11-proto/dri2proto-2.6 >=x11-libs/libdrm-2.4.20
+>=x11-proto/dmxproto-2.2.99.1 >=x11-misc/util-macros-1.14 x11-misc/xcb-util
+>=x11-proto/xf86driproto-2.1.0 >=x11-proto/dri2proto-2.6 >=x11-libs/libdrm-2.4.20 
+x11-misc/xcb-util-image x11-misc/xcb-util-wm x11-libs/libxcb x11-misc/xcb-util-renderutil x11-misc/xcb-util-keysyms 
 postmerge @ media-fonts/fonts-type1 media-fonts/dejavu 
 media-fonts/freefonts x11-misc/xinit x11-libs/libXau x11-misc/xcb-util x11-libs/libxcb x11-misc/xcb-util-image x11-misc/xcb-util-wm 
 x11-misc/xcb-util-keysyms 
