@@ -10,7 +10,7 @@ depends = """
 runtime @ x11-libs/qt5
 build @ dev-util/cmake net-misc/wget[ssl,gnutls] 
 """
-srcdir = ""
+srcdir = "libdbusmenu-qt-0.9.3+15.10.20150604"
 get("main/cmake_utils")
 
 def configure():
