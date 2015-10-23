@@ -7,8 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ app-arch/unzip  
-build @ dev-util/pkg-config
+build @ dev-util/cmake
 """
 
 get("main/cmake_utils")
