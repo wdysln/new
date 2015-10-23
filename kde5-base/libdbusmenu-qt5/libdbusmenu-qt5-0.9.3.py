@@ -8,7 +8,7 @@ arch @ ~x86_64
 
 depends = """
 runtime @ x11-libs/qt5
-build @ dev-util/cmake net-misc/wget[ssl,gnutls] dev-libs/qjson
+build @ dev-util/cmake net-misc/wget[ssl,gnutls] 
 """
 srcdir = ""
 get("main/cmake_utils")
