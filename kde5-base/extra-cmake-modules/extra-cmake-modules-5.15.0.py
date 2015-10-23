@@ -2,7 +2,7 @@ metadata = """
 summary @ Extra modules and scripts for CMake
 homepage @ https://projects.kde.org/projects/kdesupport/extra-cmake-modules
 license @ LGPL
-src_url @ http://distfiles.atheme.org/$fullname.tar.bz2
+src_url @ http://download.kde.org/stable/frameworks/5.15/$fulname.tar.xz
 arch @ ~x86_64
 """
 
