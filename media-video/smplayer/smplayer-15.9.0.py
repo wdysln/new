@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-common @ media-video/mplayer x11-libs/qt
+common @ media-video/mplayer x11-libs/qt5
 """
 
 def configure():
