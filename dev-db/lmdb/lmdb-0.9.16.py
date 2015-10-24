@@ -9,7 +9,7 @@ arch @ ~x86_64
 depends = """
 build @ dev-libs/libxslt
 """
-srcdir ="lmdb-LMDB_0.9.16/libraries/liblmdb"
+srcdir ="lmdb-LMDB_0.9.16"
 standard_procedure = False
 
 def build():
@@ -18,12 +18,13 @@ def build():
     makedirs("%s/usr/man/man1"% install_dir)
     makedirs("%s/usr/share"% install_dir)
     makedirs("%s/usr/include"% install_dir)
-
+    cd("libraries/liblmdb")
     make("prefix=/usr")
  
  
     
 def install():
+    cd("libraries/liblmdb")
     raw_install("DESTDIR=%s prefix=/usr" % install_dir)
 
 	
