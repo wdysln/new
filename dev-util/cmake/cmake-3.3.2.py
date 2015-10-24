@@ -15,6 +15,7 @@ def configure():
     system("./bootstrap --prefix=/usr \
             --mandir=/share/man \
             --docdir=/share/doc/cmake \
+             --no-system-jsoncpp \
             --system-libs \
             --parallel=2")
 
