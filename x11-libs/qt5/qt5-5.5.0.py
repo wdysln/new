@@ -25,7 +25,7 @@ def configure():
     raw_configure("-confirm-license -opensource \
             -prefix /usr \
             -docdir /usr/share/doc/qt5 \
-            -plugindir /usr/lib/q5t/plugins \
+            -plugindir /usr/lib/qt5/plugins \
             -importdir /usr/lib/qt5/imports \
             -datadir /usr/share/qt5 \
             -translationdir /usr/share/qt5/translations \
