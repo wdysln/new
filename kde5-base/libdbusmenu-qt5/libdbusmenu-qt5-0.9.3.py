@@ -8,7 +8,7 @@ arch @ ~x86_64
 
 depends = """
 runtime @ x11-libs/qt5
-build @ dev-util/cmake net-misc/wget[ssl,gnutls] 
+build @ dev-util/cmake net-misc/wget[ssl,gnutls] app-doc/doxygen
 """
 srcdir = "libdbusmenu-qt-0.9.3+15.10.20150604"
 get("main/cmake_utils")

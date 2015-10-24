@@ -18,4 +18,7 @@ def configure():
 def build():
     make()
     make("check")
+    
+def install():
+	installd()    
 

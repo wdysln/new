@@ -2,13 +2,13 @@ metadata = """
 summary @ A cross-platform open softwre make system
 homepage @ http://www.cmake.org
 license @ CMake
-src_url @ http://www.cmake.org/files/v2.8/$fullname.tar.gz
+src_url @ http://www.cmake.org/files/v3.3/$fullname.tar.gz
 arch @ ~x86_64
 """
 
 depends = """
 runtime @ dev-libs/expat app-arch/libarchive net-misc/curl
-          x11-misc/shared-mime-info dev-libs/jsoncpp
+          x11-misc/shared-mime-info 
 """
 
 def configure():
