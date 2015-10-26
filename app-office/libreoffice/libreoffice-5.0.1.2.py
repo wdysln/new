@@ -11,7 +11,7 @@ arch @ ~x86_64
 
 depends = """
 common @ dev-libs/popt >=x11-libs/gtk+-2.10:2 dev-perl/archive-zip dev-lang/python[threads] app-text/poppler
-         media-libs/silgraphite dev-cpp/clucene-core media-libs/glew
+         media-libs/silgraphite dev-cpp/clucene-core media-libs/glew net-dns/openldap
 """
 
 

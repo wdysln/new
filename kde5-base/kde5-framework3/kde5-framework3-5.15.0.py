@@ -2,19 +2,8 @@ metadata = """
 summary @ KDE Frameworks 5 is a collection of libraries based on top of Qt5 and QML that can be used independently of KDE.
 homepage @ https://projects.kde.org/projects/frameworks
 license @ LGPL
-src_url @ http://download.kde.org/stable/frameworks/5.15/kguiaddons-$version.tar.xz
-http://download.kde.org/stable/frameworks/5.15/kimageformats-$version.tar.xz
-http://download.kde.org/stable/frameworks/5.15/kitemmodels-$version.tar.xz
-http://download.kde.org/stable/frameworks/5.15/kitemviews-$version.tar.xz
-http://download.kde.org/stable/frameworks/5.15/kplotting-$version.tar.xz
-http://download.kde.org/stable/frameworks/5.15/threadweaver-$version.tar.xz
-http://download.kde.org/stable/frameworks/5.15/kcompletion-$version.tar.xz
-http://download.kde.org/stable/frameworks/5.15/kcrash-$version.tar.xz
-http://download.kde.org/stable/frameworks/5.15/kdoctools-$version.tar.xz
-http://download.kde.org/stable/frameworks/5.15/kpty-$version.tar.xz
-http://download.kde.org/stable/frameworks/5.15/kunitconversion-$version.tar.xz
-http://download.kde.org/stable/frameworks/5.15/kjobwidgets-$version.tar.xz
-http://download.kde.org/stable/frameworks/5.15/knotifications-$version.tar.xz
+src_url @ http://download.kde.org/stable/frameworks/5.15/kfilemetadata-$version.tar.xz
+http://download.kde.org/stable/frameworks/5.15/baloo-$version.tar.xz
 arch @ ~x86_64
 """
 
@@ -25,19 +14,8 @@ srcdir = "."
 
 #get("main/cmake_utils")
 
-names = ["kguiaddons",
-		"kimageformats",
-		"kitemmodels",
-		"kitemviews",
-		"kplotting",
-		"threadweaver",
-		"kcompletion",
-		"kcrash",
-		"kdoctools",
-		"kpty",
-		"kunitconversion",
-		"kjobwidgets",
-		"knotifications"]
+names = ["kfilemetadata",
+		"baloo"]
 
 				
 standard_procedure = False
@@ -51,19 +29,10 @@ def configure():
 					-DCMAKE_INSTALL_PREFIX=/usr \
 					-DLIB_INSTALL_DIR=lib \
 					-DLIBEXEC_INSTALL_DIR=lib \
-					-DBUILD_TESTING=OFF -Wno-dev ..")
-		cd("../..")
-		
-def build():
-	for packs in names:
-		cd("%s-%s" %(packs,version))
-		cd("build")
+					-DCMAKE_PREFIX_PATH=%s/usr \
+					-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+					-DQML_INSTALL_DIR=/usr/qml \
+					-DBUILD_TESTING=OFF -Wno-dev .."% install_dir)
 		make()
-		cd("../..")
-		
-def install():
-	for packs in names:
-		cd("%s-%s" %(packs,version))
-		cd("build")
 		installd()
 		cd("../..")
