@@ -21,10 +21,11 @@ def configure():
             "--libexecdir=/usr/lib",
             "--with-headers=/usr/include",
             "--enable-kernel=2.6.32",
-            "--enable-add-ons",
             "--enable-obsolete-rpc",
+            "--enable-add-ons",
             "--enable-stackguard-randomization",
             "--enable-bind-now",
+            "--disable-werror",
             "--disable-profile",
             run_dir = build_dir)
 
