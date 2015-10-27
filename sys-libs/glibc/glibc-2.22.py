@@ -13,6 +13,7 @@ build @ sys-kernel/linux-api-headers
 
 
 def configure():
+    patch(level=1)
     makedirs("../glibc-build"); cd("../glibc-build")
     echo("slibdir=/usr/lib", "configparms")
     raw_configure("--prefix=/usr",
@@ -20,6 +21,7 @@ def configure():
             "--libexecdir=/usr/lib",
             "--with-headers=/usr/include",
             "--enable-kernel=2.6.32",
+            "--enable-add-ons",
             "--enable-obsolete-rpc",
             "--enable-stackguard-randomization",
             "--enable-bind-now",
@@ -33,13 +35,13 @@ def build():
 def install():
     cd("../glibc-build")
     makedirs("/etc")
-
+    system("touch %s/etc/ld.so.conf"% install_dir)
     raw_install("install_root=%s" % install_dir)
 
     for item in ('locale', 'systemd/system', 'tmpfiles.d'):
         makedirs("/usr/lib/%s" % item)
 
-    insexe("%s/ld.so.conf" % filesdir, "/etc/ld.so.conf")
+   # insexe("%s/ld.so.conf" % filesdir, "/etc/ld.so.conf")
     insfile("%s/nscd/nscd.conf" % build_dir, "/etc/nscd.conf")
     insfile("%s/nscd/nscd.service" % build_dir, "/usr/lib/systemd/system/nscd.service")
     insfile("%s/nscd/nscd.tmpfiles" % build_dir, "/usr/lib/tmpfiles.d/nscd.conf")
