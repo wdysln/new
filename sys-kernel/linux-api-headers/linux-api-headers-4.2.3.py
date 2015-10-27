@@ -8,7 +8,7 @@ arch @ ~x86_64
 
 standard_procedure = False
 
-#srcdir = "linux-4.0.4"
+srcdir = "linux-4.2.3"
 
 def build():
     make("mrproper")
