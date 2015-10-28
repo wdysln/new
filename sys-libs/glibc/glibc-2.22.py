@@ -13,30 +13,40 @@ build @ sys-kernel/linux-api-headers
 
 
 def configure():
-    patch(level=1)
     makedirs("../glibc-build"); cd("../glibc-build")
     echo("slibdir=/usr/lib", "configparms")
+    echo("rtlddir=/usr/lib", "configparms")
+    
     raw_configure("--prefix=/usr",
             "--libdir=/usr/lib",
             "--libexecdir=/usr/lib",
             "--with-headers=/usr/include",
+            "--enable-add-ons",
             "--enable-kernel=2.6.32",
             "--enable-obsolete-rpc",
-            "--enable-add-ons",
             "--enable-stackguard-randomization",
             "--enable-bind-now",
+            "--enable-lock-elision",
             "--disable-werror",
             "--disable-profile",
             run_dir = build_dir)
 
+
+
 def build():
     cd("../glibc-build")
+    echo("slibdir=/usr/lib", "configparms")
+    echo("rtlddir=/usr/lib", "configparms")
     make()
+  #  make("check || true")
 
 def install():
     cd("../glibc-build")
+    export("HOME", build_dir)
     makedirs("/etc")
     system("touch %s/etc/ld.so.conf"% install_dir)
+    
+    
     raw_install("install_root=%s" % install_dir)
 
     for item in ('locale', 'systemd/system', 'tmpfiles.d'):
@@ -53,6 +63,7 @@ def install():
     insfile("%s/locale.gen" % filesdir, "/etc/locale.gen")
 
     makedirs("/etc/ld.so.conf.d")
-
+    system("rm %s/etc/ld.so.conf"% install_dir)
+    
 def post_install():
     warn("Please don't forget to edit /etc/locale.gen and run locale-gen")
