@@ -12,7 +12,7 @@ runtime @ app-misc/strigi kde-base/attica x11-misc/libxss app-arch/xz dev-libs/o
 	app-crypt/qca dev-libs/libdbusmenu-qt sys-auth/polkit-qt dev-libs/grantlee 
 	x11-misc/shared-mime-info app-text/enchant media-libs/giflib media-libs/jasper media-libs/openexr 
 	media-libs/ilmbase x11-misc/xdg-utils media-libs/phonon x11-themes/hicolor-icon-theme sys-power/upower 
-	sys-fs/udisks x11-libs/libXcursor app-text/docbook-xsl-stylesheets app-text/docbook-xml-dtd:4.2
+	sys-fs/udisks x11-libs/libXcursor app-text/docbook-xsl-stylesheets app-text/docbook-xml
 build @ dev-util/pkg-config dev-util/cmake dev-util/automoc4 dev-util/intltool app-text/hspell media-libs/mesa
 """
 
