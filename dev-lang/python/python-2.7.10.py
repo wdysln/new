@@ -28,7 +28,7 @@ xml @ dev-libs/expat
 
 def prepare():
     sed('-i "/progname =/s/python/python2.7/" Python/pythonrun.c')
-   # patch(location="%s/2.7.3" % filesdir)
+    patch(location="%s/2.7.10" % filesdir)
     for i in ('expat', 'zlib', '_ctypes/darwin'): #'_ctypes/libffi'):
         rmdir('Modules/%s' % i)
     copytree("Lib/plat-linux2", "%s/Lib/plat-linux3" % build_dir)
