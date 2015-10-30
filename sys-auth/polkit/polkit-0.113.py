@@ -21,7 +21,7 @@ def configure():
             "--libexecdir=/usr/lib/polkit-1",
             "--disable-man-pages",
             "--disable-gtk-doc",
-            "--enable-libsystemd-login=no",
+            "--enable-libsystemd-login=yes",
             "--disable-static",
             "--enable-examples",
             "--with-authfw=shadow",
