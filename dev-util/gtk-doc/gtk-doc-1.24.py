@@ -13,7 +13,7 @@ build @ dev-util/pkg-config app-text/docbook-xml dev-util/itstool
 """
 
 def configure():
-    conf('--with-xml-catalog="/etc/xml/docbook-xml"')
+    conf()
 
 def build():
     installd()
