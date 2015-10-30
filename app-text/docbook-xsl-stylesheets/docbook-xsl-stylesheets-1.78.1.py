@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ dev-libs/libxml2 dev-libs/libxslt 
+runtime @ dev-libs/libxml2 dev-libs/libxslt app-text/docbook-xml
 """
 
 srcdir = "docbook-xsl-"+version
