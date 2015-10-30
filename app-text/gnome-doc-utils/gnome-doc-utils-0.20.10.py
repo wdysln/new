@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ app-text/rarian app-text/docbook-xml-dtd dev-libs/libxslt
+runtime @ app-text/rarian app-text/docbook-xml dev-libs/libxslt
 build @ dev-util/pkg-config dev-util/intltool
 """
 
