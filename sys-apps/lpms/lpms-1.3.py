@@ -10,7 +10,7 @@ arch @ ~x86_64
 
 depends = """
 runtime @ dev-lang/python:2.7 net-misc/wget sys-apps/file sys-apps/sydbox
-common @ dev-lang/python:2.7 
+common @ dev-lang/python:2.7[xml,threads] 
 """
 srcdir = "lpms-1.0"
 
