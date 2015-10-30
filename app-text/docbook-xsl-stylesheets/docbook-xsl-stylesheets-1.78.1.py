@@ -7,25 +7,20 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ dev-libs/libxml2 dev-libs/libxslt app-text/docbook-xml-dtd app-text/build-docbook-catalog
+runtime @ dev-libs/libxml2 dev-libs/libxslt 
 """
 
 srcdir = "docbook-xsl-"+version
 
 standard_procedure = False
+
 def prepare():
-	patch(level=1)
+    patch(level=1)
+    copy("%s/Makefile" % filesdir, "Makefile")	
 	
 def install():
-	
-    #pkgroot = "/usr/share/sgml/docbook/xsl-stylesheets"
-    pkgroot="usr/share/xml/docbook/docbook-xsl-%s" % version
+    raw_install("DESTDIR=%s/usr/share/xml/docbook/xsl-stylesheets" % install_dir)
+    insinto("VERSION.xsl","/usr/share/xml/docbook/xsl-stylesheets")
 
-    makedirs(pkgroot)
 
-    insinto("*", pkgroot)
-    insdoc("AUTHORS", "BUGS", "COPYING", "NEWS", "README",
-            "RELEASE-NOTES.txt", "TODO", "VERSION")
 
-def post_install():
-    system("/usr/bin/build-docbook-catalog")
