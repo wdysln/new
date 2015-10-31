@@ -38,10 +38,10 @@ build @ x11-libs/qt5 kde5-base/extra-cmake-modules kde5-base/libdbusmenu-qt5 x11
 		dev-libs/libgcrypt app-text/poppler app-text/hspell app-text/hunspell app-text/aspell dev-db/lmdb
 		media-libs/phononqt5 app-text/docbook-xsl-stylesheets app-crypt/gpgme net-misc/networkmanager
 		media-libs/giflib media-sound/pulseaudio x11-misc/xcb-util-cursor media-gfx/fontforge x11-libs/wayland
+		dev-libs/xapian-core new/dev-perl/URI
 """
 srcdir = "."
 
-#get("main/cmake_utils")
 
 names = ["attica",
 		"kapidox",
@@ -79,13 +79,13 @@ def configure():
 		makedirs("build")
 		cd("build")
 		system("cmake -DCMAKE_BUILD_TYPE=Release \
-					-DCMAKE_INSTALL_PREFIX=/usr \
-					-DLIB_INSTALL_DIR=lib \
-					-DLIBEXEC_INSTALL_DIR=lib \
-					-DCMAKE_PREFIX_PATH=%s/usr \
-					-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
-					-DQML_INSTALL_DIR=/usr/qml \
-					-DBUILD_TESTING=OFF -Wno-dev .."% install_dir)
+			-DCMAKE_INSTALL_PREFIX=/usr \
+			-DLIB_INSTALL_DIR=lib \
+			-DLIBEXEC_INSTALL_DIR=lib \
+			-DCMAKE_PREFIX_PATH=%s/usr \
+			-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+			-DQML_INSTALL_DIR=/usr/qml \
+			-DBUILD_TESTING=OFF -Wno-dev .."% install_dir)
 		make()
 		installd()
 		cd("../..")

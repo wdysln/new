@@ -38,7 +38,7 @@ arch @ ~x86_64
 """
 
 depends = """
-build @ kde5-base/kde5-framework2 dev-libs/xapian-core
+build @ kde5-base/kde5-framework2 
 """
 srcdir = "."
 
@@ -90,13 +90,13 @@ def configure():
 		makedirs("build")
 		cd("build")
 		system("cmake -DCMAKE_BUILD_TYPE=Release \
-					-DCMAKE_INSTALL_PREFIX=/usr \
-					-DLIB_INSTALL_DIR=lib \
-					-DLIBEXEC_INSTALL_DIR=lib \
-					-DCMAKE_PREFIX_PATH=%s/usr \
-					-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
-					-DQML_INSTALL_DIR=/usr/qml \
-					-DBUILD_TESTING=OFF -Wno-dev .."% install_dir)
+			-DCMAKE_INSTALL_PREFIX=/usr \
+			-DLIB_INSTALL_DIR=lib \
+			-DLIBEXEC_INSTALL_DIR=lib \
+			-DCMAKE_PREFIX_PATH=%s/usr \
+			-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+			-DQML_INSTALL_DIR=/usr/qml \
+			-DBUILD_TESTING=OFF -Wno-dev .."% install_dir)
 	   	make()
 		installd()
 		cd("../..")

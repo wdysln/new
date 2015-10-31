@@ -39,6 +39,8 @@ http://download.kde.org/stable/frameworks/5.15/portingAids/kjsembed-$version.tar
 http://download.kde.org/stable/frameworks/5.15/portingAids/kmediaplayer-$version.tar.xz
 http://download.kde.org/stable/frameworks/5.15/portingAids/kross-$version.tar.xz
 http://download.kde.org/stable/frameworks/5.15/portingAids/krunner-$version.tar.xz
+http://download.kde.org/stable/frameworks/5.15/kfilemetadata-$version.tar.xz
+http://download.kde.org/stable/frameworks/5.15/baloo-$version.tar.xz
 arch @ ~x86_64
 """
 
@@ -85,6 +87,8 @@ names = ["kcrash",
 		"kjsembed",
 		"kmediaplayer",
 		"kross",
+		"kfilemetadata",
+                "baloo",
 		"krunner"]
 
 
@@ -96,13 +100,13 @@ def configure():
 		makedirs("build")
 		cd("build")
 		system("cmake -DCMAKE_BUILD_TYPE=Release \
-					-DCMAKE_INSTALL_PREFIX=/usr \
-					-DLIB_INSTALL_DIR=lib \
-					-DLIBEXEC_INSTALL_DIR=lib \
-					-DCMAKE_PREFIX_PATH=%s/usr \
-					-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
-					-DQML_INSTALL_DIR=/usr/qml \
-					-DBUILD_TESTING=OFF -Wno-dev .."% install_dir)
+			-DCMAKE_INSTALL_PREFIX=/usr \
+			-DLIB_INSTALL_DIR=lib \
+			-DLIBEXEC_INSTALL_DIR=lib \
+			-DCMAKE_PREFIX_PATH=%s/usr \
+			-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+			-DQML_INSTALL_DIR=/usr/qml \
+			-DBUILD_TESTING=OFF -Wno-dev .."% install_dir)
 		make()
 		installd()
 		cd("../..")

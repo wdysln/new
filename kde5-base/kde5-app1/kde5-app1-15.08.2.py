@@ -20,15 +20,14 @@ build @ kde5-base/plasma-desktop1
 
 srcdir = "."
 
-#get("main/cmake_utils")
 
 names = ["baloo-widgets",
-		"kio-extras",
-		"kate",
-		"ark",
-		"kmix",
-		"dolphin",
-	     "konsole"] 	
+	"kio-extras",
+	"kate",
+	"ark",
+	"kmix",
+	"dolphin",
+        "konsole"] 	
 
 		
 standard_procedure = False
@@ -39,14 +38,14 @@ def configure():
 		makedirs("build")
 		cd("build")
 		system("cmake -DCMAKE_BUILD_TYPE=Release \
-					-DCMAKE_INSTALL_PREFIX=/usr \
-					-DLIB_INSTALL_DIR=lib \
-					-DLIBEXEC_INSTALL_DIR=lib \
-					-DCMAKE_PREFIX_PATH=%s/usr \
-					-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
-					-DKMIX_KF5_BUILD=ON \
-					-DQML_INSTALL_DIR=/usr/qml \
-					-DBUILD_TESTING=OFF -Wno-dev .."% install_dir)
+                        -DCMAKE_INSTALL_PREFIX=/usr \
+			-DLIB_INSTALL_DIR=lib \
+			-DLIBEXEC_INSTALL_DIR=lib \
+			-DCMAKE_PREFIX_PATH=%s/usr \
+			-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+			-DKMIX_KF5_BUILD=ON \
+			-DQML_INSTALL_DIR=/usr/qml \
+			-DBUILD_TESTING=OFF -Wno-dev .."% install_dir)
 		make()
 		installd()
 		cd("../..")

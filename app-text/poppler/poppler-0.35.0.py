@@ -11,7 +11,7 @@ options @ cairo introspection curl jpeg lcms png cjk
 
 depends = """
 common @ media-libs/fontconfig media-libs/freetype sys-libs/zlib
-build @ dev-util/pkg-config
+build @ dev-util/pkg-config media-libs/libpng media-libs/lcms media-libs/openjpeg
 """
 
 opt_build = """
@@ -20,7 +20,7 @@ cairo @ sys-libs/glib x11-libs/cairo x11-libs/gtk+:2
 curl @ net-misc/curl
 jpeg @ media-libs/jpeg
 lcms @ media-libs/lcms
-png @ media-libs/libpng
+
 """
 
 opt_runtime = """
@@ -30,11 +30,11 @@ cjk @ app-text/poppler-data
 
 def configure():
     conf("--disable-static \
-                         --enable-xpdf-headers \
-                         --enable-libtiff \
-                         --enable-libjpeg \
-                         --enable-libpng \
-                         --enable-libcurl")
+          --enable-xpdf-headers \
+          --enable-libtiff \
+          --enable-libjpeg \
+          --enable-libpng \
+          --enable-libcurl")
 
 def build():
     make()

@@ -11,9 +11,10 @@ runtime @ x11-libs/qt5
 build @ dev-util/cmake net-misc/wget[ssl,gnutls] app-doc/doxygen
 """
 srcdir = "libdbusmenu-qt-0.9.3+15.10.20150604"
+
 get("main/cmake_utils")
 
 def configure():
     cmake_conf("-DCMAKE_INSTALL_PREFIX=/usr \
-				-DCMAKE_BUILD_TYPE=Release \
-				-DCMAKE_INSTALL_LIBDIR=lib")
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_LIBDIR=lib")
