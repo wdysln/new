@@ -8,6 +8,7 @@ options @ vdpau opengl intelvideo
 """
 
 depends = """
+build @ x11-libs/libdrm
 runtime @ sys-libs/glibc
 """
 
