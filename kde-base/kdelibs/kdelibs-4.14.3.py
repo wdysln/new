@@ -16,9 +16,6 @@ runtime @ app-misc/strigi kde-base/attica x11-misc/libxss app-arch/xz dev-libs/o
 build @ dev-util/pkg-config dev-util/cmake dev-util/automoc4 dev-util/intltool app-text/hspell media-libs/mesa
 """
 
-#opt_runtime = """
-#soprano @ dev-libs/soprano dev-libs/shared-desktop-ontologies
-#"""
 
 get("main/fdo_mime", "main/cmake_utils", "main/extract_utils")
 
@@ -34,8 +31,7 @@ def configure():
             "-DHTML_INSTALL_DIR=/usr/share/doc/kde/html",
             "-DAutomoc4_DIR=/usr/lib/automoc4",
             "-DKDE_DEFAULT_HOME='.kde4'",
-            "-DWITH_Soprano=OFF",
-            "-DDOCBOOKXSL_DIR=/usr/share/xml/docbook/docbook-xsl-1.76.1", sourcedir=build_dir)
+            "-DWITH_Soprano=OFF",sourcedir=build_dir)
 
 def post_install():
     xdg_icon_resource()
