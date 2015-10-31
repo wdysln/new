@@ -33,15 +33,15 @@ def prepare():
     
 def configure():
     conf("--disable-static \
-                             --enable-xlib \
-                         --enable-ft \
-                             --enable-ps \
-                         --enable-pdf \
-                             --enable-svg \
-                             --enable-tee \
-                             --enable-gl \
-                             --enable-gobject \
-                             --disable-gtk-doc")
+          --enable-xlib \
+          --enable-ft \
+          --enable-ps \
+           --enable-pdf \
+           --enable-svg \
+           --enable-tee \
+           --enable-gl \
+           --enable-gobject \
+           --disable-gtk-doc")
 
 def install():
     #debug says parallel install fails
