@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-build @ x11-misc/util-macros
+build @ x11-misc/util-macros x11-libs/libXmu
 """
 
 def configure():
