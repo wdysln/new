@@ -14,7 +14,7 @@ build @ dev-util/pkg-config dev-util/intltool dev-python/pygtk x11-libs/libSM
 get("gnome2_utils")
 
 def configure():
-    conf()
+	conf()
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
