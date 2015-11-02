@@ -13,7 +13,7 @@ net-misc/wget app-arch/xz sys-process/procps sys-apps/less dev-vcs/git sys-devel
 net-misc/dhcpcd sys-libs/zlib sys-apps/util-linux sys-apps/texinfo dev-util/pkg-config sys-devel/patch 
 sys-process/lsof sys-apps/dbus sys-apps/systemd sys-devel/bison app-admin/syslog-ng sys-fs/sysfsutils sys-apps/net-tools
 net-misc/iputils sys-apps/iproute2 sys-apps/inetutils dev-libs/isl dev-libs/libsigsegv dev-libs/libunistring
-dev-libs/guile dev-libs/gc
+dev-libs/guile dev-libs/gc dev-libs/elfutils
 """
 
 standard_procedure = False
