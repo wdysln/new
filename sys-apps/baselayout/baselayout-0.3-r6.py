@@ -56,7 +56,7 @@ def install():
         insfile("%s/%s" % (filesdir, item), "/etc")
         setmod("600", "%s/etc/%s" % (install_dir, item))
 
-    echo("Hadron Base System Release 0.3", "/etc/hadron-release")
+    echo("Hadron Base System Release 1.0", "/etc/hadron-release")
 
     for item in ('locale.sh', 'dircolors.sh', 'extrapaths.sh', \
             'readline.sh', 'umask.sh', 'i18n.sh', 'lpms.sh'):
@@ -69,7 +69,7 @@ def install():
         makedirs("/var/%s" % item)
         setmod("1777", "%s/var/%s" % (install_dir, item))
 
-    setgroup("games", "%s/var/games" % install_dir)
+   # setgroup("games", "%s/var/games" % install_dir)
 
     makesym("spool/mail", "/var/mail")
     makesym("../run", "/var/run")
@@ -91,6 +91,9 @@ def install():
     # FIXME: This is no good.
     cd(joinpath(install_dir, "usr"))
     makesym("lib", "usr/lib64")
+    
+    makedirs("/lib32")
+    makedirs("/usr/lib32")
 
 # TODO: Write a library function to manage groups, users and passwords
 # FIXME: improve post_install, check group existence 

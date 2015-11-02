@@ -23,8 +23,10 @@ def prepare():
         -e "s|INCLUDE\s*= ./zlib-src|INCLUDE    = /usr/include|" \
         -e "s|LIB\s*= ./zlib-src|LIB        = /usr/lib|"         \
         cpan/Compress-Raw-Zlib/config.in')
-
+    export("LC_ALL", "C")
+    
 def configure():
+    export("LC_ALL", "C")
     mythreading=""
     myndbm='U'; mygdbm='U'; mydb='U'
 

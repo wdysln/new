@@ -11,17 +11,21 @@ common @ sys-devel/binutils dev-libs/mpc >=sys-libs/zlib-1.1.4 >=dev-libs/mpfr-2
 #build @ >=sys-apps/texinfo-4.8 >=sys-devel/bison-1.875 >=sys-devel/flex-2.5.4
 """
 
-cflags = "-O2 -g"
+# TODO List
+# =========
+# options @ fortran go objc obj-c++ java
+# "--enable-languages=c,c++,lto"+","+",".join(enabled_languages),
+#   enabled_languages, languages = [], ["java", "fortran", "go", "objc", "obj-c++"]
+#   for language in languages:
+#       if opt(language):
+#           enabled_languages.append(language)
+#
+# ppl and cloog support
+# "--with-ppl",
+# "--enable-cloog-backend=isl",
+# "--disable-ppl-version-check",
+# "--disable-cloog-version-check",
 
-def prepare():
-    export("CFLAGS", cflags)
-    export("CXXFLAGS", cflags)
-    # shelltools.export("LDFLAGS", "")
-
-    export("CC", "gcc")
-    export("CXX", "g++")
-    export("LC_ALL", "en_US.UTF-8")
-  
 def configure():
     sed("-i 's/install_to_$(INSTALL_DEST) //' libiberty/Makefile.in")
     sed("-i -e /autogen/d -e /check.sh/d fixincludes/Makefile.in")
@@ -49,7 +53,6 @@ def configure():
             "--enable-multilib",
             "--with-arch_32=i686",
             "--disable-libssp",
-            "--build=x86_64-pc-linux-gnu",
             "--disable-build-with-cxx",
             "--disable-build-poststage1-with-cxx",
             "--enable-checking=release",
@@ -58,8 +61,7 @@ def configure():
 
 def build():
     cd("../gcc-build")
-   # make()
-    make('BOOT_CFLAGS="%s" profiledbootstrap' % cflags)
+    make()
 
 def install():
     cd("../gcc-build")

@@ -16,7 +16,6 @@ def configure():
     makedirs("../binutils-build"); cd("../binutils-build")
     raw_configure(
             "--prefix=/usr",
-            "--with-lib-path=/usr/lib:/usr/local/lib",
             "--enable-gold",
             "--enable-threads",
             "--enable-ld=default",
@@ -27,7 +26,7 @@ def configure():
             # http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/eclass/toolchain-binutils.eclass?revision=1.122&view=markup
             # http://wiki.osdev.org/GCC_Cross-Compiler_for_x86_64
             #"--enable-64-bit-bfd",
-            "--disable-multilib",
+            "--enable-multilib",
             "--with-pic",
         run_dir=build_dir)
 

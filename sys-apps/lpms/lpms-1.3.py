@@ -9,7 +9,7 @@ arch @ ~x86_64
 # TODO: lpms uses python-file to handle mime types now. So we can remove sys-apps/file dependency
 
 depends = """
-runtime @ dev-lang/python[xml,threads]:2.7 net-misc/wget sys-apps/file sys-apps/sydbox
+runtime @ dev-lang/python[xml,threads]:2.7 net-misc/wget sys-apps/file 
 common @ dev-lang/python[xml,threads]:2.7 
 """
 srcdir = "lpms-1.0"

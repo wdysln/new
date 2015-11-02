@@ -1,0 +1,12 @@
+diff -Nuar Python-2.7.10.orig/setup.py Python-2.7.10/setup.py
+--- Python-2.7.10.orig/setup.py	2015-05-23 19:09:25.000000000 +0300
++++ Python-2.7.10/setup.py	2015-10-30 18:02:51.626164121 +0200
+@@ -1174,7 +1174,7 @@
+                 sqlite_defines.append(('MODULE_NAME', '\\"sqlite3\\"'))
+ 
+             # Comment this out if you want the sqlite3 module to be able to load extensions.
+-            sqlite_defines.append(("SQLITE_OMIT_LOAD_EXTENSION", "1"))
++
+ 
+             if host_platform == 'darwin':
+                 # In every directory on the search path search for a dynamic
