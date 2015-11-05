@@ -2,7 +2,7 @@ metadata = """
 summary @ A high-quality data compressor
 homepage @ http://www.bzip2.org
 license @ BZIP2
-src_url @ http://bzip.org/$version/bzip2-$version.tar.gz
+src_url @ http://bzip.org/$version/$fullname.tar.gz
 arch @ ~x86_64
 """
 depends = """runtime @ sys-libs/glibc"""
@@ -15,8 +15,8 @@ def build():
 
 def install():
     raw_install('PREFIX=%s/usr' % install_dir)
-    insfile("libbz2.so.1.0.6", "/usr/lib32/libbz2.so.1.0.6")
-    makesym("/usr/lib32/libbz2.so.1.0.6", "/usr/lib32/libbz2.so")
-    makesym("/usr/lib32/libbz2.so.1.0.6", "/usr/lib32/libbz2.so.1")
-    makesym("/usr/lib32/libbz2.so.1.0.6", "/usr/lib32/libbz2.so.1.0")
+    insfile("libbz2.so.1.0.6", "/usr/lib/libbz2.so.1.0.6")
+    makesym("/usr/lib/libbz2.so.1.0.6", "/usr/lib/libbz2.so")
+    makesym("/usr/lib/libbz2.so.1.0.6", "/usr/lib/libbz2.so.1")
+    makesym("/usr/lib/libbz2.so.1.0.6", "/usr/lib/libbz2.so.1.0")
     insdoc("README", "CHANGES", "bzip2.txt")

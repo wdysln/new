@@ -67,9 +67,12 @@ def build():
     cd("contrib/src")
     make()
 
+
 def install():
     raw_install("DESTDIR=%s" % install_dir)
     insdoc("changes.txt", "readme.txt", "todo30.txt", "base/readme.txt",
             "base_readme.txt", "gtk/readme.txt", "gtk_readme.txt")
     cd("contrib/src")
     raw_install("DESTDIR=%s" % install_dir)
+    
+    

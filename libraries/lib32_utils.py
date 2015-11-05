@@ -15,50 +15,50 @@
 # You should have received a copy of the GNU General Public License
 # along with main repository.  If not, see <http://www.gnu.org/licenses/>.
 
-# lib32-related build operations
+
 import lpms
-import os
 
-get("main/fdo_mime", "main/extract_utils")
+def lib32_conf(*parameters, **kwargs):
+    append_cflags("-O2 -g -m32")
+    append_cxxflags("-O2 -g -m32")
+    append_ldflags("-O2 -g -m32")
+    export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
+       
+    conf_command = './configure \
+                     --prefix=/usr \
+                    --mandir=/tmp32 \
+                    --infodir=/tmp32 \
+                    --datadir=/tmp32 \
+                    --bindir=/tmp32 \
+                    --sbindir=/tmp32 \
+                    --sysconfdir=/tmp32 \
+                    --docdir=/tmp32 \
+                    --localedir=/tmp32 \
+                    --localstatedir=/tmp32 \
+                    --libexecdir=/usr/lib32 \
+                    --libdir=/usr/lib32'
+                    
+    args_pretty = conf_command+" "+"\n\t".join(parameters)
+    out.notify("running %s" % args_pretty)
+    if "run_dir" in kwargs:
+        conf_command = os.path.join(kwargs["run_dir"], "configure")
 
-primary_library = "lib32_utils"
+    if not system("%s %s" % (conf_command, " ".join(parameters))):
+        raise BuildError("lib32 configure failed.")
 
-# variable checks
-try:
-    subdir
-except NameError:
-    subdir = ""
-
-try:
-    source_archive
-except NameError:
-    source_archive = None
-
-def lib32_utils_extract():
-    if source_archive:
-        tar_extract("%s" % source_archive)
-    else:
-        for item in extract_plan:
-            tar_extract(lib32-basename(item))
-
-# Functions
-def lib32_utils_prepare():
-	export('CC="gcc -m32")
-	export('CXX="g++ -m32")
-	export('PKG_CONFIG_PATH="/usr/lib32/pkgconfig")
-	
 
 def lib32_utils_configure():
-    conf("--prefix=/usr",
-		"--libdir=/usr/lib32")
+    lib32_conf()
 
 def lib32_utils_build():
     make()
 
 def lib32_utils_install():
-    installd()
-	system("rm -rf %s/usr/{bin,include,share}" % install_dir)
-	
-def lib32_utils_post_install():
-    xdg_icon_resource()
+    raw_install("DESTDIR=%s" % install_dir)
+    rmdir("/tmp32")
+    if isdir("/usr/include"):
+       rmdir("/usr/include")
+
+
+
 

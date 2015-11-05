@@ -2,15 +2,13 @@ metadata = """
 summary @ An XML parser library
 homepage @ http://expat.sourceforge.net
 license @ MIT
-src_url @ http://downloads.sourceforge.net/sourceforge/expat/$fullname.tar.gz
+src_url @ http://downloads.sourceforge.net/sourceforge/expat/expat-$version.tar.gz
 arch @ ~x86_64
 """
 
 depends = """
 runtime @ sys-libs/glibc
 """
+srcdir ="expat-%s" %version
 
-
-def install():
-    raw_install("DESTDIR=%s install" % install_dir)
-    insdoc("COPYING")
+get("main/lib32_utils")

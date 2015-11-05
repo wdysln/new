@@ -2,7 +2,7 @@ metadata = """
 summary @ Libraries/utilities to handle ELF objects (drop in replacement for libelf)
 homepage @ https://fedorahosted.org/elfutils
 license @ GPL-2-with-exceptions
-src_url @ https://fedorahosted.org/releases/e/l/elfutils/$version/$fullname.tar.bz2
+src_url @ https://fedorahosted.org/releases/e/l/elfutils/$version/elfutils-$version.tar.bz2
 options @ zlib bzip2 lzma nls
 arch @ ~x86_64
 """
@@ -19,11 +19,23 @@ bzip2 @ app-arch/bzip2
 lzma @ app-arch/xz
 """
 
+srcdir = "elfutils-%s" % version
+get("main/lib32_utils")
+
+def flags():
+    append_cflags("-m32")
+    append_cxxflags("-m32")
+    append_ldflags("-m32")
+    export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
+
 def configure():
-    conf(config_enable("nls"), config_enable("bzip2", "bzlib"),
+    flags()
+    raw_configure("--prefix=/usr",
+                  "--libdir=/usr/lib32",
+            config_enable("nls"), config_enable("bzip2", "bzlib"),
             config_enable("lzma"), '--program-prefix="eu-"')
 
 def install():
+    flags()
     raw_install("DESTDIR=%s" % install_dir)
-    insdoc("AUTHORS", "ChangeLog", "NEWS", 
-            "NOTES", "README", "THANKS", "TODO")
+    system("rm -rf '%s'/usr/{bin,include,share}"% install_dir)
