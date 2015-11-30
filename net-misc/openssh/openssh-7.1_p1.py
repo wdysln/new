@@ -7,7 +7,7 @@ arch @ ~x86_64
 options @ libedit tcpd
 """
 
-srcdir = name+"-6.1p1"
+srcdir = name+"-7.1p1"
 
 depends = """
 runtime @ sys-libs/glibc >=dev-libs/openssl-1.0.1
