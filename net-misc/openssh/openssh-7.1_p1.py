@@ -2,7 +2,7 @@ metadata = """
 summary @ Free version of the SSH connectivity tools
 homepage @ http://www.openssh.org/portable.html
 license @ BSD
-src_url @ ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-6.1p1.tar.gz
+src_url @ ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-7.1p1.tar.gz
 arch @ ~x86_64
 options @ libedit tcpd
 """
