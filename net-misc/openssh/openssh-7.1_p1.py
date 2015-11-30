@@ -37,11 +37,11 @@ def install():
     
     
     
-    insfile("%s/sshdgenkeys.service""/usr/lib/systemd/system/sshdgenkeys.service")
-    insfile("%s/sshd@.service" % filesdir "/usr/lib/systemd/system/sshd@.service")
-    insfile("%s/sshd.service" % filesdir "/usr/lib/systemd/system/sshd.service")
-    insfile("%s/sshd.socket" % filesdir "/usr/lib/systemd/system/sshd.socket")
-    insfile("%s/sshd.conf" % filesdir "/usr/lib/tmpfiles.d/sshd.conf")
+    insfile("%s/sshdgenkeys.service" % filesdir,"/usr/lib/systemd/system/sshdgenkeys.service")
+    insfile("%s/sshd@.service" % filesdir, "/usr/lib/systemd/system/sshd@.service")
+    insfile("%s/sshd.service" % filesdir, "/usr/lib/systemd/system/sshd.service")
+    insfile("%s/sshd.socket" % filesdir, "/usr/lib/systemd/system/sshd.socket")
+    insfile("%s/sshd.conf" % filesdir, "/usr/lib/tmpfiles.d/sshd.conf")
     
    # insfile("%s/sshd.confd" % filesdir, "/etc/conf.d/sshd")
     insfile("%s/sshd.pam" % filesdir, "/etc/pam.d/sshd")
