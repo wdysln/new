@@ -13,7 +13,7 @@ lxde-base/libfm
 
 
 def configure():
-    conf(config_enable("debug"))
+    conf()
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
