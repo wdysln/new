@@ -11,8 +11,6 @@ common @ sys-libs/glib x11-libs/gtk+:2 lxde-base/menu-cache
 lxde-base/libfm
 """
 
-def prepare():
-    autoreconf()
 
 def configure():
     conf(config_enable("debug"))
