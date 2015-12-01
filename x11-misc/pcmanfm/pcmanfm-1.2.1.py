@@ -12,8 +12,6 @@ lxde-base/libfm
 """
 
 def prepare():
-    intltoolize("--force --copy --automake")
-    system('sed -i -e "/MimeType/s:=.*normal;:=:" data/pcmanfm.desktop.in \ ')
     autoreconf()
 
 def configure():
