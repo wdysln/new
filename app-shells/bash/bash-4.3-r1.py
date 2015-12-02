@@ -14,15 +14,14 @@ build @ sys-libs/readline
 cfgsettings = """-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\' \
                  -DSTANDARD_UTILS_PATH=\'\"/bin:/usr/bin:/sbin:/usr/sbin\"\' \
                  -DSYS_BASHRC=\'\"/etc/bash/bashrc\"\' \
-                 -DNON_INTERACTIVE_LOGIN_SHELLS \
                  -DSSH_SOURCE_BASHRC"""
                  
                  
 def prepare():
-    for i in xrange(1, 39):
+    for i in xrange(1, 42):
         fetch("http://ftp.gnu.org/gnu/bash/bash-4.3-patches/bash43-%03d" % i, location=build_dir)
 
-    for f in xrange(1, 39):
+    for f in xrange(1, 42):
         patch("bash43-%03d" % f, location=build_dir)
 
 def configure():
