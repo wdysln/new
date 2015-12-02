@@ -10,6 +10,7 @@ common @ app-arch/lzo app-arch/xz sys-libs/zlib
 """
 srcdir = "squashfs%s" % version        
 def build():
+    cd("squashfs-tools")
     make("XZ_SUPPORT=1 LZO_SUPPORT=1 LZMA_XZ_SUPPORT=1")
 
 def install():
