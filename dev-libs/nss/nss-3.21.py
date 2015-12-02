@@ -11,6 +11,9 @@ runtime @ dev-libs/nspr dev-db/sqlite sys-libs/zlib
 build @ dev-lang/perl
 """
 
+def prepare():
+    patch("nss-3.21-standalone-1.patch", level=1)
+
 def build():
     cd("nss")
     make("nss_build_all BUILD_OPT=1 NSPR_INCLUDE_DIR=/usr/include/nspr \
