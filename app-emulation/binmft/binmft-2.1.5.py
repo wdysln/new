@@ -10,7 +10,7 @@ options @ debug threads
 srcdir = "binfmt-support-%s" % version
 
 depends = """
-runtime @ sys-libs/glibc dev-libs/libpipeline 
+runtime @ sys-libs/glibc sys-libs/libpipeline 
 """
 def configure():
     conf()
