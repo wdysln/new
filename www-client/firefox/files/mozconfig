@@ -1,48 +1,70 @@
-# If you have a multicore machine you can speed up the build by running
-# several jobs at once, but if you have a single core, delete this line:
-# mk_add_options MOZ_MAKE_FLAGS="-j4"
+# If you have a multicore machine, all cores will be used by default.
+# If desired, you can reduce the number of cores used, e.g. to 1, by
+# uncommenting the next line and setting a valid number of CPU cores.
+#mk_add_options MOZ_MAKE_FLAGS="-j1"
 
-# If you have installed Yasm delete this option:
-ac_add_options --disable-webm
-
-# If you have installed DBus-Glib delete this option:
+# If you have installed DBus-Glib comment out this line:
 ac_add_options --disable-dbus
 
-# If you have installed wireless-tools delete this option:
+# If you have installed dbus-glib, and you have installed (or will install)
+# wireless-tools, and you wish to use geolocation web services, comment out
+# this line
 ac_add_options --disable-necko-wifi
 
-# If you have installed libnotify delete this option:
+# If you have installed libnotify comment out this line:
 ac_add_options --disable-libnotify
 
-# If you have installed xulrunner uncomment these two lines:
-# ac_add_options --with-system-libxul
-# ac_add_options --with-libxul-sdk=/usr/lib/xulrunner-devel-10.0
+# GStreamer is necessary for H.264 video playback in HTML5 Video Player;
+# to be enabled, also remember to set "media.gstreamer.enabled" to "true"
+# in about:config. If you have GStreamer 1.x.y, comment out this line and
+# uncomment the following one:
+ac_add_options --disable-gstreamer
+#ac_add_options --enable-gstreamer=1.0
 
-# Uncomment these if you have installed them:
-# ac_add_options --with-system-nspr
-# ac_add_options --with-system-nss
-# ac_add_options --enable-system-sqlite
-# ac_add_options --with-system-libvpx
-# ac_add_options --enable-startup-notification
-# ac_add_options --enable-system-hunspell
-# ac_add_options --with-system-libevent
+# Uncomment these lines if you have installed optional dependencies:
+#ac_add_options --enable-system-hunspell
+#ac_add_options --enable-startup-notification
 
-mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-build-dir
-ac_add_options --enable-official-branding
+# Comment out following option if you have PulseAudio installed
+ac_add_options --disable-pulseaudio
+
+# Comment out following options if you have not installed
+# recommended dependencies:
+#ac_add_options --enable-system-sqlite
+ac_add_options --with-system-libevent
+ac_add_options --with-system-libvpx
+ac_add_options --with-system-nspr
+ac_add_options --with-system-nss
+ac_add_options --with-system-icu
+
+# The BLFS editors recommend not changing anything below this line:
 ac_add_options --prefix=/usr
+ac_add_options --enable-application=browser
 
-# The rest of these options have no effect if you're
-# building against an already installed xulrunner:
-ac_add_options --with-pthreads
-ac_add_options --enable-system-ffi
-ac_add_options --with-system-jpeg
-ac_add_options --with-system-png
-ac_add_options --enable-system-cairo
-ac_add_options --with-system-zlib
-ac_add_options --enable-shared
-ac_add_options --disable-static
-ac_add_options --disable-debug
 ac_add_options --disable-crashreporter
-ac_add_options --disable-installer
 ac_add_options --disable-updater
 ac_add_options --disable-tests
+
+ac_add_options --enable-optimize
+ac_add_options --enable-strip
+ac_add_options --enable-install-strip
+
+ac_add_options --enable-gio
+ac_add_options --enable-official-branding
+ac_add_options --enable-safe-browsing
+ac_add_options --enable-url-classifier
+
+# From firefox-40, using system cairo causes firefox to crash
+# frequently when it is doing background rendering in a tab.
+#ac_add_options --enable-system-cairo
+ac_add_options --enable-system-ffi
+ac_add_options --enable-system-pixman
+
+ac_add_options --with-pthreads
+
+ac_add_options --with-system-bz2
+ac_add_options --with-system-jpeg
+ac_add_options --with-system-png
+ac_add_options --with-system-zlib
+
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-build-dir
