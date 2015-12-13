@@ -2,10 +2,10 @@ metadata = """
 summary @ A C library that implements an SQL database engine
 homepage @ http://www.sqlite.org
 license @ as-is
-src_url @ http://www.sqlite.org/sqlite-autoconf-3071300.tar.gz
+src_url @ http://www.sqlite.org/2015/sqlite-autoconf-3090200.tar.gz
 arch @ ~x86_64
 """
-srcdir="sqlite-autoconf-3071300"
+srcdir="sqlite-autoconf-3090200"
 
 depends = """
 build @ sys-libs/readline
