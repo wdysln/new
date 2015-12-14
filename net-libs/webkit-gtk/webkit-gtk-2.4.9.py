@@ -18,33 +18,20 @@ webgl @ media-libs/mesa media-libs/libwebp
 
 srcdir = "webkitgtk-%s" % version
 
-def prepare():
-    sed(""" -i 's/-O2//g' configure.ac""")
-    system("mkdir -p DerivedSources/ANGLE")
-    system("AT_M4DIR=Source/autotools autoreconf")
 
 def configure():
-    conf(
-    config_enable("coverage"),
-    config_enable("debug"),
-    config_enable("debug", "debug-features"),
-    config_enable("spell", "spellcheck"),
-    config_enable("introspection"),
-    config_enable("gstreamer", "video"),
-    config_enable("jit"),
-    config_enable("webgl"),
-    config_enable("egl"),
-    "--with-font-backend=freetype",
-    "--disable-geoloc",
-    "--disable-geolocation",
-    "--enable-web-sockets",
-    "--with-gtk=2.0",
-    "--disable-webkit2")
-
+    conf("--disable-gtk-doc \
+         --disable-silent-rules \
+         --disable-webkit2 \
+         --enable-dependency-tracking \
+         --enable-introspection \
+         --enable-video \
+         --with-gnu-ld \
+         --with-gtk=2.0")
+    
 def build():
-    export("HOME", build_dir)
-    make("XDG_DATA_HOME=\"./.local\"")
+    make()
 
 def install():
-    installd()
-    insdoc("Source/WebKit/gtk/ChangeLog")
+    raw_install("-j1 DESTDIR=%s install" % install_dir)
+    
