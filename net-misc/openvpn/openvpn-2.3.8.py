@@ -14,16 +14,19 @@ runtime @ sys-libs/glibc dev-libs/openssl sys-apps/iproute2 app-arch/lzo sys-app
 
 
 def configure():
-    system('CFLAGS="$CFLAGS -DPLUGIN_LIBDIR=\\\"/usr/lib/openvpn\\\"" ./configure \
+    system('./configure \
             --prefix=/usr \
-            --sbindir=/usr/bin \
             --enable-password-save \
-            --mandir=/usr/share/man \
+            --with-plugindir="/usr/lib/openvpn/" \
             --enable-iproute2 \
             --enable-systemd')
 
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
-    insfile("%s/sshdgenkeys.service" % filesdir,"/usr/lib/systemd/system/sshdgenkeys.service")
+    makedirs("/etc/openvpn")
+    makedirs("/usr/share/openvpn")
+    makedirs("/usr/share/openvpn/contrib")
+    insfile("sample/sample-config-files/*", "/usr/share/openvpn/examples/")
+    copy("contrib", "/usr/share/openvpn")
+    insfile("%s/openvpn@.service" % filesdir,"/usr/lib/systemd/system/openvpn@.service")
