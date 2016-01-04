@@ -2,13 +2,14 @@ metadata = """
 summary @ Handy console-based calculator utility
 homepage @ http://www.gnu.org/software/bc/bc.html
 license @ GPL-2 LGPL-2.1
-src_url @ http://distcc.googlecode.com/files/$fullname.tar.bz2
+src_url @ http://distcc.googlecode.com/files/$fullnamerc1.tar.bz2
 arch @ ~x86_64
 """
 
 depends = """
 build @ sys-devel/flex
 """
+srcdir = "distcc-3.2rc1"
 
 def configure():
     conf("--disable-Werror")
