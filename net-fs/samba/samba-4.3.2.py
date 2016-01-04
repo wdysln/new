@@ -71,7 +71,7 @@ def install():
     makedirs("/etc/samba/private")
     setmod("1777", "%s/var/spool/samba" % install_dir)
     setmod("700", "%s/etc/samba/private" % install_dir)
-    rmdir("%s/var/run" % install_dir)
+    rmdir("/var/run")
      
 def post_install():
     system("systemd-tmpfiles --create samba.conf")
